@@ -17,6 +17,8 @@ const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplaceme
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
+
 
 /**
  * Webpack Constants
@@ -311,6 +313,11 @@ module.exports = function (env) {
        *
        * See: https://github.com/th0r/webpack-bundle-analyzer
        */
+
+      new WebpackShellPlugin({
+        onBuildStart: ['git clone .git --branch master dist'],
+        onBuildEnd: ['cd dist && git add --all && git commit -m \"Release at $(date)\" && git push origin master']
+      })
 
     ],
 
