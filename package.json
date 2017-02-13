@@ -1,14 +1,10 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "5.4.1",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
-  "keywords": [
-    "angular2",
-    "webpack",
-    "typescript"
-  ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "name": "airbnb-bangkok",
+  "version": "0.0.1",
+  "description": "N&J's Airbnb page",
+  "keywords": [],
+  "author": "Jake Kang <stardom8387@gmail.com>",
+  "homepage": "http://airbnb-bangkok.com",
   "license": "MIT",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",
@@ -35,6 +31,7 @@
     "e2e": "npm-run-all -p -r server:prod:ci protractor",
     "github-deploy:dev": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubDev",
     "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --env.githubProd",
+    "github-deploy:aot": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.github-deploy.js --progress --profile  --bail --env.githubProd",
     "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "postinstall": "npm run webdriver:update",
@@ -149,8 +146,7 @@
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "2.3.0",
     "webpack-dll-bundles-plugin": "^1.0.0-beta.5",
-    "webpack-merge": "~2.6.1",
-    "webpack-shell-plugin": "^0.5.0"
+    "webpack-merge": "~2.6.1"
   },
   "repository": {
     "type": "git",

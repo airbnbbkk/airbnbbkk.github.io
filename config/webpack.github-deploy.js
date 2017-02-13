@@ -19,7 +19,7 @@ module.exports = function (options) {
   const webpackConfig = webpackConfigFactory(options);
 
   // replace the instance of HtmlWebpackPlugin with an updated one.
-  ghDeploy.replaceHtmlWebpackPlugin(webpackConfig.plugins, GH_REPO_NAME);
+  // ghDeploy.replaceHtmlWebpackPlugin(webpackConfig.plugins, GH_REPO_NAME);
 
   return webpackMerge(webpackConfig, {
    output: {
@@ -36,13 +36,13 @@ module.exports = function (options) {
       * Prefixing so every resource will be absolute (otherwise it will be url.com/repoName/repoName...
       * Suffixing since chunks will not do it automatically (testes against about page)
       */
-     publicPath: '/' + GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.output.publicPath)
+     publicPath: '/'
    },
 
    plugins: [
      function() {
        this.plugin('done', function(stats) {
-         console.log('Starting deployment to GitHub.');
+         console.log('Starting deployment to GitHub.', GH_REPO_NAME);
 
          const logger = function (msg) {
            console.log(msg);
@@ -50,6 +50,7 @@ module.exports = function (options) {
 
          const options = {
            logger: logger,
+           branch: 'master',
            remote: GIT_REMOTE_NAME,
            message: COMMIT_MESSAGE,
            dotfiles: true // for .nojekyll
