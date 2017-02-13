@@ -1,11 +1,11 @@
 {
   "main": {
-    "js": "/main.bundle.js"
+    "js": "/airbnbbkk.github.io/main.bundle.js"
   },
   "vendor": {
-    "js": "/vendor.bundle.js"
+    "js": "/airbnbbkk.github.io/vendor.bundle.js"
   },
   "polyfills": {
-    "js": "/polyfills.bundle.js"
+    "js": "/airbnbbkk.github.io/polyfills.bundle.js"
   }
 }
