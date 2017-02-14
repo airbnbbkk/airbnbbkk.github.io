@@ -32,6 +32,10 @@ import { XLargeDirective } from './home/x-large';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 
+import { MaterialModule } from '@angular/material';
+import { MainComponent } from './main/main.component';
+
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -53,6 +57,7 @@ type StoreType = {
     AppComponent,
     AboutComponent,
     HomeComponent,
+    MainComponent,
     NoContentComponent,
     XLargeDirective
   ],
@@ -60,7 +65,8 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules}),
+    MaterialModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
