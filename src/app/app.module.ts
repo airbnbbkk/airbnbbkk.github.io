@@ -15,6 +15,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
+import { MainComponent } from './main';
 import { SideNavComponent } from './side-nav';
 import { HeaderComponent } from './header';
 import { NoContentComponent } from './no-content';
@@ -22,7 +23,6 @@ import { XLargeDirective } from './home/x-large';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 import { MaterialModule } from '@angular/material';
-import { MainComponent } from './main/main.component';
 
 
 // Application wide providers

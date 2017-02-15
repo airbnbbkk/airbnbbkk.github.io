@@ -1,13 +1,8 @@
 /*
  * Angular 2 decorators and services
  */
-import {
-  Component,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppState } from './app.service';
-import './app.component.scss';
 
 /*
  * App Component
@@ -17,9 +12,9 @@ import './app.component.scss';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.scss'
+    'app.component.scss'
   ],
-  templateUrl: './app.component.html'
+  templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
