@@ -1,21 +1,10 @@
 <nj-header [sidenav]="sidenav"></nj-header>
 <md-sidenav-container class="side-nav-container">
-  <md-sidenav class="side-nav" #sidenav mode="over">
+  <md-sidenav class="side-nav" #sidenav mode="push">
     <!-- sidenav content -->
     <nj-side-nav></nj-side-nav>
   </md-sidenav>
   <!-- primary content -->
-  <md-grid-list cols="12">
-    <md-grid-tile
-      [colspan]="12"
-      [rowspan]="12">
-
-      <nj-main>
-        <router-outlet></router-outlet>
-      </nj-main>
-
-      <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-      <footer></footer>
-    </md-grid-tile>
-  </md-grid-list>
+  <router-outlet></router-outlet>
+  <footer></footer>
 </md-sidenav-container>

@@ -15,14 +15,17 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
-import { MainComponent } from './main';
+import { LogInComponent } from './log-in';
 import { SideNavComponent } from './side-nav';
 import { HeaderComponent } from './header';
+import { ListingComponent } from './listing';
+import { PageListingComponent } from './page-listing';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
 
 // Application wide providers
@@ -46,9 +49,11 @@ type StoreType = {
     AppComponent,
     AboutComponent,
     HomeComponent,
-    MainComponent,
+    LogInComponent,
     HeaderComponent,
     SideNavComponent,
+    ListingComponent,
+    PageListingComponent,
     NoContentComponent,
     XLargeDirective
   ],

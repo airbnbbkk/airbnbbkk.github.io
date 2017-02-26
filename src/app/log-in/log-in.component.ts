@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nj-main',
+  selector: 'nj-log-in',
   providers: [],
-  styleUrls: ['main.component.scss'],
-  templateUrl: 'main.component.html'
+  styleUrls: ['log-in.component.scss'],
+  templateUrl: 'log-in.component.html'
 })
-export class MainComponent implements OnInit {
+export class LogInComponent implements OnInit {
   public helloMain: string;
 
   public ngOnInit() {
