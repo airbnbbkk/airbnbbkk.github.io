@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nj-listing',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'listing.component.html'
 })
 export class ListingComponent implements OnInit {
-  public helloMain: string;
+
+  @Input() listing: Listing;
+
+  constructor() {}
 
   public ngOnInit() {
-    this.helloMain = 'Hello Main!!!!';
   }
 }
