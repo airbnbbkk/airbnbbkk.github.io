@@ -8,7 +8,6 @@ export class PageListingService {
   ) {}
 
   public getListing() {
-    console.log('get listing...');
     let listings: Listing[] = [];
 
     this.apiService.getListing().subscribe((listingData: any) => {

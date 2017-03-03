@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nj-listing',
@@ -6,12 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['listing.component.scss'],
   templateUrl: 'listing.component.html'
 })
-export class ListingComponent implements OnInit {
+export class ListingComponent implements AfterViewInit {
 
   @Input() listing: Listing;
 
   constructor() {}
 
-  public ngOnInit() {
+  public AfterViewInit() {
+    console.log('listing', this.listing);
   }
 }
