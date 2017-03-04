@@ -21,7 +21,6 @@ import { HeaderComponent } from './header';
 import { ListingComponent } from './listing';
 import { PageListingComponent } from './page-listing';
 import { NoContentComponent } from './no-content';
-import { XLargeDirective } from './home/x-large';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 import { MaterialModule } from '@angular/material';
@@ -54,8 +53,7 @@ type StoreType = {
     SideNavComponent,
     ListingComponent,
     PageListingComponent,
-    NoContentComponent,
-    XLargeDirective
+    NoContentComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
