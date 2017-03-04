@@ -1,8 +1,12 @@
-<form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-  <input
-    [value]="localState.value"
-    (input)="localState.value = $event.target.value"
-    placeholder="Type your booking number"
-    autofocus>
-  <button>Log In</button>
+<form autocomplete="off">
+  <div class="log-in-input-wrapper"
+       [@logInInputState]="logInInputState"
+       (click)="toggleLogInInput()"
+  >
+    Have you booked already? Please click here to log in!
+    <input
+      placeholder="Type your booking number"
+      autofocus>
+    <button>Log In</button>
+  </div>
 </form>
