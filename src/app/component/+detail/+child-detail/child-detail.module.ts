@@ -2,16 +2,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { routes } from './detail.routes';
-import { DetailComponent } from './detail.component';
+import { routes } from './child-detail.routes';
+import { ChildDetailComponent } from './child-detail.component';
 
 console.log('`Detail` bundle loaded asynchronously');
 
 @NgModule({
   declarations: [
     // Components / Directives/ Pipes
-    DetailComponent,
+    ChildDetailComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +18,6 @@ console.log('`Detail` bundle loaded asynchronously');
     RouterModule.forChild(routes),
   ],
 })
-export class DetailModule {
+export class ChildDetailModule {
   public static routes = routes;
 }
