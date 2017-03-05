@@ -1,4 +1,18 @@
 :host {
   display: block;
-  padding: 0.2rem;
+  padding: 1rem;
+  .listing-card {
+    .listing-header {
+      .listing-header-image {
+        background-image: url('https://a2.muscache.com/im/pictures/186ff6e1-3227-4792-bc6e-591932235263.jpg?aki_policy=profile_small');
+      }
+    }
+    .listing-content {
+      .listing-content-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

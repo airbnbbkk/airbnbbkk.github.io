@@ -13,24 +13,25 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { LogInComponent } from './log-in';
-import { SideNavComponent } from './side-nav';
-import { HeaderComponent } from './header';
-import { ListingComponent } from './listing';
-import { PageListingComponent } from './page-listing';
-import { NoContentComponent } from './no-content';
+import { HomeComponent } from './component/home';
+import { AboutComponent } from './component/about';
+import { LogInComponent } from './component/log-in';
+import { SideNavComponent } from './component/side-nav';
+import { HeaderComponent } from './component/header';
+import { ListingComponent } from './component/listing';
+import { PageListingComponent } from './component/page-listing';
+import { NoContentComponent } from './component/no-content';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
-
+import { ApiService } from './service/api.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  ApiService
 ];
 
 type StoreType = {

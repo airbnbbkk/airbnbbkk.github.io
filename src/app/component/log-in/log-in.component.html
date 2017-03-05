@@ -1,12 +1,17 @@
-<form autocomplete="off">
-  <div class="log-in-input-wrapper"
-       [@logInInputState]="logInInputState"
-       (click)="toggleLogInInput()"
-  >
+<div class="log-in-input-wrapper"
+     [@logInInputState]="logInInputState"
+     (click)="setLogInInputState('active')"
+>
+  <p class="wording">
     Have you booked already? Please click here to log in!
-    <input
-      placeholder="Type your booking number"
-      autofocus>
-    <button>Log In</button>
+  </p>
+  <div class="form-box">
+    <form autocomplete="off">
+      <input
+        placeholder="Type your booking number"
+        (blur)="setLogInInputState('inactive')"
+        autofocus>
+      <button>Log In</button>
+    </form>
   </div>
-</form>
+</div>

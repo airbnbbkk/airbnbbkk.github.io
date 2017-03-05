@@ -20,7 +20,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ngcWebpack = require('ngc-webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 
 /*
@@ -357,10 +356,7 @@ module.exports = function (options) {
       new ngcWebpack.NgcWebpackPlugin({
         disabled: !AOT,
         tsConfig: helpers.root('tsconfig.webpack.json')
-      }),
-
-      new DashboardPlugin()
-
+      })
     ],
 
     /*

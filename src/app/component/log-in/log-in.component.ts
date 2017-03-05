@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
   selector: 'nj-log-in',
@@ -6,26 +6,22 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
   animations: [
     trigger('logInInputState', [
       state('inactive', style({
-        height: '1rem;'
+        height: '20px'
       })),
       state('active', style({
-        height: '2rem'
+        height: '100%'
       })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out'))
+      transition('inactive => active', animate('1000ms ease-in')),
+      transition('active => inactive', animate('1000ms ease-out'))
     ])
   ],
   styleUrls: ['log-in.component.scss'],
   templateUrl: 'log-in.component.html'
 })
-export class LogInComponent implements OnInit {
+export class LogInComponent {
   public logInInputState = 'inactive';
 
-  public ngOnInit() {
-  }
-
-  public toggleLogInInput() {
-    console.log('toggle!');
-    this.logInInputState = 'active';
+  public setLogInInputState(state: string) {
+    this.logInInputState = state;
   }
 }

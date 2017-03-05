@@ -1,35 +1,24 @@
 <md-card class="listing-card">
-  <md-card-header>
+  <md-card-header class="listing-header">
     <div md-card-avatar class="listing-header-image"></div>
-    <md-card-title>N&J #1</md-card-title>
-    <md-card-subtitle>2BR</md-card-subtitle>
+    <md-card-title>N&J #{{ index }}</md-card-title>
+    <md-card-subtitle>{{ listing.bedrooms }} bed rooms</md-card-subtitle>
   </md-card-header>
-  <md-card-content>
-    <div class="airbnb-embed-frame" data-city-link-index="0"
-         data-eb="1482929254_Gpz1gaocY4fHgwRC"
-         data-eu="ZiB/84owb3TT7E4KEtvHCZPzrRdKK7tFK1dVvS59HdunYjaYwOBMk8Nvacx5
-y8Z73R5V2oy6r/PcFd173+SpA7oEN0mBTeOhw+ZH19ZaKCZa7qQZ2Ex4JpNs
-2j9s2xRiASgg+1EA7lT1RVVT4tEviadxnAiQK701TgvoX4+HSP2KKr3Y4Mwq
-EntQfTfK6cuk1ML1bSYusD2wEg4j5ISMFsRykjvccnWixjD6aw9nCNG+nPlh
-TihdK93pMCdNuc78G5yUnfTfyuYNNMkMsYWPZPQZV6hMk4AzQHlUPKX1vOGn
-V7xoP8Q5Uz1zyYeBDgZobr7OdYew4G3+vsZdjwodig==
-" data-embed-source-type="p3" data-trigger-source-type="p3" data-listing-id="16268602"
-         data-photo-url="https://a0.muscache.com/im/pictures/6d7fd9ae-f9c0-44f3-83b4-d27aa2c0f3c3.jpg?aki_policy=x_large"
-         data-view="listing_frame" style="max-width:600px;margin:auto;transition:height .2s;">
-      <img src="{{ listing.photos.large_url[0] }}" style="max-width:100%;" alt=""/>
-      <div><a href="https://www.airbnb.com/rooms/16268602" rel="nofollow"><h4>{{ listing.name }}</h4></a>
-        <div>Bangkok, Krung Thep Maha Nakhon, Thailand</div>
-        <blockquote>our house is only within 20 minutes distance to hot places such as Sukhumvit, Asoke, Siam, RCA,
-          Khaosan, Thonglor, etc.
+  <md-card-content class="listing-content">
+    <div class="listing-content-image">
+      <img src="{{ listing.photos.large_url[0] }}" style="" alt=""/>
+    </div>
+    <div class="listing-content-desc">
+      <a href="https://www.airbnb.com/rooms/16268602" rel="nofollow"><h4>{{ listing.name }}</h4></a>
+      <div>Bangkok, Krung Thep Maha Nakhon, Thailand</div>
+      <blockquote>our house is only within 20 minutes distance to hot places such as Sukhumvit, Asoke, Siam, RCA,
+        Khaosan, Thonglor, etc.
 
-          Every public transportation is accessible within 5 minutes distance so it...
-        </blockquote>
-      </div>
-      <script async="" src="https://www.airbnb.com/embeddable/airbnb_jssdk"></script>
+        Every public transportation is accessible within 5 minutes distance so it...
+      </blockquote>
     </div>
   </md-card-content>
   <md-card-actions>
-    <button md-button>LIKE</button>
     <button md-button>SHARE</button>
   </md-card-actions>
 </md-card>

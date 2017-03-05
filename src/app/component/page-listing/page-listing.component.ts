@@ -13,7 +13,8 @@ export class PageListingComponent implements OnInit {
 
   constructor(
     private listingService: PageListingService
-  ) {}
+  ) {
+  }
 
   public ngOnInit() {
     this.listings = this.listingService.getListing();
