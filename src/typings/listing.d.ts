@@ -1,4 +1,5 @@
 interface Listing {
+  _id: number;
   name: string;
   summary: string;
   bedrooms: number;

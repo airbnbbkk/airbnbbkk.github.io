@@ -2,5 +2,22 @@
   display: flex;
   justify-content: center;
   .log-in-input-wrapper {
+    .wording-label {
+      display: inline-block;
+      margin: 1rem 0;
+    }
+    .form-box {
+
+    }
+    &.active {
+      .wording-label {
+        display: none;
+      }
+    }
+    &.inactive {
+      .form-box {
+        display: none;
+      }
+    }
   }
 }

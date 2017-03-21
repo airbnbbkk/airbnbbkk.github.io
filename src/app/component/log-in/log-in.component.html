@@ -1,13 +1,14 @@
 <div class="log-in-input-wrapper"
+     [ngClass]="logInInputState"
      [@logInInputState]="logInInputState"
-     (click)="setLogInInputState('active')"
->
-  <p class="wording">
+     (click)="setLogInInputState('active')">
+  <label for="login-input" class="wording-label">
     Have you booked already? Please click here to log in!
-  </p>
-  <div class="form-box">
+  </label>
+  <div #formBox class="form-box">
     <form autocomplete="off">
       <input
+        id="login-input"
         placeholder="Type your booking number"
         (blur)="setLogInInputState('inactive')"
         autofocus>

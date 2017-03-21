@@ -1,1 +1,1 @@
-<nj-listing *ngFor="let listing of listings; let i = index" [listing]="listing" [index]="i"></nj-listing>
+<nj-listing *ngFor="let listing of listings | async; let i = index" [listing]="listing" [index]="i"></nj-listing>

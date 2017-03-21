@@ -279,7 +279,7 @@ i.e, to have youtube api support, run this command in terminal:
 ```shell
 npm i @types/youtube @types/gapi @types/gapi.youtube
 ``` 
-In some cases where your code editor doesn't support Typescript 2 yet or these types weren't listed in ```tsconfig.json```, add these to **"src/custom-typings.d.ts"** to make peace with the compile check: 
+In some cases where your code editor doesn't support Typescript 2 yet or these types weren't listed in ```tsconfig.json```, add these to **"src/custom-listing.d.ts"** to make peace with the compile check: 
 ```es6
 import '@types/gapi.youtube';
 import '@types/gapi';

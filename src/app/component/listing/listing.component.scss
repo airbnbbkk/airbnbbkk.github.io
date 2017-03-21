@@ -7,6 +7,11 @@
         background-image: url('https://a2.muscache.com/im/pictures/186ff6e1-3227-4792-bc6e-591932235263.jpg?aki_policy=profile_small');
       }
     }
+    @media (max-width: 600px) {
+      .listing-header {
+        margin: -8px 0 16px;
+      }
+    }
     .listing-content {
       .listing-content-image {
         img {

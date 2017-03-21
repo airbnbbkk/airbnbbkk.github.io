@@ -6,19 +6,20 @@ import { Component, trigger, state, style, transition, animate } from '@angular/
   animations: [
     trigger('logInInputState', [
       state('inactive', style({
-        height: '20px'
+        height: '1rem'
       })),
       state('active', style({
-        height: '100%'
+        height: '*'
       })),
-      transition('inactive => active', animate('1000ms ease-in')),
-      transition('active => inactive', animate('1000ms ease-out'))
+      transition('inactive => active', animate('100ms ease-in')),
+      transition('active => inactive', animate('100ms ease-out'))
     ])
   ],
   styleUrls: ['log-in.component.scss'],
   templateUrl: 'log-in.component.html'
 })
 export class LogInComponent {
+
   public logInInputState = 'inactive';
 
   public setLogInInputState(state: string) {
