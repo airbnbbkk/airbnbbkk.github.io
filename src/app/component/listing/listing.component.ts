@@ -11,7 +11,6 @@ export class ListingComponent implements OnInit {
   @Input() public listing: Listing;
   @Input() public index: number;
 
-
   public ngOnInit() {
     console.log('listing', this.listing);
     this.index++;

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PageListingService } from './page-listing.service';
 import { repoServiceFactory } from '../../service/repo.service.provider';
 import { RepoService } from '../../service/repo.service';
-import { Observable } from '../../../../node_modules/rxjs/Observable';
 
 @Component({
   selector: 'nj-page-listing',
@@ -16,7 +15,7 @@ import { Observable } from '../../../../node_modules/rxjs/Observable';
 })
 export class PageListingComponent implements OnInit {
 
-  public listings: Observable<Listing[]>;
+  public listings: Array<RepoDocResponse<Listing>>;
 
   constructor(
     private listingService: PageListingService
@@ -24,10 +23,12 @@ export class PageListingComponent implements OnInit {
   }
 
   public async ngOnInit() {
-    this.listings = this.listingService.getListing();
-
-    this.listings.subscribe(res => {
+    this.listingService.getListing().catch(res => {
+      console.log('err res', res);
+      return res;
+    }).subscribe((res: Array<RepoDocResponse<Listing>>) => {
       console.log('res', res);
+      this.listings = res;
     });
   }
 }

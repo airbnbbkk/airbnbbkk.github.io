@@ -13,9 +13,18 @@ export class RepoService {
   }
 
   public list() {
-    return this._db.allDocs({
-      include_docs: true
-    });
+    return this._db
+               .allDocs({
+                 include_docs: true
+               })
+               .then(res => {
+                 if (!res.total_rows) {
+                   let e = Error('not_found');
+                   e.name = 'not_found';
+                   throw e;
+                 }
+                 return res.rows;
+               });
   }
 
   public get(id: string) {

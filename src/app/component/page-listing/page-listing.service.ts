@@ -11,34 +11,30 @@ export class PageListingService {
   ) {
   }
 
-  public getListing(): Observable<Listing[]> {
-    return Observable.fromPromise(this.repoService.list())
-                     .catch((err: any) => {
-                       console.log(err);
-                       if (err.name === 'not_found') {
-                         const listingArray = this.fetchListing();
-                         const listingDocArray = this.transformToListingDocArray(listingArray);
+  public getListing(): Observable<Array<RepoDocResponse<Listing>>> {
+    return this.getAllListings()
+               .catch((err: any) => {
+                 console.log(err);
+                 if (err.name === 'not_found') {
+                   const listingArray = this.fetchListing();
+                   const listingDocArray = this.transformToListingDocArray(listingArray);
 
-                         return listingDocArray
-                           .switchMap(listings =>
-                             Observable.fromPromise(this.saveAllListingToRepo(listings)))
-                           .catch(error => {
-                             console.log('failed to save listings to repo', error);
-                             return null;
-                           })
-                           .switchMapTo(Observable.fromPromise(this.repoService.get('listing')));
-                       }
-                     });
+                   return listingDocArray
+                     .mergeMap(listings =>
+                       this.saveAllListingToRepo(listings)
+                           .mergeMapTo(this.getAllListings()));
+                 }
+               });
   }
 
   private saveAllListingToRepo(listingDocs: Array<Listing&RepoDoc>) {
     console.log('listingDoc', listingDocs);
-    return this.repoService.saveAll(listingDocs);
+    return Observable.fromPromise(this.repoService.saveAll(listingDocs));
   }
 
   private fetchListing() {
     return this.apiService.getListing()
-               .switchMap(res => {
+               .mergeMap(res => {
                  return res['listings'];
                });
   }
@@ -82,5 +78,10 @@ export class PageListingService {
     listing.bedrooms = data['bedrooms'];
 
     return listing;
+  }
+
+  private getAllListings(): Observable<Array<RepoDocResponse<Listing>>> {
+    console.log('get all listings');
+    return Observable.fromPromise(this.repoService.list());
   }
 }
