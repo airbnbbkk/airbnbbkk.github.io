@@ -14,15 +14,17 @@ export class PageListingService {
   public getListing(): Observable<Array<RepoDocResponse<Listing>>> {
     return this.getAllListings()
                .catch((err: any) => {
-                 console.log(err);
                  if (err.name === 'not_found') {
                    const listingArray = this.fetchListing();
                    const listingDocArray = this.transformToListingDocArray(listingArray);
 
                    return listingDocArray
+                     .merge()
                      .mergeMap(listings =>
                        this.saveAllListingToRepo(listings)
                            .mergeMapTo(this.getAllListings()));
+                 } else {
+                   console.log('error getListing', err);
                  }
                });
   }

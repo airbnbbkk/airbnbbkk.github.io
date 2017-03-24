@@ -11,5 +11,6 @@ export class HeaderComponent implements OnInit {
   @Input() public sidenav;
 
   public ngOnInit() {
+    /* empty */
   }
 }

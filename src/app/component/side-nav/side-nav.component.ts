@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'side-nav.component.html'
 })
 export class SideNavComponent implements OnInit {
-  public helloMain: string;
 
   public ngOnInit() {
+    /* empty */
   }
 }
