@@ -25,13 +25,15 @@ import '../styles/styles.scss';
 import '../styles/headings.css';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
-import { ApiService } from './service/api.service';
+import { AirbnbApiService } from './service/airbnb.api.service';
+import { GoogleApiService } from './service/google.api.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
-  ApiService
+  AirbnbApiService,
+  GoogleApiService
 ];
 
 type StoreType = {

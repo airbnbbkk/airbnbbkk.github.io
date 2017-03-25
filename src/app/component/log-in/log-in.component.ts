@@ -1,4 +1,6 @@
 import { Component, trigger, state, style, transition, animate } from '@angular/core';
+import { GoogleApiService } from '../../service/google.api.service';
+import { AirbnbApiService } from '../../service/airbnb.api.service';
 
 @Component({
   selector: 'nj-log-in',
@@ -22,7 +24,33 @@ export class LogInComponent {
 
   public logInInputState = 'inactive';
 
-  public setLogInInputState(state: string) {
+  private gapi: GoogleApi;
+
+  constructor(
+    private googleApiService: GoogleApiService,
+    private airbnbApiService: AirbnbApiService
+  ) {
+    this.init();
+  }
+
+  public async setLogInInputState(state: string) {
     this.logInInputState = state;
+
+    let auth = this.gapi.auth2.getAuthInstance().signIn();
+    console.log('login result', auth);
+    this.airbnbApiService.logInByGoogle()
+        .then(res => {
+          res.subscribe(obRes => {
+            console.log('login by google result: ', obRes);
+          });
+        })
+        .catch(err => {
+          console.log('err login by google', err);
+        });
+
+  }
+
+  private async init() {
+    this.gapi = await this.googleApiService.getClient();
   }
 }

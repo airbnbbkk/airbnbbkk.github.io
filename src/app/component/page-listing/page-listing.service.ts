@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ApiService } from '../../service/api.service';
+import { AirbnbApiService } from '../../service/airbnb.api.service';
 import { RepoService } from '../../service/repo.service';
 import { Observable } from '../../../../node_modules/rxjs/Observable';
 
 @Injectable()
 export class PageListingService {
   constructor(
-    private apiService: ApiService,
+    private apiService: AirbnbApiService,
     private repoService: RepoService
   ) {
   }
