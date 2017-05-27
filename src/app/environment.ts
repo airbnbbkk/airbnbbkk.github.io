@@ -1,14 +1,8 @@
 /**
  * Angular 2
  */
-import {
-  enableDebugTools,
-  disableDebugTools
-} from '@angular/platform-browser';
-import {
-  ApplicationRef,
-  enableProdMode
-} from '@angular/core';
+import {disableDebugTools, enableDebugTools} from "@angular/platform-browser";
+import {ApplicationRef, enableProdMode} from "@angular/core";
 /**
  * Environment Providers
  */

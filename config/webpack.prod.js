@@ -5,11 +5,11 @@
 const helpers = require('./helpers');
 /**
  * Used to merge webpack configs
-*/
+ */
 const webpackMerge = require('webpack-merge');
 /**
  * The settings that are common to prod and dev
-*/
+ */
 const commonConfig = require('./webpack.common.js');
 
 /**
@@ -17,7 +17,7 @@ const commonConfig = require('./webpack.common.js');
  */
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin')
+const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
@@ -239,35 +239,35 @@ module.exports = function (env) {
        * AoT
        */
       /*
-      new NormalModuleReplacementPlugin(
-        /@angular(\\|\/)upgrade/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /@angular(\\|\/)compiler/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /@angular(\\|\/)platform-browser-dynamic/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /dom(\\|\/)debug(\\|\/)ng_probe/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /dom(\\|\/)debug(\\|\/)by/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /src(\\|\/)debug(\\|\/)debug_node/,
-        helpers.root('config/empty.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /src(\\|\/)debug(\\|\/)debug_renderer/,
-        helpers.root('config/empty.js')
-      ),
-      */
+       new NormalModuleReplacementPlugin(
+       /@angular(\\|\/)upgrade/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /@angular(\\|\/)compiler/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /@angular(\\|\/)platform-browser-dynamic/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /dom(\\|\/)debug(\\|\/)ng_probe/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /dom(\\|\/)debug(\\|\/)by/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /src(\\|\/)debug(\\|\/)debug_node/,
+       helpers.root('config/empty.js')
+       ),
+       new NormalModuleReplacementPlugin(
+       /src(\\|\/)debug(\\|\/)debug_renderer/,
+       helpers.root('config/empty.js')
+       ),
+       */
 
       /**
        * Plugin: CompressionPlugin
