@@ -10,9 +10,8 @@
       <input
         id="login-input"
         placeholder="Type your booking number"
-        (blur)="setLogInInputState('inactive')"
         autofocus>
-      <button>Log In</button>
+      <button (click)="login()">Log In</button>
     </form>
   </div>
 </div>

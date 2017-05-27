@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import { Api } from './api';
-import { GoogleApiService } from './google.api.service';
-import { Headers } from '../../../node_modules/@angular/http/src/headers';
+import {Injectable} from "@angular/core";
+import {Headers, Http, Response} from "@angular/http";
+import {Observable} from "rxjs/Rx";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import {Api} from "./api";
+import {GoogleApiService} from "./google.api.service";
 
 @Injectable()
 export class AirbnbApiService extends Api {
@@ -38,6 +37,9 @@ export class AirbnbApiService extends Api {
     this.gapi = await this.getGapi();
     const access_token =
             this.gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse().access_token;
+
+    console.log('access_token', access_token);
+
     return this.http
                .post(
                  this.baseUrl +
@@ -51,7 +53,7 @@ export class AirbnbApiService extends Api {
                  }, {
                    method: 'POST',
                    headers: new Headers({
-                     'content-type': 'application/x-www-form-urlencoded'
+                     'Content-Type': 'application/x-www-form-urlencoded'
                    })
                  });
 

@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Api } from './api';
-import { Headers } from '../../../node_modules/@angular/http/src/headers';
+import {Injectable} from "@angular/core";
+import {Http} from "@angular/http";
+import {Api} from "./api";
 
 @Injectable()
 export class GoogleApiService extends Api {
@@ -38,7 +37,7 @@ export class GoogleApiService extends Api {
     this.gapi.client.init({
       apiKey: 'AIzaSyB3Iy2TK3Yyd9nFTQgM6n375LMqB8GQKk0',
       clientId: '873328552635-kig6sktb4ha9lglu7ajo7ek404834e0p.apps.googleusercontent.com',
-      scope: 'profile',
+      scope: 'profile email',
       discoveryDocs: ['https://people.googleapis.com/$discovery/rest?version=v1']
     }).then(() => {
 

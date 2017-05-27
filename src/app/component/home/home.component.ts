@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GoogleApiService } from '../../service/google.api.service';
+import {Component, OnInit} from "@angular/core";
+import {GoogleApiService} from "../../service/google.api.service";
 @Component({
   selector: 'home',
   styleUrls: ['home.component.scss'],
@@ -14,6 +14,5 @@ export class HomeComponent implements OnInit {
   }
 
   public async ngOnInit() {
-    await this.googleApiService.getClient();
   }
 }
