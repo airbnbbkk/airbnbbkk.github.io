@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core/src/metadata/directives';
+import { Component, OnInit } from "@angular/core";
+import { Input } from "@angular/core/directives";
 
 @Component({
   selector: 'nj-header',
