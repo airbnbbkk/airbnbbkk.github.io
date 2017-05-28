@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {GoogleApiService} from "../../service/google.api.service";
+import { Component, OnInit } from "@angular/core";
+import { GoogleApiService } from "../../service/google.api.service";
 @Component({
   selector: 'home',
   styleUrls: ['home.component.scss'],
@@ -7,9 +7,7 @@ import {GoogleApiService} from "../../service/google.api.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    private googleApiService: GoogleApiService
-  ) {
+  constructor(private googleApiService: GoogleApiService) {
 
   }
 

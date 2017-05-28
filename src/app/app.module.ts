@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { ApplicationRef, NgModule } from "@angular/core";
@@ -20,7 +21,7 @@ import { SideNavComponent } from "./component/side-nav";
 import { HeaderComponent } from "./component/header";
 import { ListingComponent } from "./component/listing";
 import { PageListingComponent } from "./component/page-listing";
-import { NoContentComponent } from "./no-content";
+import { NoContentComponent } from "./component/no-content";
 import "../styles/styles.scss";
 import "../styles/headings.css";
 import { AirbnbApiService } from "./service/airbnb.api.service";
@@ -63,6 +64,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules})
   ],
   /**
