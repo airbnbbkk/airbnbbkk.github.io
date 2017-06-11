@@ -1,31 +1,28 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
-import { ApplicationRef, NgModule } from "@angular/core";
-import { createInputTransfer, createNewHosts, removeNgStyles } from "@angularclass/hmr";
-import { PreloadAllModules, RouterModule } from "@angular/router";
+import { ApplicationRef, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PreloadAllModules, RouterModule } from '@angular/router';
+import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
+import '../styles/headings.css';
+import '../styles/styles.scss';
+// App is our top level component
+import { AppComponent } from './app.component';
+import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { ROUTES } from './app.routes';
+import { AppState, InternalStateType } from './app.service';
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { ENV_PROVIDERS } from "./environment";
-import { ROUTES } from "./app.routes";
-// App is our top level component
-import { AppComponent } from "./app.component";
-import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
-import { AppState, InternalStateType } from "./app.service";
-import { HomeComponent } from "./component/home";
-import { AboutComponent } from "./component/about";
-import { LogInComponent } from "./component/log-in";
-import { SideNavComponent } from "./component/side-nav";
-import { HeaderComponent } from "./component/header";
-import { ListingComponent } from "./component/listing";
-import { PageListingComponent } from "./component/page-listing";
-import { NoContentComponent } from "./component/no-content";
-import "../styles/styles.scss";
-import "../styles/headings.css";
-import { AirbnbApiService } from "./service/airbnb.api.service";
-import { GoogleApiService } from "./service/google.api.service";
+import { ENV_PROVIDERS } from './environment';
+
+import { HeaderComponent } from './header/header.component';
+import { NgCustomMaterialModule } from './ng-material/ng-material.module';
+import { NoContentComponent } from './no-content/no-content.component';
+import { AirbnbApiService } from './service/airbnb.api.service';
+import { GoogleApiService } from './service/google.api.service';
+import { SideNavModule } from './side-nav/side-nav.module';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -48,13 +45,7 @@ type StoreType = {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    AboutComponent,
-    HomeComponent,
-    LogInComponent,
     HeaderComponent,
-    SideNavComponent,
-    ListingComponent,
-    PageListingComponent,
     NoContentComponent
   ],
   /**
@@ -64,7 +55,9 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    NgCustomMaterialModule,
     BrowserAnimationsModule,
+    SideNavModule,
     RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules})
   ],
   /**
@@ -77,9 +70,8 @@ type StoreType = {
 })
 export class AppModule {
 
-  constructor(
-    public appRef: ApplicationRef,
-    public appState: AppState) {
+  constructor(public appRef: ApplicationRef,
+              public appState: AppState) {
   }
 
   public hmrOnInit(store: StoreType) {

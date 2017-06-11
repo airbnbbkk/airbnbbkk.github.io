@@ -35,6 +35,7 @@
     "e2e": "npm-run-all -p -r server:prod:ci protractor",
     "github-deploy:dev": "npm run webpack -- --config config/webpack.github-deploy.js --progress --profile --env.githubDev",
     "github-deploy:prod": "npm run webpack -- --config config/webpack.github-deploy.js --progress --profile --env.githubProd",
+    "github-deploy:aot": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.github-deploy.js --progress --profile --env.githubProd",
     "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "node": "node",
@@ -88,6 +89,7 @@
     "pouchdb": "^6.1.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "5.0.2",
+    "typescript": "^2.3.4",
     "zone.js": "~0.8.5"
   },
   "devDependencies": {
@@ -147,7 +149,7 @@
     "tslint": "~4.5.1",
     "tslint-loader": "^3.5.2",
     "typedoc": "^0.5.10",
-    "typescript": "~2.2.2",
+    "typescript": "~2.3.1",
     "url-loader": "^0.5.8",
     "webpack": "~2.4.1",
     "webpack-dev-middleware": "^1.10.1",

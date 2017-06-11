@@ -1,0 +1,24 @@
+<md-list class="address-list">
+  <h3 md-subheader>Address</h3>
+  <md-list-item class="address-list-item">
+    <p md-line class="address"> {{ this.listingInfo.location.address.en }} </p>
+  </md-list-item>
+  <md-list-item class="address-list-item">
+    <p md-line class="address"> {{ this.listingInfo.location.address.th }} </p>
+  </md-list-item>
+</md-list>
+
+<md-card class="youtube-card">
+  <md-card-header>
+    <md-card-title>How to go to the house</md-card-title>
+  </md-card-header>
+  <div class="youtube-box">
+    <iframe width="100%" height="auto" [src]="this.yt_voice_howToGo"
+            frameborder="0" allowfullscreen></iframe>
+  </div>
+  <md-card-content>
+    <p>This is a Thai voice instruction of how to go to the house.
+      Play this to a taxi driver.
+    </p>
+  </md-card-content>
+</md-card>

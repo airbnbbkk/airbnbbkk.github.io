@@ -1,13 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './component/home';
-import { AboutComponent } from './component/about';
-import { NoContentComponent } from './component/no-content';
-import { PageListingComponent } from './component/page-listing';
+import { NoContentComponent } from './no-content/no-content.component';
 
 export const ROUTES: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'listing', component: PageListingComponent},
-  {path: '**', component: NoContentComponent},
+  {path: '', loadChildren: './#HomePageModule'},
+  {path: 'home', loadChildren: './#HomePageModule'},
+  {path: 'listing', loadChildren: './#ListingsModule'},
+  {path: 'listing-info', loadChildren: './#ListingInfoModule'},
+  {path: '**', component: NoContentComponent}
 ];
