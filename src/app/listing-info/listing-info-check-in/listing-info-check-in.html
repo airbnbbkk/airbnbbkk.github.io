@@ -1,1 +1,20 @@
-<p>This is a check-in</p>
+<md-card class="youtube-card">
+  <md-card-header>
+    <md-card-title>Video Instruction of How to Check in</md-card-title>
+  </md-card-header>
+  <div class="youtube-box">
+    <iframe width="100%" height="100%" [src]="this.yt_voice_howToGo"
+            frameborder="0" allowfullscreen></iframe>
+  </div>
+  <md-card-content>
+    <md-list class="address-list">
+      <h3 md-subheader>Address</h3>
+      <md-list-item class="address-list-item">
+        <p md-line class="address"> {{ this.listingInfo.location.address.en }} </p>
+      </md-list-item>
+      <md-list-item class="address-list-item">
+        <p md-line class="address"> {{ this.listingInfo.location.address.th }} </p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>

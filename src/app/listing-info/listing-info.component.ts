@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
   selector: 'listing-info',
   styleUrls: ['listing-info.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   templateUrl: 'listing-info.component.html'
 })
 export class ListingInfoComponent implements OnInit {

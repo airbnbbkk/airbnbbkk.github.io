@@ -21,8 +21,6 @@ export class ListingInfoLocationComponent implements OnInit {
 
     this.yt_voice_howToGo = this.domSanitizer.bypassSecurityTrustResourceUrl(
       this.listingInfo.location.voiceGuide.howToGo.default.toString());
-
-    console.log(this.listingInfo);
   }
 
 }

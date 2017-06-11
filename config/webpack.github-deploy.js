@@ -54,6 +54,7 @@ module.exports = function (options) {
            logger: logger,
            remote: GIT_REMOTE_NAME,
            message: COMMIT_MESSAGE,
+           branch:'master',
            dotfiles: true // for .nojekyll
          };
          /**

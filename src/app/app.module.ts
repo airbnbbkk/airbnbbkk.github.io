@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PreloadAllModules, RouterModule } from '@angular/router';
+import { NoPreloading, RouterModule } from '@angular/router';
 import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import '../styles/headings.css';
 import '../styles/styles.scss';
@@ -17,12 +17,12 @@ import { AppState, InternalStateType } from './app.service';
  */
 import { ENV_PROVIDERS } from './environment';
 
-import { HeaderComponent } from './header/header.component';
 import { NgCustomMaterialModule } from './ng-material/ng-material.module';
 import { NoContentComponent } from './no-content/no-content.component';
 import { AirbnbApiService } from './service/airbnb.api.service';
 import { GoogleApiService } from './service/google.api.service';
 import { SideNavModule } from './side-nav/side-nav.module';
+import { HeaderModule } from './header/header.module';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -45,7 +45,6 @@ type StoreType = {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    HeaderComponent,
     NoContentComponent
   ],
   /**
@@ -57,8 +56,9 @@ type StoreType = {
     HttpModule,
     NgCustomMaterialModule,
     BrowserAnimationsModule,
+    HeaderModule,
     SideNavModule,
-    RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: NoPreloading})
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
