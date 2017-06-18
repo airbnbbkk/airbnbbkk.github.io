@@ -1,15 +1,15 @@
 {
   "vendor": {
-    "js": "/airbnbbkk.github.io/vendor.19b7c3f3417639c0eb13.bundle.js"
+    "js": "/airbnbbkk.github.io/vendor.d79109f748f931f0bfcc.bundle.js"
   },
   "polyfills": {
     "js": "/airbnbbkk.github.io/polyfills.0b7c60cdd0a1a671104c.bundle.js"
   },
   "main": {
-    "js": "/airbnbbkk.github.io/main.b1a9f0f9a3bf0a1bbbe8.bundle.js",
+    "js": "/airbnbbkk.github.io/main.77486fff94352f51316f.bundle.js",
     "css": "/airbnbbkk.github.io/main.aa9003c43df554144510a0814e09eb99.css"
   },
   "manifest": {
-    "js": "/airbnbbkk.github.io/manifest.8f9fab0f0398bf97b12c.bundle.js"
+    "js": "/airbnbbkk.github.io/manifest.049a1b5b303cad0ca96d.bundle.js"
   }
 }
