@@ -1,0 +1,38 @@
+{
+  "LISTING": {
+    "BED_ROOMS": "bed rooms"
+  },
+  "LISTING_INFO": {
+    "LOCATION": "Location",
+    "CHECK_IN_N_OUT": "Check in & out",
+    "RULES": "Rules",
+    "FACILITIES": "Facilities",
+    "ADDRESS": "Address",
+    "ENGLISH": "English",
+    "THAI": "Thai"
+  },
+  "LISTING_INFO_LOCATION": {
+    "HOW_TO_GO": "How to Go"
+  },
+  "LISTING_INFO_CHECK_IN": {
+    "HOW_TO_CHECK_IN": "How to Check In",
+    "BUILDING": "building",
+    "FLOOR": "Floor",
+    "HOUSE_NUMBER": "House Number",
+    "TIME_POLICY": "Time Policy",
+    "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "Early check-in and Late check-out is only possible when there is no other staying guests",
+    "CHECK_IN": "Check In",
+    "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "You may leave your luggage in the house first at 12:30",
+    "CHECK_OUT_TIME": "Check Out Time",
+    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION": "You may keep your luggage in one of our vacant houses, if there's any, after check out"
+  },
+  "LISTING_INFO_FACILITIES": {
+    "WIFI": "WIFI",
+    "NAME":"NAME",
+    "PASSWORD":"PASSWORD",
+    "POOL_N_GYM":"Swimming Pool & Gym",
+    "OPERATION_HOURS":"Operation Hours",
+    "LOCATION":"Location",
+    "DUMPSTER":"Dumpster"
+  }
+}

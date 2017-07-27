@@ -1,0 +1,38 @@
+{
+  "LISTING": {
+    "BED_ROOMS": "인실"
+  },
+  "LISTING_INFO": {
+    "LOCATION": "주소",
+    "CHECK_IN_N_OUT": "체크인 & 아웃",
+    "RULES": "규칙",
+    "FACILITIES": "시설",
+    "ADDRESS": "주소",
+    "ENGLISH": "영어",
+    "THAI": "태국어"
+  },
+  "LISTING_INFO_LOCATION": {
+    "HOW_TO_GO": "가는 방법"
+  },
+  "LISTING_INFO_CHECK_IN": {
+    "HOW_TO_CHECK_IN": "체크인 하는 방법",
+    "BUILDING": "빌딩",
+    "FLOOR": "층",
+    "HOUSE_NUMBER": "호",
+    "TIME_POLICY": "시간 정책",
+    "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "빠른 체크인과 늦은 체크아웃은 이미 머물고 있는 손님이 없을 때만 가능합니다.",
+    "CHECK_IN": "체크인 시간",
+    "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "12:30에 짐을 먼저 두실 수 있습니다.",
+    "CHECK_OUT_TIME": "체크아웃 시간",
+    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION":"저희가 운영중인 집들 중 빈 집이 있을 경우에 체크아웃 후 짐을 보관 하실 수 있습니다."
+  },
+  "LISTING_INFO_FACILITIES": {
+    "WIFI": "와이파이",
+    "NAME":"이름",
+    "PASSWORD":"비밀번호",
+    "POOL_N_GYM":"수영장 & 헬스장",
+    "OPERATION_HOURS":"운영시간",
+    "LOCATION":"위치",
+    "DUMPSTER":"쓰레기 버리는 곳"
+  }
+}
