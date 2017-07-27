@@ -6,10 +6,10 @@
     "js": "/polyfills.152884db2cf4dc02d304.bundle.js"
   },
   "main": {
-    "js": "/main.f260ec97ee7bb8dd20ba.bundle.js",
+    "js": "/main.58feda4a96db77b9eb5a.bundle.js",
     "css": "/main.aa9003c43df554144510a0814e09eb99.css"
   },
   "manifest": {
-    "js": "/manifest.c22ed9aece12526e3b9b.bundle.js"
+    "js": "/manifest.23c320ff089b80ccccb6.bundle.js"
   }
 }
