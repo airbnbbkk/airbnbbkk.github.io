@@ -1,4 +1,13 @@
 {
+  "COMMON": {
+    "BAHT": "baht",
+    "PRICE": ""
+  },
+  "SIDE_NAV": {
+    "HOUSES": "Houses",
+    "CONTACTS": "Contacts",
+    "SERVICES": "Services"
+  },
   "LISTING": {
     "BED_ROOMS": "bed rooms"
   },
@@ -28,11 +37,29 @@
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "WIFI",
-    "NAME":"NAME",
-    "PASSWORD":"PASSWORD",
-    "POOL_N_GYM":"Swimming Pool & Gym",
-    "OPERATION_HOURS":"Operation Hours",
-    "LOCATION":"Location",
-    "DUMPSTER":"Dumpster"
+    "NAME": "NAME",
+    "PASSWORD": "PASSWORD",
+    "POOL_N_GYM": "Swimming Pool & Gym",
+    "OPERATION_HOURS": "Operation Hours",
+    "LOCATION": "Location",
+    "DUMPSTER": "Dumpster"
+  },
+  "CONTACTS": {
+    "CONTACTS": "Contacts",
+    "ADD_CONTACTS_DESCRIPTION": "Please add phone number or ID below in your preferred messenger",
+    "PHONE_WHATS_APP": "Phone / WhatsApp",
+    "LINE_KAKAO_WECHAT": "LINE / WeChat / Kakao"
+  },
+  "SERVICES": {
+    "TRANSPORTATION": "Transportation",
+    "TRANSPORTATION_AIRPORT_SHUTTLE": "Airport Shuttle",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_VEHICLE_LIST": "Vehicle List",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_DESCRIPTION": "Airport shuttle service provides a ride between the airport and the house.",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_CAPACITY": "Capacity",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_PEOPLE": "people",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_PRICE": "Price",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_CAUTION": "Price",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_NOTICE": "Notice",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_NOTICE_1": "Don't delay"
   }
 }
