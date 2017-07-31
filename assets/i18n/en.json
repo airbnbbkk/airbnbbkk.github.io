@@ -56,7 +56,7 @@
     "TRANSPORTATION": "Transportation",
     "TRANSPORTATION_AIRPORT_SHUTTLE": "Airport Shuttle",
     "TRANSPORTATION_AIRPORT_SHUTTLE_VEHICLE_LIST": "Vehicle List",
-    "TRANSPORTATION_AIRPORT_SHUTTLE_DESCRIPTION": "Airport shuttle service provides a ride between the airport and the house.",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_DESCRIPTION": "Airport shuttle service provides a ride between the airport and the house. The service charge can be paid through Airbnb.",
     "TRANSPORTATION_AIRPORT_SHUTTLE_CAPACITY": "Capacity",
     "TRANSPORTATION_AIRPORT_SHUTTLE_PEOPLE": "people",
     "TRANSPORTATION_AIRPORT_SHUTTLE_PRICE": "Price",
