@@ -66,10 +66,10 @@
     "TRANSPORTATION_AIRPORT_SHUTTLE_PICKUP_SPOT_WARN": "If you are delayed over an hour from arrival time, you will be charged an overtime fee.",
     "TRANSPORTATION_AIRPORT_SHUTTLE_NOTICE": "Notice",
     "TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI": "Suvarnabhumi Airport",
-    "TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI_INFO": "Your driver will wait at the Gate 3 holding your name card.",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI_INFO": "Gate Number 3",
     "TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG": "Don Mueang Airport",
-    "TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG_INFO": "Your driver will wait at the Gate 3 holding your name card.",
+    "TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG_INFO": "Gate Number 3",
     "TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE": "House Lobby",
-    "TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE_INFO": "Your driver will wait at the lobby of the house you stay in."
+    "TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE_INFO": "Lobby at the house building"
   }
 }
