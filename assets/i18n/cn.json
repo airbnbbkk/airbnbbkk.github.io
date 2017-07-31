@@ -22,7 +22,7 @@
   "LISTING_INFO_LOCATION": {
     "HOW_TO_GO": "怎么去"
   },
-  "LISTING_INFO_CHECK_IN": {
+  "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "如何登錄",
     "BUILDING": "建築",
     "FLOOR": "樓層",
@@ -32,7 +32,16 @@
     "CHECK_IN": "簽入",
     "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "你可以先把你的行李放在房子的12:30",
     "CHECK_OUT_TIME": "退房時間",
-    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION": "如果有任何問題，可以將您的行李放在我們的一個空置房間內"
+    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION": "如果有任何問題，可以將您的行李放在我們的一個空置房間內",
+    "HOW_TO_CHECK_OUT":"如何退房",
+    "LEAVE_KEY_CARD":"退货钥匙卡",
+    "LEAVE_KEY_CARD_DESCRIPTION":"当您退房时，请退回您的钥匙卡并整理房子。",
+    "LEAVE_KEY_CARD_ON_THE_TABLE":"将钥匙卡放在桌子上或邮箱中。",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX":"将钥匙卡留在邮箱中",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION":"请将钥匙卡的照片作为证据发送给我们。\n如果钥匙卡没有照片不存在，我们将不得不要求赔偿您的损失。",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE":"这是照片的一个例子。 通过Airbnb应用程序或任何您最喜欢的信使发送照片。",
+    "CLEAN_CHECK_OUT":"大扫除",
+    "CLEAN_CHECK_OUT_DESCRIPTION":"请整理房子给下一位客人"
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "WIFI",
