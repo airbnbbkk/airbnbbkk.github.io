@@ -1,15 +1,15 @@
 {
   "vendor": {
-    "js": "/vendor.0b424518f9280e11c492.bundle.js"
+    "js": "/vendor.557897dce8a4365b15de.bundle.js"
   },
   "polyfills": {
     "js": "/polyfills.e3b03222f2943281c456.bundle.js"
   },
   "main": {
-    "js": "/main.d7ebe53f401416e2c6b2.bundle.js",
+    "js": "/main.81f860757d0f4b304911.bundle.js",
     "css": "/main.aa9003c43df554144510a0814e09eb99.css"
   },
   "manifest": {
-    "js": "/manifest.273d7bb1f708ac93b064.bundle.js"
+    "js": "/manifest.3e7800608088b1b124b0.bundle.js"
   }
 }
