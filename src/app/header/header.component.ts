@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'nj-header',
@@ -9,7 +10,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() public sidenav;
 
+  constructor(private translate: TranslateService) {
+
+  }
+
   public ngOnInit() {
     /* empty */
+  }
+
+  public changeLang(lang: string) {
+    this.translate.use(lang);
   }
 }

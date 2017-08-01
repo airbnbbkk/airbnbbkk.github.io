@@ -1,0 +1,64 @@
+<md-card class="nj-card youtube-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">wifi</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_FACILITIES.WIFI' | translate}}</span>
+    </md-card-title>
+  </md-card-header>
+  <md-divider></md-divider>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.NAME' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <p md-line class="nj-card-list-item-text"> {{ this.facilities.wifi.name }}</p>
+      </md-list-item>
+    </md-list>
+    <md-list dense class="nj-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.PASSWORD' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <p md-line class="nj-card-list-item-text"> {{ this.facilities.wifi.pw }}</p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-card class="nj-card youtube-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">pool</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_FACILITIES.POOL_N_GYM' | translate}}</span>
+    </md-card-title>
+  </md-card-header>
+  <md-divider></md-divider>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.OPERATION_HOURS' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <p md-line class="nj-card-list-item-text"> {{ this.facilities.poolAndGym.hours.open }}:00 -
+          {{this.facilities.poolAndGym.hours.close}}:00</p>
+      </md-list-item>
+    </md-list>
+    <md-list dense class="nj-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.LOCATION' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <p class="nj-card-list-item-text"> {{ this.facilities.poolAndGym.location[translate.currentLang || translate.getDefaultLang()] }}</p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-card class="nj-card youtube-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">delete</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_FACILITIES.DUMPSTER' | translate}}</span>
+    </md-card-title>
+  </md-card-header>
+  <md-divider></md-divider>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.DUMPSTER' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <p class="nj-card-list-item-text"> {{ this.facilities.dumpster.location[translate.currentLang || translate.getDefaultLang()] }}</p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>

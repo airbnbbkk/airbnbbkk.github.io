@@ -1,10 +1,13 @@
 import { ListingInfoComponent } from './listing-info.component';
 import { ListingInfoResolve } from './listing-info.resolve';
+
 export const routes = [
   {
     path: ':id',
     component: ListingInfoComponent,
+    // canActivate: [TranslateRouteService],
     children: [
+      {path: '', redirectTo: 'location', pathMatch: 'full'},
       {
         path: 'location',
         loadChildren: './listing-info-location/listing-info-location.module#ListingInfoLocationModule',
@@ -13,15 +16,22 @@ export const routes = [
         }
       },
       {
-        path: 'check-in',
+        path: 'checkin',
         loadChildren: './listing-info-check-in/listing-info-check-in.module#ListingInfoCheckInModule',
         resolve: {
           listingInfo: ListingInfoResolve
         }
       },
       {
-        path: 'house-rules',
+        path: 'rules',
         loadChildren: './listing-info-house-rules/listing-info-house-rules.module#ListingInfoHouseRulesModule',
+        resolve: {
+          listingInfo: ListingInfoResolve
+        }
+      },
+      {
+        path: 'facilities',
+        loadChildren: './listing-info-facilities/listing-info-facilities.module#ListingInfoFacilitiesModule',
         resolve: {
           listingInfo: ListingInfoResolve
         }

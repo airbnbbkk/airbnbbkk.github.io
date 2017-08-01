@@ -1,0 +1,26 @@
+.check-in-card-list, .check-out-card-list {
+  .listing-card-list-sub-header {
+    font-size: $font-normal-size;
+    color: rgba(0, 0, 0, .78)
+  }
+  .listing-card-list-item {
+    .listing-card-list-item-icon {
+      font-size: $font-larger-size;
+      width: $font-larger-size;
+      height: $font-larger-size;
+    }
+    .listing-card-list-item-heading {
+      white-space: normal;
+    }
+  }
+}
+
+.late-check-out-card-list, .early-check-in-card-list {
+  .listing-card-list-item {
+    .listing-card-list-item-text {
+      font-size: $font-large-size;
+    }
+  }
+}
+
+

@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { RepoService } from '../service/repo.service';
-import { repoServiceFactory } from '../service/repo.service.provider';
 import { ListingsService } from './listings.service';
+import { ListingsRepoService } from './listings-repo.service';
 
 @Component({
   selector: 'nj-listings',
-  providers: [ListingsService,
+  providers: [
+    ListingsService,
     {
       provide: RepoService,
-      useFactory: repoServiceFactory('listing')
+      useFactory: ListingsRepoService
     }],
   styleUrls: ['listings.component.scss'],
   templateUrl: 'listings.component.html'
@@ -21,7 +22,11 @@ export class ListingsComponent implements OnInit {
   }
 
   public async ngOnInit() {
-    this.listingService.getListing().catch(res => {
+    await this.getListing(false);
+  }
+
+  public async getListing(forceFetch = false) {
+    await this.listingService.getListing(forceFetch).catch(res => {
       console.log('err res', res);
       return res;
     }).subscribe((res: Array<RepoDocResponse<Listing>>) => {

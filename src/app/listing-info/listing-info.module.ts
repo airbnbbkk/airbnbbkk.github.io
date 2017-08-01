@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
 import { ListingInfoComponent } from './listing-info.component';
-
-import { ListingInfoDict } from './listing-info.const';
 import { ListingInfoResolve } from './listing-info.resolve';
 import { routes } from './listing-info.routes';
 import { ListingInfoService } from './listing-info.service';
+import { TranslationModule } from '../service/translationModule.provider';
+import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +13,7 @@ import { ListingInfoService } from './listing-info.service';
   ],
   imports: [
     NgCustomMaterialModule,
+    TranslationModule,
     RouterModule.forChild(routes)
   ],
   providers: [
@@ -26,6 +26,5 @@ import { ListingInfoService } from './listing-info.service';
 })
 
 export class ListingInfoModule {
-  public listingInfoDict = ListingInfoDict;
 
 }

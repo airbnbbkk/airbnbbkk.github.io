@@ -2,6 +2,8 @@
  * Angular 2 decorators and services
  */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Router, ActivatedRoute, Params, NavigationEnd } from '@angular/router';
 import { AppState } from './app.service';
 
 /**
@@ -21,13 +23,32 @@ export class AppComponent implements OnInit {
   public name = 'Angular 2 Webpack Starter';
   public url = 'https://twitter.com/AngularClass';
 
-  constructor(public appState: AppState) {
+  constructor(public appState: AppState,
+              private translate: TranslateService,
+              private router: Router,
+              private activatedRoute: ActivatedRoute) {
+    // Using Rx's built in `distinctUntilChanged ` feature to handle url change c/o @dloomb's answer
+    router.events.distinctUntilChanged((previous: any, current: any) => {
+      // Subscribe to any `NavigationEnd` events where the url has changed
+      if (current instanceof NavigationEnd) {
+        return previous.url === current.url;
+      }
+      return true;
+    }).subscribe((x: any) => {
+      window['ga']('set', 'page', x.url);
+      window['ga']('send', 'pageview');
+    });
   }
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
+    this.translate.setDefaultLang('en');
+    this.activatedRoute.queryParams
+      .subscribe((params: Params) => {
+        console.log('lang', params['lang']);
+        this.translate.use(params['lang'] || this.translate.currentLang);
+      });
   }
-
 }
 
 /**

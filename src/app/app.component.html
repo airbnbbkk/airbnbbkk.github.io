@@ -2,7 +2,7 @@
 <md-sidenav-container class="side-nav-container">
   <md-sidenav class="side-nav" #sidenav mode="push">
     <!-- sidenav content -->
-    <nj-side-nav></nj-side-nav>
+    <nj-side-nav [sidenav]="sidenav"></nj-side-nav>
   </md-sidenav>
   <!-- primary content -->
   <router-outlet></router-outlet>

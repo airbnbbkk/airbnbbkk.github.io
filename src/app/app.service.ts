@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 export type InternalStateType = {
   [key: string]: any
@@ -7,7 +7,7 @@ export type InternalStateType = {
 @Injectable()
 export class AppState {
 
-  public _state: InternalStateType = { };
+  public _state: InternalStateType = {};
 
   /**
    * Already return a clone of the current state.
@@ -42,6 +42,39 @@ export class AppState {
     /**
      * Simple object clone.
      */
-    return JSON.parse(JSON.stringify( object ));
+    return JSON.parse(JSON.stringify(object));
   }
 }
+
+/*@Injectable()
+export class TranslateRouteService implements CanActivate {
+
+  constructor(private http: Http) {
+
+  }
+
+  public canActivate(route: ActivatedRouteSnapshot,
+                     state: RouterStateSnapshot): Observable<boolean>
+    | Promise<boolean>
+    | boolean {
+    const path = route.data['i18n'];
+
+    // No i18n data path provided
+    if (!path) {
+      return;
+    }
+
+    function HttpLoaderFactory() {
+      return new TranslateHttpLoader(this.http, `app/${path}/`, '.json');
+    }
+
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory
+      }
+    });
+
+    return true;
+  }
+}*/

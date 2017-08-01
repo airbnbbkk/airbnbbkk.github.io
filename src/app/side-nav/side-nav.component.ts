@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nj-side-nav',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'side-nav.component.html'
 })
 export class SideNavComponent implements OnInit {
+  @Input() public sidenav;
 
   public ngOnInit() {
     /* empty */

@@ -1,19 +1,99 @@
-<md-card class="youtube-card">
-  <md-card-header>
-    <md-card-title>Video Instruction of How to Check in</md-card-title>
+<md-card class="nj-card youtube-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">play_circle_outline</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_CHECK_IN_OUT.HOW_TO_CHECK_IN' | translate}}</span>
+    </md-card-title>
   </md-card-header>
-  <div class="youtube-box">
-    <iframe width="100%" height="100%" [src]="this.yt_voice_howToGo"
+  <md-divider></md-divider>
+  <div class="youtube-box" md-card-image>
+    <iframe width="100%" height="100%" [src]="this.YT_VIDEO_CHECK_IN"
             frameborder="0" allowfullscreen></iframe>
   </div>
-  <md-card-content>
-    <md-list class="address-list">
-      <h3 md-subheader>Address</h3>
-      <md-list-item class="address-list-item">
-        <p md-line class="address"> {{ this.listingInfo.location.address.en }} </p>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list">
+      <h4 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO.ADDRESS' | translate}}</h4>
+      <div class="md-list-item-box-flex">
+        <md-list-item class="nj-card-list-item">
+          <md-icon md-list-icon class="nj-card-list-item-icon">home</md-icon>
+          <h4 md-line class="nj-card-list-item-heading"> {{'LISTING_INFO_CHECK_IN_OUT.HOUSE_NUMBER' | translate}}</h4>
+          <p md-line class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.houseNumber }} </p>
+        </md-list-item>
+        <md-list-item class="nj-card-list-item">
+          <md-icon md-list-icon class="nj-card-list-item-icon">domain</md-icon>
+          <h4 md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.BUILDING' | translate}}</h4>
+          <p md-line class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.building }} </p>
+        </md-list-item>
+        <md-list-item class="nj-card-list-item">
+          <md-icon md-list-icon class="nj-card-list-item-icon">layers</md-icon>
+          <h4 md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.FLOOR' | translate}}</h4>
+          <p md-line class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.floor }}th </p>
+        </md-list-item>
+      </div>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-card class="nj-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">alarm</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_CHECK_IN_OUT.TIME_POLICY' | translate}}</span>
+    </md-card-title>
+    <md-card-subtitle>{{'LISTING_INFO_CHECK_IN_OUT.EARLY_CHECK_IN_N_OUT_DESCRIPTION' | translate}}</md-card-subtitle>
+  </md-card-header>
+  <md-divider></md-divider>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list check-in-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_CHECK_IN_OUT.CHECK_IN' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <md-icon md-list-icon class="nj-card-list-item-icon">hourglass_empty</md-icon>
+        <p md-line class="nj-card-list-item-text"> {{ this.listingInfo.time.in }}:00 </p>
+        <h4 md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.LEAVE_LUGGAGE_FIRST_DESCRIPTION' |
+          translate}}</h4>
       </md-list-item>
-      <md-list-item class="address-list-item">
-        <p md-line class="address"> {{ this.listingInfo.location.address.th }} </p>
+    </md-list>
+    <md-list dense class="nj-card-list check-out-card-list">
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_CHECK_IN_OUT.CHECK_OUT_TIME' | translate}}</h3>
+      <md-list-item class="nj-card-list-item">
+        <md-icon md-list-icon class="nj-card-list-item-icon">hourglass_full</md-icon>
+        <p md-line class="nj-card-list-item-text"> {{ this.listingInfo.time.out }}:00 </p>
+        <h4 md-line class="nj-card-list-item-heading">
+          {{'LISTING_INFO_CHECK_IN_OUT.KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION' | translate}}</h4>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-card class="nj-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">flight_takeoff</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_CHECK_IN_OUT.HOW_TO_CHECK_OUT' | translate}}</span>
+    </md-card-title>
+    <md-card-subtitle>{{'LISTING_INFO_CHECK_IN_OUT.LEAVE_KEY_CARD_DESCRIPTION' | translate}}</md-card-subtitle>
+  </md-card-header>
+  <md-divider></md-divider>
+  <md-card-content class="nj-card-content">
+    <md-list class="nj-card-list check-in-card-list">
+      <md-list-item class="nj-card-list-item">
+        <md-icon md-list-icon class="nj-card-list-item-icon">video_label</md-icon>
+        <p md-line class="nj-card-list-item-heading">{{ 'LISTING_INFO_CHECK_IN_OUT.' + this.listingInfo.leaveKeycard |
+          translate }}
+        </p>
+      </md-list-item>
+      <div class="warn-box">
+        <pre>{{ 'LISTING_INFO_CHECK_IN_OUT.LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION' | translate}}</pre>
+        <div class="button-row">
+          <span class="flex-spacer-middle"></span>
+          <button md-mini-fab (click)="openDialog()">
+            <md-icon>search</md-icon>
+          </button>
+        </div>
+      </div>
+      <br>
+      <md-list-item class="nj-card-list-item">
+        <md-icon md-list-icon class="nj-card-list-item-icon">mood</md-icon>
+        <p md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.CLEAN_CHECK_OUT_DESCRIPTION' |
+          translate}}</p>
       </md-list-item>
     </md-list>
   </md-card-content>

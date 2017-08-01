@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import {
   MdButtonModule,
+  MdButtonToggleModule,
   MdCardModule,
   MdListModule,
   MdSidenavModule,
-  MdTabsModule
+  MdTabsModule,
+  MdIconModule,
+  MdMenuModule,
+  MdDialogModule,
+  MdToolbarModule
 } from '@angular/material';
 
 @NgModule({
   exports: [
     MdButtonModule,
+    MdButtonToggleModule,
     MdSidenavModule,
     MdCardModule,
     MdListModule,
-    MdTabsModule
+    MdTabsModule,
+    MdIconModule,
+    MdMenuModule,
+    MdDialogModule,
+    MdToolbarModule
   ]
 })
 

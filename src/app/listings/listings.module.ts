@@ -3,6 +3,7 @@ import { NgModule, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ListingModule } from './listing/listing.module';
 import { ListingsComponent } from './listings.component';
+import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ListingsComponent } from './listings.component';
   imports: [
     CommonModule,
     ListingModule,
+    NgCustomMaterialModule,
     RouterModule.forChild([{
       path: '',
       component: ListingsComponent

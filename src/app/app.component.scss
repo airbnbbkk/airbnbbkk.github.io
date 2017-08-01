@@ -4,13 +4,96 @@ html, body, main {
   font-family: Arial, Helvetica, sans-serif
 }
 
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-line;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
 a.active {
   background-color: gray;
+}
+
+.flex-spacer-right {
+  flex: 1 auto;
+}
+
+.flex-spacer-middle {
+  flex: 0.5 auto;
+}
+
+.button-row {
+  display: flex;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.icon-heading {
+  display: inline-flex;
+  align-items: center;
+  .material-icons {
+    margin-right: 0.3rem;
+  }
 }
 
 .side-nav-container {
   height: 100%;
   .side-nav {
     width: 30%;
+  }
+}
+
+.warn-box {
+  color: #fff;
+  background: #f44336;
+  border: 2px solid #FF311B;
+  padding: 0.3rem;
+}
+
+.nj-card {
+  margin-bottom: 0.6rem;
+  .nj-card-header {
+    .nj-card-title {
+      .nj-card-title-icon {
+        font-size: $font-larger-size;
+        width: $font-larger-size;
+        height: $font-larger-size;
+        vertical-align: middle;
+      }
+      .nj-card-title-text {
+        font-size: $font-normal-size;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .nj-card-content {
+    .nj-card-list {
+      .md-list-item-box-flex {
+        display: flex;
+      }
+      .nj-card-list-sub-header {
+
+      }
+      .nj-card-list-item {
+        .nj-card-list-item-icon {
+
+        }
+        .nj-card-list-item-heading {
+          white-space: normal;
+          opacity: 0.75;
+        }
+        .nj-card-list-item-text {
+          font-size: $font-larger-size;
+        }
+      }
+    }
   }
 }

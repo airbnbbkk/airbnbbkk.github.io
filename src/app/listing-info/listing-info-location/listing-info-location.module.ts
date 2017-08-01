@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgCustomMaterialModule } from '../../ng-material/ng-material.module';
 import { ListingInfoDict } from '../listing-info.const';
 import { ListingInfoLocationComponent } from './listing-info-location.component';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { ListingInfoLocationComponent } from './listing-info-location.component'
   ],
   imports: [
     NgCustomMaterialModule,
+    TranslationModule,
     RouterModule.forChild([
       {
         path: '',

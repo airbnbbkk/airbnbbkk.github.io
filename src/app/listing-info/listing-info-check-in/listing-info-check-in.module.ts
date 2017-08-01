@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ListingInfoCheckInComponent } from './listing-info-check-in.component';
 import { NgCustomMaterialModule } from '../../ng-material/ng-material.module';
+import { TranslationModule } from '../../service/translationModule.provider';
+import { ListingInfoCheckOutImgDialogComponent } from './listing-info-check-out-img.component';
 
 @NgModule({
   declarations: [
-    ListingInfoCheckInComponent
+    ListingInfoCheckInComponent,
+    ListingInfoCheckOutImgDialogComponent
   ],
   imports: [
     NgCustomMaterialModule,
+    TranslationModule,
     RouterModule.forChild([
       {
         path: '',
@@ -16,11 +20,11 @@ import { NgCustomMaterialModule } from '../../ng-material/ng-material.module';
       }
     ])
   ],
+  entryComponents: [ListingInfoCheckOutImgDialogComponent],
   exports: [
     ListingInfoCheckInComponent
   ]
 })
-
 export class ListingInfoCheckInModule {
 
 }

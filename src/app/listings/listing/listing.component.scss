@@ -1,6 +1,11 @@
 :host {
   display: block;
   padding: 1rem;
+  a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
   .listing-card {
     .listing-header {
       .listing-header-image {

@@ -1,1 +1,13 @@
-<p>house rules</p>
+<md-card (click)="changeLang()" class="nj-card youtube-card" *ngFor="let rule of getRulesData()">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">{{ rule.icon }}</md-icon>
+      <span class="nj-card-title-text">{{ rule.title }}</span>
+    </md-card-title>
+  </md-card-header>
+  <md-card-content class="nj-card-content">
+    <p>
+      {{ rule.rule }}
+    </p>
+  </md-card-content>
+</md-card>

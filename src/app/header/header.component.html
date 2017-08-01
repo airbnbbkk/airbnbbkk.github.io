@@ -1,3 +1,19 @@
 <nav>
-  <button id="nav-button" md-button (click)="sidenav.toggle()"><i class="material-icons">menu</i></button>
+  <md-button-toggle id="nav-button" (click)="sidenav.toggle()"><i class="material-icons">menu</i></md-button-toggle>
+  <div class="language-menu">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>language</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item (click)="changeLang('en')">
+        <span>English</span>
+      </button>
+      <button md-menu-item (click)="changeLang('ko')">
+        <span>한국어</span>
+      </button>
+      <button md-menu-item (click)="changeLang('cn')">
+        <span>中文</span>
+      </button>
+    </md-menu>
+  </div>
 </nav>

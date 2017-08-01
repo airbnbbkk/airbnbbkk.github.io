@@ -25,7 +25,8 @@ export class AirbnbApiService extends Api {
         this.PROXY_URL +
         this.baseUrl +
         '/v2/listings?locale=en-US&_offset=0&user_id=45188796' +
-        '&currency=USD&_limit=10&_format=v1_legacy_long&client_id=3092nxybyb0otqw18e8nh5nty')
+        '&currency=USD&_limit=10&_format=v1_legacy_long&client_id=3092nxybyb0otqw18e8nh5nty'
+      )
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }

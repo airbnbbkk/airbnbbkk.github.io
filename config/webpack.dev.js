@@ -14,6 +14,7 @@ const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 /**
  * Webpack Constants
@@ -206,6 +207,8 @@ module.exports = function (options) {
 
         }
       }),
+
+      new DashboardPlugin()
 
     ],
 

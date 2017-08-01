@@ -22,7 +22,7 @@ function getRepoName(remoteName) {
   remoteName = remoteName || 'origin';
 
   var stdout = execSync('git remote show ' + remoteName),
-      match = REPO_NAME_RE.exec(stdout);
+    match = REPO_NAME_RE.exec(stdout);
 
   if (!match) {
     throw new Error('Could not find a repository on remote ' + remoteName);
@@ -60,7 +60,7 @@ function safeUrl(url) {
 }
 
 function replaceHtmlWebpackPlugin(plugins, ghRepoName) {
-  for (var i=0; i<plugins.length; i++) {
+  for (var i = 0; i < plugins.length; i++) {
     if (plugins[i] instanceof HtmlWebpackPlugin) {
       /**
        * Remove the old instance of the html plugin.
@@ -72,7 +72,7 @@ function replaceHtmlWebpackPlugin(plugins, ghRepoName) {
          * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
          * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
          */
-        baseUrl: '/' + ghRepoName + '/' + safeUrl(htmlPlug.options.metadata.baseUrl)
+        baseUrl: '/'
       });
 
       /**
@@ -89,6 +89,7 @@ function replaceHtmlWebpackPlugin(plugins, ghRepoName) {
     }
   }
 }
+
 exports.getWebpackConfigModule = getWebpackConfigModule;
 exports.getRepoName = getRepoName;
 exports.safeUrl = safeUrl;

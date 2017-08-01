@@ -1,9 +1,11 @@
 import { ApplicationRef, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoPreloading, RouterModule } from '@angular/router';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import '../styles/headings.css';
 import '../styles/styles.scss';
@@ -38,6 +40,11 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: Http) {
+  return new TranslateHttpLoader(http);
+}
+
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -58,7 +65,17 @@ type StoreType = {
     BrowserAnimationsModule,
     HeaderModule,
     SideNavModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [Http]
+      }
+    }),
     RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: NoPreloading})
+  ],
+  exports: [
+    TranslateModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

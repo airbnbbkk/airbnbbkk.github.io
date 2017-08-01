@@ -1,1 +1,4 @@
 <nj-listing *ngFor="let listing of listings; let i = index" [listing]="listing.doc" [index]="i"></nj-listing>
+<button md-fab class="button-refresh" (click)="getListing(true)">
+  <md-icon>refresh</md-icon>
+</button>

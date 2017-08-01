@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'listing-info',
   styleUrls: ['listing-info.component.scss'],
@@ -18,5 +17,4 @@ export class ListingInfoComponent implements OnInit {
     this.listingInfo = this.route.snapshot.data['listingInfo'];
     console.log('listingINfo', this.listingInfo);
   }
-
 }

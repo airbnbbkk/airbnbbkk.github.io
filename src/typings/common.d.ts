@@ -1,8 +1,8 @@
 type Languages = 'en' | 'ko' | 'cn' | 'th';
-type InfoByLang = {
-  default?: any;
-  en?: any;
-  ko?: any;
-  cn?: any;
-  th?: any;
+type InfoByLang<T> = {
+  default?: T;
+  en?: T;
+  ko?: T;
+  cn?: T;
+  th?: T;
 };

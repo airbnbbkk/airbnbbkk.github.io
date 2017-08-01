@@ -7,8 +7,6 @@ export class RepoService {
   private _db: PouchDB.Database<any>;
 
   constructor(db: string) {
-    // To use PouchDB Chrome plugin
-    window['PouchDB'] = PouchDB;
     this._db = this.createDb(db);
   }
 

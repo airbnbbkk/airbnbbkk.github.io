@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
 import { HeaderComponent } from './header.component';
 
@@ -7,7 +8,8 @@ import { HeaderComponent } from './header.component';
     HeaderComponent
   ],
   imports: [
-    NgCustomMaterialModule
+    NgCustomMaterialModule,
+    TranslateModule
   ],
   exports: [
     HeaderComponent

@@ -1,20 +1,30 @@
-<md-card class="youtube-card">
-  <md-card-header>
-    <md-card-title>Thai Voice Instruction</md-card-title>
+<md-card class="nj-card youtube-card">
+  <md-card-header class="nj-card-header">
+    <md-card-title class="nj-card-title">
+      <md-icon class="nj-card-title-icon">play_circle_outline</md-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_LOCATION.HOW_TO_GO' | translate}}</span>
+    </md-card-title>
   </md-card-header>
-  <div class="youtube-box">
+  <md-divider></md-divider>
+  <div class="youtube-box" md-card-image>
     <iframe width="100%" height="100%" [src]="this.yt_voice_howToGo"
             frameborder="0" allowfullscreen></iframe>
   </div>
-  <md-card-content>
-    <md-list class="address-list">
-      <h3 md-subheader>Address</h3>
-      <md-list-item class="address-list-item">
-        <p md-line class="address"> {{ this.listingInfo.location.address.en }} </p>
+  <md-card-content class="nj-card-content">
+    <md-list dense class="nj-card-list">
+      <h4 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO.ADDRESS' | translate}}</h4>
+      <md-list-item class="nj-card-list-item">
+        <h4 md-line class="nj-card-list-item-heading">{{'LISTING_INFO.ENGLISH' | translate}}</h4>
       </md-list-item>
-      <md-list-item class="address-list-item">
-        <p md-line class="address"> {{ this.listingInfo.location.address.th }} </p>
+      <div>
+        <p class="nj-card-list-item-text"> {{ this.listingInfo.location.address.en }} </p>
+      </div>
+      <md-list-item class="nj-card-list-item">
+        <h4 md-line class="nj-card-list-item-heading">{{'LISTING_INFO.THAI' | translate}}</h4>
       </md-list-item>
+      <div>
+        <p class="nj-card-list-item-text"> {{ this.listingInfo.location.address.th }} </p>
+      </div>
     </md-list>
   </md-card-content>
 </md-card>
