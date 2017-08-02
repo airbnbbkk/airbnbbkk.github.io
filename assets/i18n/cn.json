@@ -27,6 +27,7 @@
     "BUILDING": "建築",
     "FLOOR": "樓層",
     "HOUSE_NUMBER": "房屋號碼",
+    "SECURITY_CHECK_DESCRIPTION": "大厅的招待会可能会要求您填写可填写任何内容的表格，并交出护照以备一份安全程序。 \n\n请不要阻挠地遵循他们的要求，因为它只是为了安全起见。",
     "TIME_POLICY": "時間政策",
     "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "只有在沒有其他住客的情況下才可以提前入住或延遲退房",
     "CHECK_IN": "簽入",
