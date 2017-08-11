@@ -40,12 +40,12 @@
     "HOW_TO_CHECK_OUT": "How to Check Out",
     "LEAVE_KEY_CARD": "Return Key Card",
     "LEAVE_KEY_CARD_DESCRIPTION": "Please return the key card and tidy up the house as you check out.",
-    "LEAVE_KEY_CARD_ON_THE_TABLE": "Leave your key card on the table or in the mail box.",
+    "LEAVE_KEY_CARD_ON_THE_TABLE": "Leave your key card on the dinning table.",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX": "leave your key card in the mail box",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION": "<h4>Please send us the photo of returned key card.</h4>\nIf the returned key card is lost without the photo, we will have to claim compensation for loss from you.",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE": "This is an example of the photo. Send the photo via Airbnb app or any of your favorite messenger.",
     "CLEAN_CHECK_OUT": "Clean the House",
-    "CLEAN_CHECK_OUT_DESCRIPTION": "Please tidy up the house as much as you can for the next guests"
+    "CLEAN_CHECK_OUT_DESCRIPTION": "Please tidy up the house as much as you can for the next guests. We would appreciate your cooperation!"
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "WIFI",
