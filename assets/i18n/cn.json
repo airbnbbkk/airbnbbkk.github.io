@@ -20,7 +20,8 @@
     "THAI": "泰语"
   },
   "LISTING_INFO_LOCATION": {
-    "HOW_TO_GO": "怎么去"
+    "HOW_TO_GO": "怎么去",
+    "HOW_TO_GO_DESCRIPTION":"这是一个泰国语言教学如何去房子。\n把这个给出租车司机。"
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "如何登錄",

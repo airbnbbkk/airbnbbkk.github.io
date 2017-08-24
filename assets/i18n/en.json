@@ -23,7 +23,8 @@
     "THAI": "Thai"
   },
   "LISTING_INFO_LOCATION": {
-    "HOW_TO_GO": "How to Go"
+    "HOW_TO_GO": "How to Go",
+    "HOW_TO_GO_DESCRIPTION":"This is a Thai voice instruction of how to go to the house.\nPlay this to a taxi driver."
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "How to Check In",
