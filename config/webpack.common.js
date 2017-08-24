@@ -22,6 +22,7 @@ const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ngcWebpack = require('ngc-webpack');
+//const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -139,20 +140,16 @@ module.exports = function (options) {
               }
             },
             {
+              loader: 'ngc-webpack',
+              options: {
+                disable: !AOT,
+              }
+            },
+            {
               loader: 'angular2-template-loader'
             }
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
-        },
-
-        /**
-         * Json loader support for *.json files.
-         *
-         * See: https://github.com/webpack/json-loader
-         */
-        {
-          test: /\.json$/,
-          use: 'json-loader'
         },
 
         /**
@@ -222,15 +219,16 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
-      new AssetsPlugin({
-        path: helpers.root('dist'),
-        filename: 'webpack-assets.json',
-        prettyPrint: true
-      }),
+      // Use for DLLs
+      // new AssetsPlugin({
+      //   path: helpers.root('dist'),
+      //   filename: 'webpack-assets.json',
+      //   prettyPrint: true
+      // }),
 
       /**
        * Plugin: ForkCheckerPlugin
-       * Description: Do type checking in a separate process, so webpack don't need to wait.
+       * Description: Do type checking in a separate process, so webpack doesn't need to wait.
        *
        * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
        */
@@ -250,21 +248,21 @@ module.exports = function (options) {
       /**
        * This enables tree shaking of the vendor modules
        */
-      new CommonsChunkPlugin({
-        name: 'vendor',
-        chunks: ['main'],
-        minChunks: module => /node_modules/.test(module.resource)
-      }),
+      // new CommonsChunkPlugin({
+      //   name: 'vendor',
+      //   chunks: ['main'],
+      //   minChunks: module => /node_modules/.test(module.resource)
+      // }),
       /**
        * Specify the correct order the scripts will be injected in
        */
-      new CommonsChunkPlugin({
-        name: ['polyfills', 'vendor'].reverse()
-      }),
-      new CommonsChunkPlugin({
-        name: ['manifest'],
-        minChunks: Infinity,
-      }),
+      // new CommonsChunkPlugin({
+      //   name: ['polyfills', 'vendor'].reverse()
+      // }),
+      // new CommonsChunkPlugin({
+      //   name: ['manifest'],
+      //   minChunks: Infinity,
+      // }),
 
       /**
        * Plugin: ContextReplacementPlugin
@@ -301,24 +299,42 @@ module.exports = function (options) {
         isProd ? {ignore: ['mock-data/**/*']} : undefined
       ),
 
-
-      /**
-       * Plugin: HtmlWebpackPlugin
-       * Description: Simplifies creation of HTML files to serve your webpack bundles.
-       * This is especially useful for webpack bundles that include a hash in the filename
-       * which changes every compilation.
+      /*
+       * Plugin: PreloadWebpackPlugin
+       * Description: Preload is a web standard aimed at improving
+       * performance and granular loading of resources.
        *
-       * See: https://github.com/ampedandwired/html-webpack-plugin
+       * See: https://github.com/GoogleChrome/preload-webpack-plugin
        */
+      //new PreloadWebpackPlugin({
+      //  rel: 'preload',
+      //  as: 'script',
+      //  include: ['polyfills', 'vendor', 'main'].reverse(),
+      //  fileBlacklist: ['.css', '.map']
+      //}),
+      //new PreloadWebpackPlugin({
+      //  rel: 'prefetch',
+      //  as: 'script',
+      //  include: 'asyncChunks'
+      //}),
+
+      /*
+      * Plugin: HtmlWebpackPlugin
+      * Description: Simplifies creation of HTML files to serve your webpack bundles.
+      * This is especially useful for webpack bundles that include a hash in the filename
+      * which changes every compilation.
+      *
+      * See: https://github.com/ampedandwired/html-webpack-plugin
+      */
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
-        inject: 'head'
+        inject: 'body'
       }),
-
-      /**
+      
+       /**
        * Plugin: ScriptExtHtmlWebpackPlugin
        * Description: Enhances html-webpack-plugin functionality
        * with different deployment options for your scripts including:
@@ -326,7 +342,10 @@ module.exports = function (options) {
        * See: https://github.com/numical/script-ext-html-webpack-plugin
        */
       new ScriptExtHtmlWebpackPlugin({
-        defaultAttribute: 'defer'
+        sync: /polyfills|vendor/,
+        defaultAttribute: 'async',
+        preload: [/polyfills|vendor|main/],
+        prefetch: [/chunk/]
       }),
 
       /**
@@ -362,35 +381,16 @@ module.exports = function (options) {
        */
       new LoaderOptionsPlugin({}),
 
-
-      /**
-       * Fix Angular 2
-       */
-      new NormalModuleReplacementPlugin(
-        /facade(\\|\/)async/,
-        helpers.root('node_modules/@angular/core/src/facade/async.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /facade(\\|\/)collection/,
-        helpers.root('node_modules/@angular/core/src/facade/collection.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /facade(\\|\/)errors/,
-        helpers.root('node_modules/@angular/core/src/facade/errors.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /facade(\\|\/)lang/,
-        helpers.root('node_modules/@angular/core/src/facade/lang.js')
-      ),
-      new NormalModuleReplacementPlugin(
-        /facade(\\|\/)math/,
-        helpers.root('node_modules/@angular/core/src/facade/math.js')
-      ),
-
       new ngcWebpack.NgcWebpackPlugin({
+        /**
+         * If false the plugin is a ghost, it will not perform any action.
+         * This property can be used to trigger AOT on/off depending on your build target (prod, staging etc...)
+         *
+         * The state can not change after initializing the plugin.
+         * @default true
+         */
         disabled: !AOT,
         tsConfig: helpers.root('tsconfig.webpack.json'),
-        resourceOverride: helpers.root('config/resource-override.js')
       }),
 
       /**
