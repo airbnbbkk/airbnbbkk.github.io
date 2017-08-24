@@ -23,8 +23,14 @@ export class TranslationModule implements OnDestroy {
     });
   }
 
-  public getCurrentLang(){
+  public getCurrentLang() {
     return this.translate.currentLang || this.translate.getDefaultLang();
+  }
+
+  public getCurrentGoogleLang() {
+    const lang = this.getCurrentLang();
+
+    return lang === 'cn' ? 'zh-Hans' : lang;
   }
 
   public ngOnDestroy() {
