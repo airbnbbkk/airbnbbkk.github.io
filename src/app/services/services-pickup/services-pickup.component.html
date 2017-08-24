@@ -24,12 +24,12 @@
   <md-card-content class="nj-card-content">
     <md-list>
       <md-tab-group>
-        <md-tab label="{{vehicle.name[translate.currentLang || translate.defaultLang]}}"
+        <md-tab label="{{vehicle.name[translate.getCurrentLang()]}}"
                 *ngFor="let vehicle of pickupInfo.vehicles; let i = index">
           <md-list dense class="nj-card-list">
             <md-card class="example-card">
               <md-card-header>
-                <md-card-title>{{vehicle.name[translate.currentLang]}}</md-card-title>
+                <md-card-title>{{vehicle.name[translate.getCurrentLang()]}}</md-card-title>
                 <md-card-subtitle></md-card-subtitle>
               </md-card-header>
               <img md-card-image src="assets/img/{{vehicle.img}}">

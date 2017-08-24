@@ -1,15 +1,21 @@
+const GMaps = {
+  BELLE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.311621847027!2d100.5672353155985!3d13.76007190080715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e8b89948df9%3A0xb209ddbd1f7910d0!2sBelle+Condominium!5e0!3m2!1sen!2sth!4v1503540415771',
+  ASPIRE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.311621847027!2d100.5672353155985!3d13.76007190080715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ef33442611f%3A0x9d1ddb4e4964bfcb!2sAspire+Rama+9+Condominium!5e0!3m2!1sen!2sth!4v1503540840914'
+};
+
 export const ListingInfoDict: Dict<ListingInfo> = {
   nj_1: {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI'
+          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
         }
       },
       address: {
         en: '131/414, 22nd fl, Building C2, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '131/414, Building C2, 33/4 พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
-      }
+      },
+      gMap: GMaps.BELLE
     },
     checkIn: {
       video: {
@@ -62,13 +68,14 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI'
+          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
         }
       },
       address: {
         en: '141/740, 25th fl., Building B1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/740, Building B1, Belle Condo, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
-      }
+      },
+      gMAp: GMaps.BELLE
     },
     checkIn: {
       video: {
@@ -121,13 +128,14 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI'
+          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
         }
       },
       address: {
         en: '141/260, 34th Fl., Building A1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/260, Building A1, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
-      }
+      },
+      gMAp: GMaps.BELLE
     },
     checkIn: {
       video: {
@@ -180,13 +188,14 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/4Ee6iIGCxR8'
+          default: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0'
         }
       },
       address: {
         en: '842/479, 15th Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/479, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
-      }
+      },
+      gMAp: GMaps.ASPIRE
     },
     checkIn: {
       video: {
@@ -236,3 +245,4 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   }
 };
+

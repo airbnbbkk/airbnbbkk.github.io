@@ -23,29 +23,30 @@
     "THAI": "Thai"
   },
   "LISTING_INFO_LOCATION": {
-    "HOW_TO_GO": "How to Go"
+    "HOW_TO_GO": "How to Go",
+    "HOW_TO_GO_DESCRIPTION":"This is a Thai voice instruction of how to go to the house.\nPlay this to a taxi driver."
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "How to Check In",
-    "BUILDING": "building",
+    "BUILDING": "Building",
     "FLOOR": "Floor",
     "HOUSE_NUMBER": "Number",
+    "SECURITY_CHECK_DESCRIPTION": "The reception at the lobby might ask you to fill the form, which can be filled with anything, and give your passport to make a copy for a security procedure. \n\n Please follow their request without resistance as it is merely a formality which will not cause any trouble at all.",
     "TIME_POLICY": "Time Policy",
     "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "Early check-in and Late check-out is only possible when there is no other staying guests",
     "CHECK_IN": "Check In",
-    "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "You may leave your luggage in the house first at 12:30",
-    "CHECK_OUT_TIME": "Check Out Time",
-    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION": "You may keep your luggage in one of our vacant houses, if there's any, after check out",
-    "HOW_TO_CHECK_OUT":"How to Check Out",
-    "LEAVE_KEY_CARD":"Return Key Card",
-    "LEAVE_KEY_CARD_DESCRIPTION":"Please return your key card and tidy up the house when you check out.",
-    "LEAVE_KEY_CARD_ON_THE_TABLE":"Leave your key card on the table or in the mail box.",
-    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX":"leave your key card in the mail box",
-    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION":"Please send us the photo of the key card placed on the table or in the mail box.\nIf the key card is lost without the photo, we will have to claim compensation for loss from you.",
-    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE":"This is an example of the photo. Send the photo via Airbnb app or any of your favorite messenger.",
-    "CLEAN_CHECK_OUT":"Clean the House",
-    "CLEAN_CHECK_OUT_DESCRIPTION":"Please tidy up the house as much as you can for the next guests"
-
+    "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "Luggage can be left first at 12:30",
+    "CHECK_OUT_TIME": "Check Out",
+    "KEEP_LUGGAGE_ON_CHECK_OUT_DESCRIPTION": "Luggage can be kept in one of our vacant houses, if any, after check out.",
+    "HOW_TO_CHECK_OUT": "How to Check Out",
+    "LEAVE_KEY_CARD": "Return Key Card",
+    "LEAVE_KEY_CARD_DESCRIPTION": "Please return the key card and tidy up the house as you check out.",
+    "LEAVE_KEY_CARD_ON_THE_TABLE": "Leave your key card on the dinning table.",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX": "leave your key card in the mail box",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION": "<h4>Please send us the photo of returned key card.</h4>\nIf the returned key card is lost without the photo, we will have to claim compensation for loss from you.",
+    "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE": "This is an example of the photo. Send the photo via Airbnb app or any of your favorite messenger.",
+    "CLEAN_CHECK_OUT": "Clean the House",
+    "CLEAN_CHECK_OUT_DESCRIPTION": "Please tidy up the house as much as you can for the next guests. We would appreciate your cooperation!"
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "WIFI",

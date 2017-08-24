@@ -16,13 +16,16 @@ export class ListingInfoCheckInComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private domSanitizer: DomSanitizer,
-              public dialog: MdDialog
-              ) {
+              public dialog: MdDialog) {
 
   }
 
-  openDialog() {
-    this.dialog.open(ListingInfoCheckOutImgDialogComponent);
+  public openDialog() {
+    this.dialog.open(ListingInfoCheckOutImgDialogComponent, {
+      data: {
+        keyCard: this.listingInfo.leaveKeycard
+      }
+    });
   }
 
   public ngOnInit() {

@@ -3,7 +3,7 @@ export const Rules: Dict<InfoByLang<HouseRule[]>> = {
     {
       title: 'Turn Off AC',
       icon: 'ac_unit',
-      rule: 'TURN OFF AIR CONDITIONERS when not in use. We are suffering from excessive amount of electricity fee.'
+      rule: 'TURN OFF AIR CONDITIONERS when not in use. If your total electricity usage is significantly higher than the average, a surcharge will be claimed upon your check-out.'
     },
     {
       title: 'Don\'t Lose Key Card',
@@ -45,7 +45,7 @@ export const Rules: Dict<InfoByLang<HouseRule[]>> = {
     {
       title: '关闭空调”',
       icon: 'ac_unit',
-      rule: '关闭空调不使用。我们正在耗费过多的电费。'
+      rule: '不要使用时请关闭空调。 我们每天检查您的用电量，如果您的使用量明显高于平均水平，退房时将收取附加费。'
     },
     {
       title: '不要丢钥匙卡',

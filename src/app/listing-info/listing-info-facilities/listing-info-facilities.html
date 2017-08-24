@@ -40,7 +40,7 @@
     <md-list dense class="nj-card-list">
       <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.LOCATION' | translate}}</h3>
       <md-list-item class="nj-card-list-item">
-        <p class="nj-card-list-item-text"> {{ this.facilities.poolAndGym.location[translate.currentLang || translate.getDefaultLang()] }}</p>
+        <p class="nj-card-list-item-text"> {{ this.facilities.poolAndGym.location[translate.getCurrentLang()] }}</p>
       </md-list-item>
     </md-list>
   </md-card-content>
@@ -55,9 +55,9 @@
   <md-divider></md-divider>
   <md-card-content class="nj-card-content">
     <md-list dense class="nj-card-list">
-      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.DUMPSTER' | translate}}</h3>
+      <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_FACILITIES.LOCATION' | translate}}</h3>
       <md-list-item class="nj-card-list-item">
-        <p class="nj-card-list-item-text"> {{ this.facilities.dumpster.location[translate.currentLang || translate.getDefaultLang()] }}</p>
+        <p class="nj-card-list-item-text"> {{ this.facilities.dumpster.location[translate.getCurrentLang()] }}</p>
       </md-list-item>
     </md-list>
   </md-card-content>

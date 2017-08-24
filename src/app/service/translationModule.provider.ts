@@ -14,14 +14,17 @@ export class TranslationModule implements OnDestroy {
 
   private onLangChageSubs: Subject<any>;
 
-  constructor(translate: TranslateService) {
+  constructor(private translate: TranslateService) {
     this.currentLang = translate.getDefaultLang();
 
     this.onLangChageSubs = translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang;
-      console.log('change lang', this.currentLang);
-      translate.use(this.currentLang);
+      this.translate.use(this.currentLang);
     });
+  }
+
+  public getCurrentLang(){
+    return this.translate.currentLang || this.translate.getDefaultLang();
   }
 
   public ngOnDestroy() {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Rules } from './listing-info-rules.const';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @Component({
   selector: 'nj-listing-info-house-rules',
@@ -10,11 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
 export class ListingInfoHouseRulesComponent {
   public rules: string[];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslationModule) {
 
   }
 
   public getRulesData() {
-    return Rules[this.translate.currentLang || this.translate.defaultLang];
+    return Rules[this.translate.getCurrentLang()];
   }
 }

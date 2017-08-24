@@ -25,6 +25,7 @@ import { AirbnbApiService } from './service/airbnb.api.service';
 import { GoogleApiService } from './service/google.api.service';
 import { SideNavModule } from './side-nav/side-nav.module';
 import { HeaderModule } from './header/header.module';
+import { NjCapitalizePipe } from './app.pipe';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -52,7 +53,8 @@ export function HttpLoaderFactory(http: Http) {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    NoContentComponent
+    NoContentComponent,
+    NjCapitalizePipe
   ],
   /**
    * Import Angular's modules.

@@ -20,13 +20,15 @@
     "THAI": "泰语"
   },
   "LISTING_INFO_LOCATION": {
-    "HOW_TO_GO": "怎么去"
+    "HOW_TO_GO": "怎么去",
+    "HOW_TO_GO_DESCRIPTION":"这是一个泰国语言教学如何去房子。\n把这个给出租车司机。"
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "如何登錄",
     "BUILDING": "建築",
     "FLOOR": "樓層",
     "HOUSE_NUMBER": "房屋號碼",
+    "SECURITY_CHECK_DESCRIPTION": "大厅的招待会可能会要求您填写可填写任何内容的表格，并交出护照以备一份安全程序。 \n\n请不要阻挠地遵循他们的要求，因为它只是为了安全起见。",
     "TIME_POLICY": "時間政策",
     "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "只有在沒有其他住客的情況下才可以提前入住或延遲退房",
     "CHECK_IN": "簽入",
@@ -36,7 +38,7 @@
     "HOW_TO_CHECK_OUT":"如何退房",
     "LEAVE_KEY_CARD":"退货钥匙卡",
     "LEAVE_KEY_CARD_DESCRIPTION":"当您退房时，请退回您的钥匙卡并整理房子。",
-    "LEAVE_KEY_CARD_ON_THE_TABLE":"将钥匙卡放在桌子上或邮箱中。",
+    "LEAVE_KEY_CARD_ON_THE_TABLE":"请将钥匙卡放在餐桌上。",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX":"将钥匙卡留在邮箱中",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION":"请将钥匙卡的照片作为证据发送给我们。\n如果钥匙卡没有照片不存在，我们将不得不要求赔偿您的损失。",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE":"这是照片的一个例子。 通过Airbnb应用程序或任何您最喜欢的信使发送照片。",

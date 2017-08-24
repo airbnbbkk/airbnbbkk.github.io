@@ -20,6 +20,7 @@ type ListingInfoLocation = {
     howToGo: InfoByLang<string>;
   }
   address: InfoByLang<string>;
+  gMap: any;
 };
 
 type ListingInfoCheckIn = {

@@ -1,13 +1,18 @@
 <md-card class="nj-card youtube-card">
   <md-card-header class="nj-card-header">
     <md-card-title class="nj-card-title">
-      <md-icon class="nj-card-title-icon">play_circle_outline</md-icon>
+      <md-icon class="nj-card-title-icon">location_on</md-icon>
       <span class="nj-card-title-text">{{'LISTING_INFO_LOCATION.HOW_TO_GO' | translate}}</span>
     </md-card-title>
+    <md-card-subtitle>
+      <pre>
+      {{'LISTING_INFO_LOCATION.HOW_TO_GO_DESCRIPTION' | translate}}
+      </pre>
+    </md-card-subtitle>
   </md-card-header>
   <md-divider></md-divider>
   <div class="youtube-box" md-card-image>
-    <iframe width="100%" height="100%" [src]="this.yt_voice_howToGo"
+    <iframe width="100%" height="100%" [src]="this.ytVoiceHowToGo"
             frameborder="0" allowfullscreen></iframe>
   </div>
   <md-card-content class="nj-card-content">
@@ -26,5 +31,13 @@
         <p class="nj-card-list-item-text"> {{ this.listingInfo.location.address.th }} </p>
       </div>
     </md-list>
+  </md-card-content>
+</md-card>
+<md-card class="nj-card youtube-card">
+  <md-card-content>
+    <div class="youtube-box" md-card-image>
+      <iframe width="100%" height="100%" [src]="this.gmHouseLocation"
+              frameborder="0" allowfullscreen></iframe>
+    </div>
   </md-card-content>
 </md-card>

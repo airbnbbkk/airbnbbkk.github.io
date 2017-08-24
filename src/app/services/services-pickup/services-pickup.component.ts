@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServicesPickupInfo } from './services-pickup.const';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @Component({
   selector: 'nj-services-pickup',
@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class ServicesPickupComponent {
   public pickupInfo: any;
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslationModule) {
     this.pickupInfo = ServicesPickupInfo;
   }
 }

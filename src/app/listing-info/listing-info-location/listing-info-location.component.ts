@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListingInfoLocationComponent implements OnInit {
   public listingInfo: ListingInfo;
-  public yt_voice_howToGo: any;
+  public ytVoiceHowToGo: SafeResourceUrl;
+  public gmHouseLocation: SafeResourceUrl;
 
   constructor(private route: ActivatedRoute,
               private domSanitizer: DomSanitizer) {
@@ -19,8 +20,11 @@ export class ListingInfoLocationComponent implements OnInit {
   public async ngOnInit() {
     this.listingInfo = this.route.snapshot.data['listingInfo'];
 
-    this.yt_voice_howToGo = this.domSanitizer.bypassSecurityTrustResourceUrl(
+    this.ytVoiceHowToGo = this.domSanitizer.bypassSecurityTrustResourceUrl(
       this.listingInfo.location.voiceGuide.howToGo.default.toString());
+
+    this.gmHouseLocation = this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.listingInfo.location.gMap.toString());
   }
 
 }

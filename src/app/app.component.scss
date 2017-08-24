@@ -27,6 +27,11 @@ a.active {
   flex: 0.5 auto;
 }
 
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+}
+
 .button-row {
   display: flex;
 }
@@ -76,9 +81,6 @@ a.active {
 
   .nj-card-content {
     .nj-card-list {
-      .md-list-item-box-flex {
-        display: flex;
-      }
       .nj-card-list-sub-header {
 
       }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @Component({
   selector: 'nj-listing-info-facilities',
@@ -12,7 +12,7 @@ export class ListingInfoFacilitiesComponent implements OnInit {
   public facilities: ListingInfoFacilities;
 
   constructor(private route: ActivatedRoute,
-              public translate: TranslateService) {
+              public translate: TranslationModule) {
 
   }
 
