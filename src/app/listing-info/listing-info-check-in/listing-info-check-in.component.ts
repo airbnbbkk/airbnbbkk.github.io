@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { MdDialog } from '@angular/material';
 import { ListingInfoCheckOutImgDialogComponent } from './listing-info-check-out-img.component';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @Component({
   selector: 'nj-listing-info-check-in',
@@ -12,12 +13,16 @@ import { ListingInfoCheckOutImgDialogComponent } from './listing-info-check-out-
 export class ListingInfoCheckInComponent implements OnInit {
 
   public listingInfo: ListingInfoCheckIn;
-  public YT_VIDEO_CHECK_IN: any;
 
   constructor(private route: ActivatedRoute,
               private domSanitizer: DomSanitizer,
+              private translate: TranslationModule,
               public dialog: MdDialog) {
 
+  }
+
+  public ngOnInit() {
+    this.listingInfo = this.route.snapshot.data['listingInfo'].checkIn;
   }
 
   public openDialog() {
@@ -28,10 +33,8 @@ export class ListingInfoCheckInComponent implements OnInit {
     });
   }
 
-  public ngOnInit() {
-    this.listingInfo = this.route.snapshot.data['listingInfo'].checkIn;
-
-    this.YT_VIDEO_CHECK_IN = this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.listingInfo.video.howToGo.default.toString());
+  public getCheckInYtUrl() {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.listingInfo.video.howToGo.default.concat('&cc_lang_pref=' + this.translate.getCurrentGoogleLang()).toString());
   }
 }
