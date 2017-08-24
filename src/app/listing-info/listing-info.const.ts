@@ -75,7 +75,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         en: '141/740, 25th fl., Building B1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/740, Building B1, Belle Condo, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
       },
-      gMAp: GMaps.BELLE
+      gMap: GMaps.BELLE
     },
     checkIn: {
       video: {
@@ -135,7 +135,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         en: '141/260, 34th Fl., Building A1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/260, Building A1, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
       },
-      gMAp: GMaps.BELLE
+      gMap: GMaps.BELLE
     },
     checkIn: {
       video: {
@@ -195,7 +195,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         en: '842/479, 15th Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/479, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
       },
-      gMAp: GMaps.ASPIRE
+      gMap: GMaps.ASPIRE
     },
     checkIn: {
       video: {
