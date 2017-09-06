@@ -8,7 +8,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
+          en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
         }
       },
       address: {
@@ -20,7 +22,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/fTprVHLXtZw?cc_load_policy=1'
+          en: 'https://www.youtube.com/embed/fTprVHLXtZw?rel=0&cc_load_policy=1&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/fTprVHLXtZw?rel=0&cc_load_policy=1&cc_lang_pref=ko',
+          cn: 'https://v.youku.com/v_show/id_XMjg4MDgzODQyMA==.html'
         }
       },
       houseInfo: {
@@ -68,7 +72,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
+          en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
         }
       },
       address: {
@@ -80,7 +86,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/6tCii41nYxA?cc_load_policy=1'
+          en: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://v.youku.com/v_show/id_XMjg4MDczMzM3Ng==.html'
         }
       },
       houseInfo: {
@@ -128,7 +136,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0'
+          en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
+          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
         }
       },
       address: {
@@ -140,7 +150,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/HHdMmglPL2w?cc_load_policy=1'
+          en: 'https://www.youtube.com/embed/HHdMmglPL2w?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/HHdMmglPL2w?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://v.youku.com/v_show/id_XMjg0OTA0Njc2MA==.html'
         }
       },
       houseInfo: {
@@ -188,7 +200,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0'
+          en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          cn: 'https://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
         }
       },
       address: {
@@ -200,7 +214,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          default: 'https://www.youtube.com/embed/kbh0r9qtpmE?cc_load_policy=1'
+          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
         }
       },
       houseInfo: {
@@ -243,6 +259,133 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         }
       }
     }
+  },
+  nj_5: {
+    location: {
+      voiceGuide: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          cn: 'http://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
+        }
+      },
+      address: {
+        en: '842/425, 11th Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
+        th: '842/425, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
+      },
+      gMap: GMaps.ASPIRE
+    },
+    checkIn: {
+      video: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'http://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
+        }
+      },
+      houseInfo: {
+        building: 'B',
+        floor: 11,
+        houseNumber: '842/425'
+      },
+      time: {
+        in: 14,
+        out: 12,
+        flexIn: 5,
+        flexOut: 6,
+        paidIn: 5,
+        paidOut: 5,
+        overStayCharge: 1000
+      },
+      leaveKeycard: 'LEAVE_KEY_CARD_IN_THE_MAIL_BOX'
+    },
+    facilities: {
+      wifi: {
+        name: 'nui',
+        pw: 1234512345
+      },
+      dumpster: {
+        location: {
+          en: 'Near the emergency exit in front of the elevator',
+          ko: '엘리베이터 앞 비상 계단실',
+          cn: '靠近电梯前的紧急出口'
+        }
+      },
+      poolAndGym: {
+        hours: {
+          open: 7,
+          close: 21
+        },
+        location: {
+          en: 'right in front of the house building',
+          ko: '숙소 빌딩 밖 맞은 편',
+          cn: '就在房屋前面'
+        }
+      }
+    }
+  },
+  nj_6: {
+    location: {
+      voiceGuide: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          cn: 'https://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
+        }
+      },
+      address: {
+        en: '842/614, 22nd Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
+        th: '842/614, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
+      },
+      gMap: GMaps.ASPIRE
+    },
+    checkIn: {
+      video: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
+        }
+      },
+      houseInfo: {
+        building: 'B',
+        floor: 22,
+        houseNumber: '842/614'
+      },
+      time: {
+        in: 14,
+        out: 12,
+        flexIn: 5,
+        flexOut: 6,
+        paidIn: 5,
+        paidOut: 5,
+        overStayCharge: 1000
+      },
+      leaveKeycard: 'LEAVE_KEY_CARD_IN_THE_MAIL_BOX'
+    },
+    facilities: {
+      wifi: {
+        name: 'M&M Residence',
+        pw: 1234567890
+      },
+      dumpster: {
+        location: {
+          en: 'Near the emergency exit in front of the elevator',
+          ko: '엘리베이터 앞 비상 계단실',
+          cn: '靠近电梯前的紧急出口'
+        }
+      },
+      poolAndGym: {
+        hours: {
+          open: 7,
+          close: 21
+        },
+        location: {
+          en: 'right in front of the house building',
+          ko: '숙소 빌딩 밖 맞은 편',
+          cn: '就在房屋前面'
+        }
+      }
+    }
   }
 };
-

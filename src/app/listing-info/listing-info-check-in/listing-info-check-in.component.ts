@@ -33,8 +33,8 @@ export class ListingInfoCheckInComponent implements OnInit {
     });
   }
 
-  public getCheckInYtUrl() {
+  public getCheckInVideoUrl() {
     return this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.listingInfo.video.howToGo.default.concat('&cc_lang_pref=' + this.translate.getCurrentGoogleLang()).toString());
+      this.listingInfo.video.howToGo[this.translate.getCurrentLang()].concat('&cc_lang_pref=' + this.translate.getCurrentGoogleLang()).toString());
   }
 }

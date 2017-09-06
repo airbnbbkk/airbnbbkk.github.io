@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { TranslationModule } from '../../service/translationModule.provider';
 
 @Component({
   selector: 'nj-listing-info-location',
@@ -9,19 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListingInfoLocationComponent implements OnInit {
   public listingInfo: ListingInfo;
-  public ytVoiceHowToGo: SafeResourceUrl;
+  public getHowToGoVideoUrl: () => SafeResourceUrl;
   public gmHouseLocation: SafeResourceUrl;
 
   constructor(private route: ActivatedRoute,
-              private domSanitizer: DomSanitizer) {
+              private domSanitizer: DomSanitizer,
+              private translate: TranslationModule) {
 
   }
 
   public async ngOnInit() {
     this.listingInfo = this.route.snapshot.data['listingInfo'];
 
-    this.ytVoiceHowToGo = this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.listingInfo.location.voiceGuide.howToGo.default.toString());
+    this.getHowToGoVideoUrl = () => this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.listingInfo.location.voiceGuide.howToGo[this.translate.getCurrentLang()].toString());
 
     this.gmHouseLocation = this.domSanitizer.bypassSecurityTrustResourceUrl(
       this.listingInfo.location.gMap.toString());

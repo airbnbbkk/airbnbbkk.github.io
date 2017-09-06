@@ -7,17 +7,17 @@ export const routes = [
     component: ListingInfoComponent,
     // canActivate: [TranslateRouteService],
     children: [
-      {path: '', redirectTo: 'location', pathMatch: 'full'},
+      {path: '', redirectTo: 'checkin', pathMatch: 'full'},
       {
-        path: 'location',
-        loadChildren: './listing-info-location/listing-info-location.module#ListingInfoLocationModule',
+        path: 'checkin',
+        loadChildren: './listing-info-check-in/listing-info-check-in.module#ListingInfoCheckInModule',
         resolve: {
           listingInfo: ListingInfoResolve
         }
       },
       {
-        path: 'checkin',
-        loadChildren: './listing-info-check-in/listing-info-check-in.module#ListingInfoCheckInModule',
+        path: 'location',
+        loadChildren: './listing-info-location/listing-info-location.module#ListingInfoLocationModule',
         resolve: {
           listingInfo: ListingInfoResolve
         }
