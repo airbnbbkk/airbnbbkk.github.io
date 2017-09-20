@@ -17,11 +17,7 @@ export class ListingsService {
     return this.getListingFromRepo()
       .catch((err: any) => {
         console.log('Failed to get listing from repo: ', err);
-        if (err.name === 'not_found') {
-          return this.fetchListing();
-        } else {
-          console.log('error getListing', err);
-        }
+        return this.fetchListing();
       });
   }
 
@@ -37,7 +33,7 @@ export class ListingsService {
       });
 
     const listingDocArray = this.transformToListingDocArray(listingArray);
-    moment().format('YYYY')
+    moment().format('YYYY');
     return listingDocArray
       .merge()
       .mergeMap(listings =>
@@ -56,7 +52,6 @@ export class ListingsService {
     const timestamp = new Date().getTime();
 
     const repoDoc: RepoDoc = {
-      _id: 'listing',
       updatedAt: timestamp,
       createdAt: timestamp
     };
@@ -88,6 +83,9 @@ export class ListingsService {
 
   private getListingFromRepo(): Observable<Array<RepoDocResponse<Listing>>> {
     console.log('get all listings');
+    this.repoService.list().then(res => {
+      console.log(res);
+    });
     return Observable.fromPromise(this.repoService.list());
   }
 }

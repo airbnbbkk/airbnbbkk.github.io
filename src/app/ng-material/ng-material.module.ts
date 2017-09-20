@@ -9,7 +9,8 @@ import {
   MdIconModule,
   MdMenuModule,
   MdDialogModule,
-  MdToolbarModule
+  MdToolbarModule, MdFormFieldModule, MdInputModule, MdSelectModule, MdDatepickerModule,
+  MdNativeDateModule, MdRadioModule
 } from '@angular/material';
 
 @NgModule({
@@ -23,7 +24,13 @@ import {
     MdIconModule,
     MdMenuModule,
     MdDialogModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdFormFieldModule,
+    MdInputModule,
+    MdSelectModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdRadioModule
   ]
 })
 

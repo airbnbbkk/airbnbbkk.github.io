@@ -28,10 +28,10 @@
                 *ngFor="let vehicle of pickupInfo.vehicles; let i = index">
           <md-list dense class="nj-card-list">
             <md-card class="example-card">
-              <md-card-header>
+              <!--<md-card-header>
                 <md-card-title>{{vehicle.name[translate.getCurrentLang()]}}</md-card-title>
                 <md-card-subtitle></md-card-subtitle>
-              </md-card-header>
+              </md-card-header>-->
               <img md-card-image src="assets/img/{{vehicle.img}}">
               <md-card-content>
                 <md-list>
@@ -53,7 +53,8 @@
                 </md-list>
               </md-card-content>
               <md-card-actions>
-                <!--<button md-button>BOOK NOW</button>-->
+                <!--<button md-raised-button color="primary" (click)="openDialog(vehicle)">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_BOOK'
+                  | translate}}</button>-->
               </md-card-actions>
             </md-card>
           </md-list>

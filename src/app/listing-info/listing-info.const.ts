@@ -10,7 +10,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
           ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
-          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
+          cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
       address: {
@@ -24,7 +24,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/fTprVHLXtZw?rel=0&cc_load_policy=1&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/fTprVHLXtZw?rel=0&cc_load_policy=1&cc_lang_pref=ko',
-          cn: 'https://v.youku.com/v_show/id_XMjg4MDgzODQyMA==.html'
+          cn: 'https://player.youku.com/embed/XMjg4MDgzODQyMA=='
         }
       },
       houseInfo: {
@@ -50,7 +50,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to the emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }
@@ -74,7 +74,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
           ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
-          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
+          cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
       address: {
@@ -88,7 +88,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://v.youku.com/v_show/id_XMjg4MDczMzM3Ng==.html'
+          cn: 'https://player.youku.com/embed/XMjg4MDczMzM3Ng=='
         }
       },
       houseInfo: {
@@ -114,7 +114,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to the emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }
@@ -138,7 +138,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
           ko: 'https://www.youtube.com/embed/68W2Y_daPfI?rel=0',
-          cn: 'https://v.youku.com/v_show/id_XMjg0OTQzNzU5Mg==.html'
+          cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
       address: {
@@ -152,7 +152,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/HHdMmglPL2w?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/HHdMmglPL2w?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://v.youku.com/v_show/id_XMjg0OTA0Njc2MA==.html'
+          cn: 'https://player.youku.com/embed/XMjg0OTA0Njc2MA=='
         }
       },
       houseInfo: {
@@ -178,7 +178,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to the emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }
@@ -202,7 +202,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
           ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          cn: 'https://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
+          cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
       address: {
@@ -216,7 +216,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
+          cn: 'https://player.youku.com/embed/XMzAwNTY1MTEyMA=='
         }
       },
       houseInfo: {
@@ -242,7 +242,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to the emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }
@@ -266,7 +266,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
           ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          cn: 'http://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
+          cn: 'http://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
       address: {
@@ -278,9 +278,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'http://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
+          en: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'http://player.youku.com/embed/XMzAxODc3NDY0OA=='
         }
       },
       houseInfo: {
@@ -306,7 +306,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }
@@ -330,7 +330,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
           ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          cn: 'https://v.youku.com/v_show/id_XMzAwNzc1MTkxNg==.html'
+          cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
       address: {
@@ -342,9 +342,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://v.youku.com/v_show/id_XMzAwNTY1MTEyMA==.html'
+          en: 'https://www.youtube.com/embed/c6ya6Zu8N0g?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/c6ya6Zu8N0g?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://player.youku.com/embed/XMzAxODc2MjIzMg=='
         }
       },
       houseInfo: {
@@ -370,7 +370,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       dumpster: {
         location: {
-          en: 'Near the emergency exit in front of the elevator',
+          en: 'Behind the door to the emergency exit in front of the elevator',
           ko: '엘리베이터 앞 비상 계단실',
           cn: '靠近电梯前的紧急出口'
         }

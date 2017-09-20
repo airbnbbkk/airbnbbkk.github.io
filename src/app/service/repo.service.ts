@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as PouchDB from 'pouchdb';
+import PouchDB from 'pouchdb';
 
 @Injectable()
 export class RepoService {
@@ -12,17 +12,17 @@ export class RepoService {
 
   public list() {
     return this._db
-               .allDocs({
-                 include_docs: true
-               })
-               .then(res => {
-                 if (!res.total_rows) {
-                   let e = Error('not_found');
-                   e.name = 'not_found';
-                   throw e;
-                 }
-                 return res.rows;
-               });
+      .allDocs({
+        include_docs: true
+      })
+      .then(res => {
+        if (!res.total_rows) {
+          let e = Error('not_found');
+          e.name = 'not_found';
+          throw e;
+        }
+        return res.rows;
+      });
   }
 
   public get(id: string) {

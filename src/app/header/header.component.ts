@@ -3,7 +3,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'nj-header',
-  providers: [],
   styleUrls: ['header.component.scss'],
   templateUrl: 'header.component.html'
 })

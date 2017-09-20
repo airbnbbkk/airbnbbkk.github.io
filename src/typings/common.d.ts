@@ -5,4 +5,5 @@ type InfoByLang<T> = {
   ko?: T;
   cn?: T;
   th?: T;
+  i18n?: T;
 };
