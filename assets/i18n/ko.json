@@ -51,7 +51,8 @@
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION":"반납한 키 키드의 사진을 찍어 보내주시기 바랍니다. 만약 사진 없이 키 키드가 없어 질 경우 카드 분실 비용을 청구하게 됨을 양지바랍니다.",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE":"예시 사진 입니다. 이와 같이 사진을 찍어 에어비엔비 앱이나 다른 메신저로 저희에게 보내주세요.",
     "CLEAN_CHECK_OUT":"집을 깨끗이",
-    "CLEAN_CHECK_OUT_DESCRIPTION":"다음 손님을 위해 집을 최대한 깨끗하게 정리해 주시기를 정중히 부탁드립니다."
+    "CLEAN_CHECK_OUT_DESCRIPTION":"다음 손님을 위해 집을 최대한 깨끗하게 정리해 주시기를 정중히 부탁드립니다.",
+    "REVIEW_US": "서비스에 만족 하셨다면 좋은 리뷰(별이 5개~)를 남겨주시면 진심으로 감사드리겠습니다. 저희에게 큰 도움이 됩니다!"
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "와이파이",
