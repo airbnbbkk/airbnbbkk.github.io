@@ -54,7 +54,7 @@
           translate}}</h4>
       </md-list-item>
     </md-list>
-    <md-list dense class="nj-card-list check-out-card-list">
+    <md-list dense class="nj-card-list check-in-card-list">
       <h3 md-subheader class="nj-card-list-sub-header">{{'LISTING_INFO_CHECK_IN_OUT.CHECK_OUT_TIME' | translate}}</h3>
       <md-list-item class="nj-card-list-item">
         <md-icon md-list-icon class="nj-card-list-item-icon">hourglass_full</md-icon>
@@ -75,7 +75,7 @@
   </md-card-header>
   <md-divider></md-divider>
   <md-card-content class="nj-card-content">
-    <md-list class="nj-card-list check-in-card-list">
+    <md-list class="nj-card-list check-out-card-list">
       <md-list-item class="nj-card-list-item">
         <md-icon md-list-icon class="nj-card-list-item-icon">video_label</md-icon>
         <p md-line class="nj-card-list-item-heading">{{ 'LISTING_INFO_CHECK_IN_OUT.' + this.listingInfo.leaveKeycard |
@@ -91,7 +91,12 @@
           </button>
         </div>
       </div>
-      <br>
+      <br><br>
+      <md-list-item class="nj-card-list-item">
+        <md-icon md-list-icon class="nj-card-list-item-icon">rate_review</md-icon>
+        <p md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.REVIEW_US' |
+          translate}}</p>
+      </md-list-item>
       <md-list-item class="nj-card-list-item">
         <md-icon md-list-icon class="nj-card-list-item-icon">mood</md-icon>
         <p md-line class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.CLEAN_CHECK_OUT_DESCRIPTION' |

@@ -48,7 +48,8 @@
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION":"请将钥匙卡的照片作为证据发送给我们。\n如果钥匙卡没有照片不存在，我们将不得不要求赔偿您的损失。",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE":"这是照片的一个例子。 通过Airbnb应用程序或任何您最喜欢的信使发送照片。",
     "CLEAN_CHECK_OUT":"大扫除",
-    "CLEAN_CHECK_OUT_DESCRIPTION":"请整理房子给下一位客人"
+    "CLEAN_CHECK_OUT_DESCRIPTION":"请整理房子给下一位客人",
+    "REVIEW_US": "Your good review helps us! I'd very appreciate for your good review if you are satisfied with our service :)"
   },
   "LISTING_INFO_FACILITIES": {
     "WIFI": "WIFI",

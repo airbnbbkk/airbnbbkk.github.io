@@ -15,6 +15,16 @@
   }
 }
 
+.check-out-card-list {
+  .nj-card-list-item {
+    margin-bottom: 1rem;
+
+    /deep/ .mat-list-item-content {
+      height: auto;
+    }
+  }
+}
+
 .late-check-out-card-list, .early-check-in-card-list {
   .listing-card-list-item {
     .listing-card-list-item-text {
