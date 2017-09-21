@@ -36,7 +36,7 @@
     "BUILDING": "Building",
     "FLOOR": "Floor",
     "HOUSE_NUMBER": "Number",
-    "SECURITY_CHECK_DESCRIPTION": "The reception at the lobby might ask you to fill the form, which can be filled with anything, and give your passport to make a copy for a security procedure. \n\n Please follow their request without resistance as it is merely a formality which will not cause any trouble at all.",
+    "SECURITY_CHECK_DESCRIPTION": "The reception at the lobby might ask you to fill a form and give your passport to make a copy for a security procedure. \n\n Please follow their request without resistance as it is only for formality and once for all.",
     "TIME_POLICY": "Time Policy",
     "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "Early check-in and Late check-out is only possible when there is no other staying guests",
     "CHECK_IN": "Check In",
