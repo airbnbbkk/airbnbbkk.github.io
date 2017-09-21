@@ -1,0 +1,95 @@
+<form [formGroup]="form">
+  <md-form-field>
+    <input mdInput placeholder="Vehicle Type" [value]="selectedVehicle.name[translate.getCurrentLang()]" readonly>
+  </md-form-field>
+  <div class="nj-form-field">
+    <md-radio-group name="trip" formControlName="tripType" (change)="changeSpotOptions()">
+      <md-radio-button value="oneway">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_ONEWAY' | translate}}
+      </md-radio-button>
+      <span>&nbsp;</span>
+      <md-radio-button value="round">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_ROUNDTRIP' | translate}}
+      </md-radio-button>
+    </md-radio-group>
+  </div>
+  <md-card class="nj-card">
+    <md-card-header class="nj-card-header">
+      <md-card-title class="nj-card-title">
+        <md-icon cxlass="nj-card-title-icon">{{ form.get('departure').value === PICKUP_SPOTS.HOUSE ?  'home' : 'local_airport' }}</md-icon>
+        <md-icon cxlass="nj-card-title-icon">arrow_forward</md-icon>
+        <md-icon cxlass="nj-card-title-icon">{{ form.get('destination').value === PICKUP_SPOTS.HOUSE ? 'home' : 'local_airport' }}</md-icon>
+      </md-card-title>
+    </md-card-header>
+    <md-card-content class="nj-card-content">
+      <div class="nj-form-field">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <md-select placeholder="{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DEPARTURE' | translate}}"
+                         name="departure"
+                         formControlName="departure"
+                         (change)="changeSpotOptions()">
+                <md-option *ngFor="let airport of departures" [value]="airport.type">
+                  {{airport.name.i18n | translate}}
+                </md-option>
+              </md-select>
+            </td>
+            <td>
+              <md-select placeholder="{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DESTINATION' | translate}}"
+                         name="destination"
+                         formControlName="destination"
+                         (change)="changeSpotOptions()">
+                <md-option *ngFor="let airport of destination" [value]="airport.type">
+                  {{airport.name.i18n | translate}}
+                </md-option>
+              </md-select>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <md-form-field class="nj-booking-date-picker">
+                <input mdInput [mdDatepicker]="picker" (click)="picker.open()" placeholder="Choose a date" readonly>
+                <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+                <md-datepicker touchUi="false" #picker></md-datepicker>
+              </md-form-field>
+            </td>
+            <td>
+              <md-form-field>
+                <input mdInput type="number" id="time" formControlName="time" placeholder="Time" class="time-input"
+                       min="1" max="24" [errorStateMatcher]="hourlyTimeMatcher" required>
+              </md-form-field>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <md-form-field>
+        <input type="text" mdInput placeholder="Flight Name" formControlName="flightName" pattern="[a-zA-Z0-9 ]*">
+        <md-error *ngIf="form.controls['flightName'].hasError('pattern')">
+          {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
+        </md-error>
+      </md-form-field>
+      <md-form-field>
+        <input type="text" mdInput placeholder="Flight Number" formControlName="flightNumber" pattern="[a-zA-Z0-9 ]*">
+        <md-error *ngIf="form.controls['flightNumber'].hasError('pattern')">
+          {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
+        </md-error>
+      </md-form-field>
+      <md-form-field>
+        <input type="text" mdInput placeholder="Your Name" formControlName="name" pattern="[a-zA-Z ]*">
+        <md-error *ngIf="form.controls['name'].hasError('pattern')">
+          {{'COMMON.ERROR_MESSAGES.ENGLISH_ONLY' | translate}}
+        </md-error>
+      </md-form-field>
+      <md-form-field class="nj-form-field">
+        <input type="text" mdInput placeholder="Total Price" formControlName="price" [value]="getPickupPrice() | number"
+               readonly>
+      </md-form-field>
+    </md-card-content>
+  </md-card>
+  <md-card class="nj-card">
+
+  </md-card>
+</form>

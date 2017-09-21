@@ -17,7 +17,7 @@ export class ServicesPickupComponent {
     this.pickupInfo = ServicesPickupInfo;
   }
 
-  /*public openDialog(vehicle: PickupVehicle) {
+  public openDialog(vehicle: PickupVehicle) {
     this.dialog.open(ServicesPickupBookingDialogComponent, {
       panelClass: 'nj-booking-dialog',
       height: '90%',
@@ -26,5 +26,5 @@ export class ServicesPickupComponent {
         selectedVehicle: vehicle
       }
     });
-  }*/
+  }
 }

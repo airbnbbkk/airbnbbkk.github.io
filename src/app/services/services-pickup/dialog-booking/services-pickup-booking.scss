@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.nj-form-field {
+  padding-bottom: 0;
+  margin-bottom: 1.50em;
+
+  label {
+    color: rgba(0, 0, 0, .54);
+  }
+  .time-input {
+    height: 1rem;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    background: none;
+  }
+}
+
+.nj-booking-date-picker {
+  width: 100%;
+}
+
+table {
+
+}
