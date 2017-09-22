@@ -38,7 +38,7 @@
     "HOUSE_NUMBER": "Number",
     "SECURITY_CHECK_DESCRIPTION": "The reception at the lobby might ask you to fill a form and give your passport to make a copy for a security procedure. \n\n Please follow their request without resistance as it is only for formality and once for all.",
     "TIME_POLICY": "Time Policy",
-    "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "Early check-in and Late check-out is only possible when there is no other staying guests",
+    "EARLY_CHECK_IN_N_OUT_DESCRIPTION": "Early check-in and late check-out is possible if there is no other guests",
     "CHECK_IN": "Check In",
     "LEAVE_LUGGAGE_FIRST_DESCRIPTION": "Luggage can be left first at 12:30",
     "CHECK_OUT_TIME": "Check Out",
@@ -51,7 +51,7 @@
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION": "<h4>Please send us the photo of returned key card.</h4>\nIf the returned key card is lost without the photo, we will have to claim compensation for loss from you.",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_EXAMPLE": "This is an example of the photo. Send the photo via Airbnb app or any of your favorite messenger.",
     "CLEAN_CHECK_OUT": "Clean the House",
-    "CLEAN_CHECK_OUT_DESCRIPTION": "Please tidy up the house as much as you can for the next guests. We would appreciate your cooperation!",
+    "CLEAN_CHECK_OUT_DESCRIPTION": "Please tidy up the house and check your belongings for the next guests. We would appreciate your cooperation!",
     "REVIEW_US": "Your 5 star review means A LOT to us. If you are satisfied with our service, please leave us a good review :)"
   },
   "LISTING_INFO_FACILITIES": {
