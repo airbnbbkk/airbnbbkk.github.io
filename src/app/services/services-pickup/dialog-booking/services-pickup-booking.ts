@@ -57,14 +57,17 @@ export class ServicesPickupBookingDialogComponent {
     this.departures = this.destination = this.pickupInfo.spots.slice();
 
     if (tripTypeForm.value === 'oneway') {
-      // destinationForm.disable();
       if (departureForm.value === PICKUP_SPOTS.HOUSE) {
+        destinationForm.setValue(null);
         this.destination = this.pickupInfo.spots.filter(spot => spot.type !== PICKUP_SPOTS.HOUSE);
       } else {
         this.fixDestinationToHouse();
       }
     } else {
       this.departures = this.pickupInfo.spots.filter(spot => spot.type !== PICKUP_SPOTS.HOUSE);
+      if (departureForm.value === PICKUP_SPOTS.HOUSE) {
+        departureForm.setValue(null);
+      }
       this.fixDestinationToHouse();
     }
   }

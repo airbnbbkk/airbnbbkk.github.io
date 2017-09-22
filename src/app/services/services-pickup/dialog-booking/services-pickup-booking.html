@@ -11,12 +11,20 @@
       </md-radio-button>
     </md-radio-group>
   </div>
+  <div class="nj-form-field">
+    <md-icon cxlass="nj-card-title-icon">{{ form.get('departure').value == null ? '' : form.get('departure').value
+      === PICKUP_SPOTS.HOUSE ? 'home' : 'local_airport' }}
+    </md-icon>
+    <md-icon cxlass="nj-card-title-icon">{{form.get('tripType').value === 'oneway' ? 'trending_flat':'swap_horiz'}}
+    </md-icon>
+    <md-icon cxlass="nj-card-title-icon">{{ form.get('destination').value === null ? '' :
+      form.get('destination').value === PICKUP_SPOTS.HOUSE ? 'home' : 'local_airport' }}
+    </md-icon>
+  </div>
   <md-card class="nj-card">
     <md-card-header class="nj-card-header">
       <md-card-title class="nj-card-title">
-        <md-icon cxlass="nj-card-title-icon">{{ form.get('departure').value === PICKUP_SPOTS.HOUSE ?  'home' : 'local_airport' }}</md-icon>
-        <md-icon cxlass="nj-card-title-icon">arrow_forward</md-icon>
-        <md-icon cxlass="nj-card-title-icon">{{ form.get('destination').value === PICKUP_SPOTS.HOUSE ? 'home' : 'local_airport' }}</md-icon>
+
       </md-card-title>
     </md-card-header>
     <md-card-content class="nj-card-content">
@@ -37,7 +45,7 @@
               <md-select placeholder="{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DESTINATION' | translate}}"
                          name="destination"
                          formControlName="destination"
-                         (change)="changeSpotOptions()">
+              >
                 <md-option *ngFor="let airport of destination" [value]="airport.type">
                   {{airport.name.i18n | translate}}
                 </md-option>
@@ -88,8 +96,5 @@
                readonly>
       </md-form-field>
     </md-card-content>
-  </md-card>
-  <md-card class="nj-card">
-
   </md-card>
 </form>
