@@ -1,36 +1,41 @@
 import { NgModule } from '@angular/core';
 import {
-  MdButtonModule,
-  MdButtonToggleModule,
-  MdCardModule,
-  MdListModule,
-  MdSidenavModule,
-  MdTabsModule,
-  MdIconModule,
-  MdMenuModule,
-  MdDialogModule,
-  MdToolbarModule, MdFormFieldModule, MdInputModule, MdSelectModule, MdDatepickerModule,
-  MdNativeDateModule, MdRadioModule
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatListModule,
+  MatSidenavModule,
+  MatTabsModule,
+  MatIconModule,
+  MatMenuModule,
+  MatDialogModule,
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatRadioModule
 } from '@angular/material';
 
 @NgModule({
   exports: [
-    MdButtonModule,
-    MdButtonToggleModule,
-    MdSidenavModule,
-    MdCardModule,
-    MdListModule,
-    MdTabsModule,
-    MdIconModule,
-    MdMenuModule,
-    MdDialogModule,
-    MdToolbarModule,
-    MdFormFieldModule,
-    MdInputModule,
-    MdSelectModule,
-    MdDatepickerModule,
-    MdNativeDateModule,
-    MdRadioModule
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule,
+    MatTabsModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ]
 })
 

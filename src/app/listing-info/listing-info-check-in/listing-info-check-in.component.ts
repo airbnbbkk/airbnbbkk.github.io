@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { ListingInfoCheckOutImgDialogComponent } from './listing-info-check-out-img.component';
 import { TranslationModule } from '../../service/translationModule.provider';
 
@@ -17,7 +17,7 @@ export class ListingInfoCheckInComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private domSanitizer: DomSanitizer,
               private translate: TranslationModule,
-              public dialog: MdDialog) {
+              public dialog: MatDialog) {
 
   }
 
