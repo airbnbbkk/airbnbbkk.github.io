@@ -1,16 +1,16 @@
-<md-card class="listing-card nj-card">
+<mat-card class="listing-card nj-card">
   <a routerLink="./info/nj_{{ index }}">
-    <md-card-header class="listing-header">
-      <md-card-title>N&J #{{ index }}</md-card-title>
-      <md-card-subtitle>{{ listing.bedrooms }} {{'LISTING.BED_ROOMS' | translate}}</md-card-subtitle>
-    </md-card-header>
-    <md-card-content class="listing-content">
+    <mat-card-header class="listing-header">
+      <mat-card-title>N&J #{{ index }}</mat-card-title>
+      <mat-card-subtitle>{{ listing.bedrooms }} {{'LISTING.BED_ROOMS' | translate}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="listing-content">
       <div class="listing-content-image">
         <img src="{{ listing.photos.large_url[0] }}" style="" alt=""/>
       </div>
       <div class="listing-content-desc">
         <h4>{{ listing.name }}</h4>
       </div>
-    </md-card-content>
+    </mat-card-content>
   </a>
-</md-card>
+</mat-card>

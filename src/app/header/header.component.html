@@ -1,20 +1,20 @@
-<md-toolbar>
-  <md-button-toggle id="nav-button" (click)="sidenav.toggle()"><i class="material-icons">menu</i></md-button-toggle>
+<mat-toolbar>
+  <mat-button-toggle id="nav-button" (click)="sidenav.toggle()"><i class="material-icons">menu</i></mat-button-toggle>
   <span class="flex-spacer"></span>
   <div class="language-menu">
-    <button md-icon-button [mdMenuTriggerFor]="menu">
-      <md-icon>language</md-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>language</mat-icon>
     </button>
-    <md-menu #menu="mdMenu">
-      <button md-menu-item (click)="changeLang('en')">
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="changeLang('en')">
         <span>English</span>
       </button>
-      <button md-menu-item (click)="changeLang('ko')">
+      <button mat-menu-item (click)="changeLang('ko')">
         <span>한국어</span>
       </button>
-      <button md-menu-item (click)="changeLang('cn')">
+      <button mat-menu-item (click)="changeLang('cn')">
         <span>中文</span>
       </button>
-    </md-menu>
+    </mat-menu>
   </div>
-</md-toolbar>
+</mat-toolbar>

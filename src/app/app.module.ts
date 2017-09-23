@@ -26,11 +26,13 @@ import { GoogleApiService } from './service/google.api.service';
 import { SideNavModule } from './side-nav/side-nav.module';
 import { HeaderModule } from './header/header.module';
 import { NjCapitalizePipe } from './app.pipe';
+import { MATERIAL_COMPATIBILITY_MODE } from '@angular/material';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
+  {provide: MATERIAL_COMPATIBILITY_MODE, useValue: true},
   AirbnbApiService,
   GoogleApiService
 ];

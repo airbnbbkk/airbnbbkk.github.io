@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ContactsComponent } from './contacts.component';
 import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MdIconRegistry } from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
 import { TranslationModule } from '../service/translationModule.provider';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { TranslationModule } from '../service/translationModule.provider';
 })
 
 export class ContactsModule {
-  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     console.log('registering fonts');
     iconRegistry
       .addSvgIcon(

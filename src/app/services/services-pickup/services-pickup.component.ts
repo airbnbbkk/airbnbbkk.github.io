@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ServicesPickupInfo } from './services-pickup.const';
 import { TranslationModule } from '../../service/translationModule.provider';
 import { ServicesPickupBookingDialogComponent } from './dialog-booking/services-pickup-booking';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'nj-services-pickup',
@@ -13,7 +13,7 @@ export class ServicesPickupComponent {
   public pickupInfo: PickupServiceInfo;
 
   constructor(public translate: TranslationModule,
-              public dialog: MdDialog) {
+              public dialog: MatDialog) {
     this.pickupInfo = ServicesPickupInfo;
   }
 

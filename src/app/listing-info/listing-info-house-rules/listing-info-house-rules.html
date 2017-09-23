@@ -1,14 +1,14 @@
-<md-card class="nj-card youtube-card" *ngFor="let rule of getRulesData()">
-  <md-card-header class="nj-card-header">
-    <md-card-title class="nj-card-title">
-      <md-icon class="nj-card-title-icon">{{ rule.icon }}</md-icon>
+<mat-card class="nj-card youtube-card" *ngFor="let rule of getRulesData()">
+  <mat-card-header class="nj-card-header">
+    <mat-card-title class="nj-card-title">
+      <mat-icon class="nj-card-title-icon">{{ rule.icon }}</mat-icon>
       <span class="nj-card-title-text">{{ rule.title }}</span>
-    </md-card-title>
-  </md-card-header>
-  <md-card-content class="nj-card-content">
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="nj-card-content">
     <a name="{{ rule.icon}}"></a>
     <p>
         {{ rule.rule }}
     </p>
-  </md-card-content>
-</md-card>
+  </mat-card-content>
+</mat-card>
