@@ -59,7 +59,7 @@ export class AirbnbApiService extends Api {
   public async sendMessage(id: number, message: string) {
     return this.http
       .post(
-        'https://rzsw7dfqbh.execute-api.ap-southeast-1.amazonaws.com/dev' +
+        'https://zj4inqosl0.execute-api.ap-southeast-1.amazonaws.com/prod' +
         '/message',
         {
           receiver: id,

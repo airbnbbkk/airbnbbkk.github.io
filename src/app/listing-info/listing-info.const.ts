@@ -29,7 +29,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       },
       houseInfo: {
         building: 'C2',
-        floor: 25,
+        floor: 22,
         houseNumber: '131/414'
       },
       time: {
@@ -367,6 +367,70 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       wifi: {
         name: 'M&M Residence',
         pw: 1234567890
+      },
+      dumpster: {
+        location: {
+          en: 'Behind the door to the emergency exit in front of the elevator',
+          ko: '엘리베이터 앞 비상 계단실',
+          cn: '靠近电梯前的紧急出口'
+        }
+      },
+      poolAndGym: {
+        hours: {
+          open: 7,
+          close: 21
+        },
+        location: {
+          en: 'right in front of the house building',
+          ko: '숙소 빌딩 밖 맞은 편',
+          cn: '就在房屋前面'
+        }
+      }
+    }
+  },
+  nj_7: {
+    location: {
+      voiceGuide: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
+        }
+      },
+      address: {
+        en: '842/189, 12th Fl., Building A, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
+        th: '842/189, Building A,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
+      },
+      gMap: GMaps.ASPIRE
+    },
+    checkIn: {
+      video: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
+        }
+      },
+      houseInfo: {
+        building: 'A',
+        floor: 12,
+        houseNumber: '842/189'
+      },
+      time: {
+        in: 14,
+        out: 12,
+        flexIn: 5,
+        flexOut: 6,
+        paidIn: 5,
+        paidOut: 5,
+        overStayCharge: 1000
+      },
+      leaveKeycard: 'LEAVE_KEY_CARD_IN_THE_MAIL_BOX'
+    },
+    facilities: {
+      wifi: {
+        name: 'NJ7',
+        pw: 1234512345
       },
       dumpster: {
         location: {
