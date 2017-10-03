@@ -15,7 +15,8 @@ import {
   MatSelectModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatRadioModule
+  MatRadioModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
@@ -35,7 +36,8 @@ import {
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatProgressSpinnerModule
   ]
 })
 

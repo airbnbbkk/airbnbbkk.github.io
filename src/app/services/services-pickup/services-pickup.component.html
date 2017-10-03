@@ -2,13 +2,13 @@
   <mat-card-header class="nj-card-header">
     <mat-card-title class="nj-card-title">
       <mat-icon class="nj-card-title-icon">local_airport</mat-icon>
-      <span class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE' | translate}}</span>
+      <span class="nj-card-title-text">{{ 'SERVICES.SHUTTLE' | translate}}</span>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="nj-card-content">
     <div class="description-box">
       <p>
-        {{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DESCRIPTION' | translate}}
+        {{ 'SERVICES.SHUTTLE_DESCRIPTION' | translate}}
       </p>
     </div>
   </mat-card-content>
@@ -17,7 +17,7 @@
   <mat-card-header class="nj-card-header">
     <mat-card-title class="nj-card-title">
       <mat-icon class="nj-card-title-icon">directions_car</mat-icon>
-      <span class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_VEHICLE_LIST' | translate}}</span>
+      <span class="nj-card-title-text">{{ 'SERVICES.SHUTTLE_VEHICLE_LIST' | translate}}</span>
     </mat-card-title>
   </mat-card-header>
   <mat-divider></mat-divider>
@@ -37,15 +37,15 @@
                 <mat-list>
                   <mat-list-item class="nj-card-list-item">
                     <mat-icon mat-list-icon class="nj-card-list-item-icon">people</mat-icon>
-                    <h4 matLine class="nj-card-list-item-heading">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_CAPACITY'
+                    <h4 matLine class="nj-card-list-item-heading">{{'SERVICES.SHUTTLE_CAPACITY'
                       | translate}}</h4>
                     <p matLine class="nj-card-list-item-text"> {{vehicle.capacity}}
-                      {{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_PEOPLE' |
+                      {{'SERVICES.SHUTTLE_PEOPLE' |
                       translate}} </p>
                   </mat-list-item>
                   <mat-list-item class="nj-card-list-item">
                     <mat-icon mat-list-icon class="nj-card-list-item-icon">payment</mat-icon>
-                    <h4 matLine class="nj-card-list-item-heading">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_PRICE' |
+                    <h4 matLine class="nj-card-list-item-heading">{{'SERVICES.SHUTTLE_PRICE' |
                       translate}}</h4>
                     <p matLine class="nj-card-list-item-text"> {{vehicle.price | number}} {{ 'COMMON.BAHT' |
                       translate}}</p>
@@ -53,7 +53,7 @@
                 </mat-list>
               </mat-card-content>
               <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog(vehicle)">{{'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_BOOK'
+                <button mat-raised-button color="primary" (click)="openDialog(vehicle)">{{'SERVICES.SHUTTLE_BOOK'
                   | translate}}</button>
               </mat-card-actions>
             </mat-card>
@@ -67,12 +67,12 @@
   <mat-card-header class="nj-card-header">
     <mat-card-title class="nj-card-title">
       <mat-icon class="nj-card-title-icon">place</mat-icon>
-      <span class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_PICKUP_SPOT' | translate}}</span>
+      <span class="nj-card-title-text">{{ 'SERVICES.SHUTTLE_PICKUP_SPOT' | translate}}</span>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="nj-card-content">
     <p>
-      {{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_PICKUP_SPOT_INFO' | translate}}
+      {{ 'SERVICES.SHUTTLE_PICKUP_SPOT_INFO' | translate}}
     </p>
     <mat-card class="nj-card">
       <mat-card-header class="nj-card-header">
@@ -82,17 +82,17 @@
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p class="warn-box">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_PICKUP_SPOT_WARN' | translate}}</p>
+        <p class="warn-box">{{ 'SERVICES.SHUTTLE_PICKUP_SPOT_WARN' | translate}}</p>
       </mat-card-content>
     </mat-card>
     <mat-card class="nj-card">
       <mat-card-header class="nj-card-header">
         <mat-card-title class="nj-card-title">
           <span
-            class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI' | translate}}</span>
+            class="nj-card-title-text">{{ 'SERVICES.SHUTTLE_SUVARNABHUMI' | translate}}</span>
         </mat-card-title>
         <mat-card-subtitle>
-          {{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI_INFO' | translate}}
+          {{ 'SERVICES.SHUTTLE_SUVARNABHUMI_INFO' | translate}}
         </mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="assets/img/pickup_suvan_airport.jpg">
@@ -100,10 +100,10 @@
     <mat-card class="nj-card">
       <mat-card-header class="nj-card-header">
         <mat-card-title class="nj-card-title">
-          <span class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG' | translate}}</span>
+          <span class="nj-card-title-text">{{ 'SERVICES.SHUTTLE_DONMUEANG' | translate}}</span>
         </mat-card-title>
         <mat-card-subtitle>
-          {{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG_INFO' | translate}}
+          {{ 'SERVICES.SHUTTLE_DONMUEANG_INFO' | translate}}
         </mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="assets/img/pickup_dmk_airport.jpg">
@@ -111,10 +111,10 @@
     <mat-card class="nj-card">
       <mat-card-header class="nj-card-header">
         <mat-card-title class="nj-card-title">
-          <span class="nj-card-title-text">{{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE' | translate}}</span>
+          <span class="nj-card-title-text">{{ 'SERVICES.SHUTTLE_HOUSE' | translate}}</span>
         </mat-card-title>
         <mat-card-subtitle>
-          {{ 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE_INFO' | translate}}
+          {{ 'SERVICES.SHUTTLE_HOUSE_INFO' | translate}}
         </mat-card-subtitle>
       </mat-card-header>
     </mat-card>

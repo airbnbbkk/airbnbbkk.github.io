@@ -1,0 +1,18 @@
+<p>{{'SERVICES.SHUTTLE_CONFIRM_HEADER' | translate}}</p>
+<mat-card class="nj-card">
+  <mat-card-content class="nj-card-content">
+    <pre>{{data.message}}</pre>
+  </mat-card-content>
+</mat-card>
+<p>{{'SERVICES.SHUTTLE_CONFIRM_INFO' | translate}}</p>
+<div class="button-group" *ngIf="!submitted">
+  <button mat-raised-button color="warn" (click)="confirmDialog.close()">
+    {{'SERVICES.SHUTTLE_BACK'
+    | translate}}
+  </button>
+  <button mat-raised-button color="primary" (click)="submit()">
+    {{'SERVICES.SHUTTLE_SUBMIT'
+    | translate}}
+  </button>
+</div>
+<mat-spinner style="margin:0 auto;" *ngIf="submitted"></mat-spinner>

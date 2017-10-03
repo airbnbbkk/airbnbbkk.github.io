@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ServicesPickupInfo } from './services-pickup.const';
 import { TranslationModule } from '../../service/translationModule.provider';
-import { ServicesPickupBookingDialogComponent } from './dialog-booking/services-pickup-booking';
+import { ServicesPickupDialogBookingComponent } from './dialog-booking/services-pickup-dialog-booking';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -18,7 +18,7 @@ export class ServicesPickupComponent {
   }
 
   public openDialog(vehicle: PickupVehicle) {
-    this.dialog.open(ServicesPickupBookingDialogComponent, {
+    this.dialog.open(ServicesPickupDialogBookingComponent, {
       panelClass: 'nj-booking-dialog',
       height: '90%',
       data: {

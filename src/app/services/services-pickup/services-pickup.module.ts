@@ -5,12 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServicesPickupComponent } from './services-pickup.component';
 import { NgCustomMaterialModule } from '../../ng-material/ng-material.module';
 import { TranslationModule } from '../../service/translationModule.provider';
-import { ServicesPickupBookingDialogComponent } from './dialog-booking/services-pickup-booking';
+import { ServicesPickupDialogBookingComponent } from './dialog-booking/services-pickup-dialog-booking';
+import { ServicesPickupDialogConfirmComponent } from './dialog-confirm/services-pickup-dialog-confirm';
 
 @NgModule({
   declarations: [
     ServicesPickupComponent,
-    ServicesPickupBookingDialogComponent
+    ServicesPickupDialogBookingComponent,
+    ServicesPickupDialogConfirmComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,10 @@ import { ServicesPickupBookingDialogComponent } from './dialog-booking/services-
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents: [ServicesPickupBookingDialogComponent],
+  entryComponents: [
+    ServicesPickupDialogBookingComponent,
+    ServicesPickupDialogConfirmComponent
+  ],
   exports: [
     ServicesPickupComponent
   ]

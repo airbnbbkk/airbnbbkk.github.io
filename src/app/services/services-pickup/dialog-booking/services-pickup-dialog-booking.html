@@ -1,0 +1,150 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <mat-form-field>
+    <input matInput placeholder="Vehicle Type"
+           formControlName="vehicle" readonly>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="{{'SERVICES.SHUTTLE_CONFIRMATION_CODE' | translate}}"
+           formControlName="bookingNumber" pattern="[a-zA-Z]*" required>
+    <mat-error *ngIf="form.controls['bookingNumber'].hasError('pattern')">
+      {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
+    </mat-error>
+  </mat-form-field>
+  <div class="">
+    <mat-radio-group name="trip" formControlName="tripType" (change)="changeSpotOptions()">
+      <mat-radio-button value="oneway">{{'SERVICES.SHUTTLE_ONEWAY' | translate}}
+      </mat-radio-button>
+      <span>&nbsp;</span>
+      <mat-radio-button value="round">{{'SERVICES.SHUTTLE_ROUNDTRIP' | translate}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="nj-form-field">
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <mat-select placeholder="{{'SERVICES.SHUTTLE_DEPARTURE' | translate}}"
+                      name="departure"
+                      formControlName="departure"
+                      floatPlaceholder="never"
+                      (change)="changeSpotOptions()" required>
+            <mat-option *ngFor="let airport of departures" [value]="airport.type">
+              {{airport.name.i18n | translate}}
+            </mat-option>
+          </mat-select>
+        </td>
+        <td class="icon-col">
+          <mat-icon cxlass="nj-card-title-icon">{{form.get('tripType').value === 'oneway' ?
+            'trending_flat':'swap_horiz'}}
+          </mat-icon>
+        </td>
+        <td>
+          <mat-select placeholder="{{'SERVICES.SHUTTLE_DESTINATION' | translate}}"
+                      name="destination"
+                      floatPlaceholder="never"
+                      formControlName="destination" required>
+            <mat-option *ngFor="let airport of destination" [value]="airport.type">
+              {{airport.name.i18n | translate}}
+            </mat-option>
+          </mat-select>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <mat-card class="airport-pickup-card pickup-card nj-card"
+            *ngIf="form.controls['departure'].value !== PICKUP_SPOTS.HOUSE">
+    <mat-card-header class="nj-card-header">
+      <mat-card-title class="nj-card-title">
+        <mat-icon class="nj-card-title-icon">local_airport</mat-icon>
+        <mat-icon class="nj-card-title-icon">trending_flat</mat-icon>
+        <mat-icon class="nj-card-title-icon">home</mat-icon>
+      </mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="airportForm">
+      <mat-card-content class="nj-card-content">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="nj-booking-date-picker">
+                <input matInput [matDatepicker]="picker" (click)="picker.open()" placeholder="{{'SERVICES.SHUTTLE_DATE' | translate}} & {{'SERVICES.SHUTTLE_TIME' | translate}}"
+                       formControlName="date" required readonly>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="false" #picker></mat-datepicker>
+              </mat-form-field>
+            </td>
+            <td>
+              <input formControlName="time" type="time" class="time-input" placeholder="Time" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field>
+                <input type="text" matInput placeholder="{{'SERVICES.SHUTTLE_FLIGHT_NAME' | translate}}" formControlName="flightName"
+                       pattern="[a-zA-Z0-9 ]*" required>
+                <mat-error *ngIf="airportForm.controls['flightName'].hasError('pattern')">
+                  {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
+                </mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field>
+                <input type="text" matInput placeholder="{{'SERVICES.SHUTTLE_FLIGHT_NUMBER' | translate}}" formControlName="flightNumber"
+                       pattern="[a-zA-Z0-9 ]*" required>
+                <mat-error *ngIf="airportForm.controls['flightNumber'].hasError('pattern')">
+                  {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
+                </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <mat-form-field>
+          <input type="text" matInput placeholder="{{'SERVICES.SHUTTLE_YOUR_NAME' | translate}}" formControlName="name" pattern="[a-zA-Z ]*" required>
+          <mat-error *ngIf="airportForm.controls['name'].hasError('pattern')" required>
+            {{'COMMON.ERROR_MESSAGES.ENGLISH_ONLY' | translate}}
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+    </form>
+  </mat-card>
+  <mat-card class="house-pickup-card pickup-card nj-card"
+            *ngIf="form.controls['departure'].value === PICKUP_SPOTS.HOUSE || form.controls['tripType'].value !== 'oneway'">
+    <mat-card-header class="nj-card-header">
+      <mat-card-title class="nj-card-title">
+        <mat-icon class="nj-card-title-icon">home</mat-icon>
+        <mat-icon class="nj-card-title-icon">trending_flat</mat-icon>
+        <mat-icon class="nj-card-title-icon">local_airport</mat-icon>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="nj-card-content">
+      <form [formGroup]="houseForm">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="nj-booking-date-picker">
+                <input matInput [matDatepicker]="picker" [min]="airportForm.get('date').value" formControlName="date"
+                       (click)="picker.open()"
+                       placeholder="{{'SERVICES.SHUTTLE_DATE' | translate}} & {{'SERVICES.SHUTTLE_TIME' | translate}}" required readonly>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="false" #picker></mat-datepicker>
+              </mat-form-field>
+            </td>
+            <td>
+              <input formControlName="time" type="time" id="houseTime"
+                     class="time-input" placeholder="Time" required>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-form-field>
+    <input matInput type="text" placeholder="{{'SERVICES.SHUTTLE_TOTAL_PRICE' | translate}}"
+           formControlName="price"
+           [value]="getPickupPrice() | number" readonly>
+    <span matSuffix>{{'COMMON.BAHT' | translate}}</span>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">{{'SERVICES.SHUTTLE_CONTINUE'
+    | translate}}
+  </button>
+</form>
+

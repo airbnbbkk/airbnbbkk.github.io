@@ -1,0 +1,68 @@
+:host {
+  display: block;
+}
+
+.nj-form-field {
+  padding-bottom: 0;
+  margin-bottom: 1.50em;
+
+  label {
+    color: rgba(0, 0, 0, .54);
+  }
+}
+
+.time-input {
+  height: 1rem;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  background: none;
+
+  &.ng-invalid.ng-touched {
+    border-color: red;
+  }
+}
+
+.nj-booking-date-picker {
+  width: 100%;
+}
+
+.mat-input-element,
+input[type='time'],
+input[type='text'] {
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  caption {
+    text-align: left;
+  }
+  td {
+    &.icon-col {
+      vertical-align: bottom;
+    }
+    mat-select {
+      /deep/ .mat-select-trigger {
+        min-width: inherit;
+      }
+    }
+    mat-form-field, mat-select {
+      width: 100%;
+    }
+  }
+}
+
+.pickup-card {
+  .nj-card-header {
+    /deep/ .mat-card-header-text {
+      margin: 0;
+    }
+    .nj-card-title {
+      .nj-card-title-icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

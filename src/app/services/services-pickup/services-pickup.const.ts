@@ -22,7 +22,7 @@ export const ServicesPickupInfo: PickupServiceInfo = {
         ko: '도요타 포츄너',
         cn: '丰田Fortuner'
       },
-      capacity: '3 - 5',
+      capacity: '1 - 4',
       price: 1200,
       img: 'toyota_fortuner.jpg'
     },
@@ -32,8 +32,8 @@ export const ServicesPickupInfo: PickupServiceInfo = {
         ko: '미니벤',
         cn: '迷你范'
       },
-      capacity: '5 - 8',
-      price: 2500,
+      capacity: '4 - 8',
+      price: 2000,
       img: 'mini_van.jpg'
     }
   ],
@@ -41,23 +41,23 @@ export const ServicesPickupInfo: PickupServiceInfo = {
     {
       type: PICKUP_SPOTS.SUVARNABHUMI,
       name: {
-        i18n: 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_SUVARNABHUMI'
+        i18n: 'SERVICES.SHUTTLE_SUVARNABHUMI'
       },
       location: 'Between gate number 3 and 4'
     },
     {
       type: PICKUP_SPOTS.DONMUEANG,
       name: {
-        i18n: 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_DONMUEANG'
+        i18n: 'SERVICES.SHUTTLE_DONMUEANG'
       },
       location: 'Gate number 3'
     },
     {
       type: PICKUP_SPOTS.HOUSE,
       name: {
-        i18n: 'SERVICES.TRANSPORTATION_AIRPORT_SHUTTLE_HOUSE'
+        i18n: 'SERVICES.SHUTTLE_HOUSE'
       },
-      location: 'At the lobby'
+      location: 'At the house lobby'
     }
   ]
 };
