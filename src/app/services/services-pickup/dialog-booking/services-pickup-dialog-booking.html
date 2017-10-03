@@ -5,7 +5,7 @@
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="{{'SERVICES.SHUTTLE_CONFIRMATION_CODE' | translate}}"
-           formControlName="bookingNumber" pattern="[a-zA-Z]*" required>
+           formControlName="bookingNumber" pattern="[a-zA-Z0-9]*" required>
     <mat-error *ngIf="form.controls['bookingNumber'].hasError('pattern')">
       {{'COMMON.ERROR_MESSAGES.ALPHANUMERIC_ONLY' | translate}}
     </mat-error>
