@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <mat-button-toggle id="nav-button" (click)="sidenav.toggle()"><i class="material-icons">menu</i></mat-button-toggle>
+  <button mat-button mat-raised-button color="primary" id="nav-button" (click)="sidenav.toggle()"><i class="material-icons">menu</i></button>
   <span class="flex-spacer"></span>
   <div class="language-menu">
     <button mat-icon-button [matMenuTriggerFor]="menu">
