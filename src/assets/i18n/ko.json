@@ -29,7 +29,8 @@
   },
   "LISTING_INFO_LOCATION": {
     "HOW_TO_GO": "가는 방법",
-    "HOW_TO_GO_DESCRIPTION":"집 가는 방법을 설명하는 태국 음성 안내 입니다.\n택시 기사분께 들려 드리세요."
+    "HOW_TO_GO_DESCRIPTION":"집 가는 방법을 설명하는 태국 음성 안내 입니다.\n택시 기사분께 들려 드리세요.",
+    "MAP": "지도"
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "체크인 하는 방법",

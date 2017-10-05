@@ -12,10 +12,10 @@ nav[mat-tab-nav-bar] {
     }
   }
   .activeLink {
-    background-color: rgba(197,202,233,.3);
+    background-color: rgba(197, 202, 233, .3);
     outline: 0;
     opacity: 1;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
   }
 }
 
@@ -31,5 +31,14 @@ nav[mat-tab-nav-bar] {
   margin-top: 1em;
   .youtube-box {
     height: 56.25vw;
+  }
+}
+
+.gmap-card {
+  margin-top: 1em;
+
+  iframe {
+    height: 100%;
+    min-height: 300px;
   }
 }

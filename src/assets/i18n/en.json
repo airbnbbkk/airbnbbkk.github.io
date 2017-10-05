@@ -4,10 +4,10 @@
     "PRICE": "",
     "WARNING": "warning",
     "ATTENTION": "attention",
-    "ERROR_MESSAGES":{
-      "ENGLISH_ONLY":"Please type English only",
-      "NUMBER_ONLY":"Please type numbers only",
-      "ALPHANUMERIC_ONLY":"Please type English and number only"
+    "ERROR_MESSAGES": {
+      "ENGLISH_ONLY": "Please type English only",
+      "NUMBER_ONLY": "Please type numbers only",
+      "ALPHANUMERIC_ONLY": "Please type English and number only"
     }
   },
   "SIDE_NAV": {
@@ -29,7 +29,8 @@
   },
   "LISTING_INFO_LOCATION": {
     "HOW_TO_GO": "How to Go",
-    "HOW_TO_GO_DESCRIPTION":"This is a Thai voice instruction of how to go to the house.\nPlay this to a taxi driver."
+    "HOW_TO_GO_DESCRIPTION": "This is a Thai voice instruction of how to go to the house.\nPlay this to a taxi driver.",
+    "MAP": "Map"
   },
   "LISTING_INFO_CHECK_IN_OUT": {
     "HOW_TO_CHECK_IN": "How to Check In",
@@ -97,15 +98,15 @@
     "SHUTTLE_VEHICLE_TYPE": "Vehicle Type",
     "SHUTTLE_SUBMIT": "Submit",
     "SHUTTLE_BACK": "Back",
-    "SHUTTLE_CONTINUE":"Continue",
-    "SHUTTLE_CONFIRMATION_CODE":"Airbnb Confirmation Code",
-    "SHUTTLE_DATE":"Date",
-    "SHUTTLE_TIME":"Time",
-    "SHUTTLE_FLIGHT_NAME":"Flight Name",
-    "SHUTTLE_FLIGHT_NUMBER":"Flight Number",
-    "SHUTTLE_YOUR_NAME":"Your name",
-    "SHUTTLE_TOTAL_PRICE":"Total Price",
-    "SHUTTLE_CONFIRM_HEADER":"Your request for pickup service will be placed like below",
-    "SHUTTLE_CONFIRM_INFO":"We will send you a payment request through Airbnb shortly. Let us know if you can't proceed the payment."
+    "SHUTTLE_CONTINUE": "Continue",
+    "SHUTTLE_CONFIRMATION_CODE": "Airbnb Confirmation Code",
+    "SHUTTLE_DATE": "Date",
+    "SHUTTLE_TIME": "Time",
+    "SHUTTLE_FLIGHT_NAME": "Flight Name",
+    "SHUTTLE_FLIGHT_NUMBER": "Flight Number",
+    "SHUTTLE_YOUR_NAME": "Your name",
+    "SHUTTLE_TOTAL_PRICE": "Total Price",
+    "SHUTTLE_CONFIRM_HEADER": "Your request for pickup service will be placed like below",
+    "SHUTTLE_CONFIRM_INFO": "We will send you a payment request through Airbnb shortly. Let us know if you can't proceed the payment."
   }
 }

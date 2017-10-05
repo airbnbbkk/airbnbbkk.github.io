@@ -33,11 +33,16 @@
     </mat-list>
   </mat-card-content>
 </mat-card>
-<mat-card class="nj-card youtube-card">
+<mat-card class="nj-card gmap-card">
+  <mat-card-header class="nj-card-header">
+    <mat-card-title class="nj-card-title">
+      <mat-icon class="nj-card-title-icon">map</mat-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_LOCATION.MAP' | translate}}</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
   <mat-card-content>
-    <div class="youtube-box" mat-card-image>
-      <iframe width="100%" height="100%" [src]="this.gmHouseLocation"
-              frameborder="0" allowfullscreen></iframe>
-    </div>
+    <iframe width="100%" [src]="this.gmHouseLocation"
+            frameborder="0" allowfullscreen></iframe>
   </mat-card-content>
 </mat-card>
