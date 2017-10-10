@@ -32,7 +32,6 @@ import { MATERIAL_COMPATIBILITY_MODE } from '@angular/material';
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
-  {provide: MATERIAL_COMPATIBILITY_MODE, useValue: true},
   AirbnbApiService,
   GoogleApiService
 ];

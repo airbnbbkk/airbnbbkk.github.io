@@ -41,13 +41,14 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    console.log('Initial App State', this.appState.state);
     this.translate.setDefaultLang('en');
     this.activatedRoute.queryParams
       .subscribe((params: Params) => {
         console.log('lang', params['lang']);
         this.translate.use(params['lang'] || this.translate.currentLang);
+        this.appState.set('confirmationCode', params['cc']);
       });
+    console.log('Initial App State', this.appState.state);
   }
 }
 

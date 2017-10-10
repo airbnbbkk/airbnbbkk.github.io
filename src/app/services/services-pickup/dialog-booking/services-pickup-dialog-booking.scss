@@ -34,23 +34,33 @@ input[type='text'] {
   font-size: 16px;
 }
 
+.nj-form-field-spots {
+  td {
+    width: 50%;
+  }
+  .icon-col {
+    width: inherit;
+  }
+}
+
 table {
   width: 100%;
   caption {
     text-align: left;
   }
   td {
-    &.icon-col {
-      vertical-align: bottom;
-    }
-    mat-select {
-      /deep/ .mat-select-trigger {
-        min-width: inherit;
-      }
-    }
     mat-form-field, mat-select {
       width: 100%;
     }
+  }
+}
+
+.button-box {
+  .total-price-form-field {
+    width: 40%;
+  }
+  .submit-button {
+    margin-left: 10%;
   }
 }
 
