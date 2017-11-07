@@ -30,6 +30,7 @@ export class ServicesPickupDialogConfirmComponent {
     const subs = res.subscribe((r: any) => {
       console.log('response', r);
       this.dialog.closeAll();
+      alert('your request has been sent.\n\nThe host will contact you shortly.');
     }, err => {
       alert('Failed to send request. If the problem persists, please contact the host.');
       this.submitted = false;
