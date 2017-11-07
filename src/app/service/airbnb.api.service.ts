@@ -56,7 +56,7 @@ export class AirbnbApiService extends Api {
         });
   }
 
-  public async sendMessage(id: number, message: string) {
+  public sendMessage(id: number, message: string) {
     return this.http
       .post(
         'https://98nhqk1s77.execute-api.ap-southeast-1.amazonaws.com/prod/message',
@@ -68,9 +68,7 @@ export class AirbnbApiService extends Api {
           headers: new Headers({
             'Content-Type': 'application/json'
           })
-        })
-      .map((res: Response) => res.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'sending message failed'));
+        });
   }
 
   private async getGapi() {

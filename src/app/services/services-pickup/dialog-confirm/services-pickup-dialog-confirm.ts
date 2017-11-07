@@ -25,13 +25,13 @@ export class ServicesPickupDialogConfirmComponent {
 
     this.submitted = true;
 
-    const res = await this.airbnbApi.sendMessage(276569855, this.data.message + msgLink);
+    const res = this.airbnbApi.sendMessage(276569855, this.data.message + msgLink);
 
     const subs = res.subscribe((r: any) => {
       console.log('response', r);
       this.dialog.closeAll();
     }, err => {
-      alert('failed to send request. please try again.');
+      alert('Failed to send request. If the problem persists, please contact the host.');
       this.submitted = false;
     }, async () => {
       await subs.unsubscribe();
