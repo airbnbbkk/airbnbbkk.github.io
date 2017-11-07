@@ -88,7 +88,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://player.youku.com/embed/XMjg4MDczMzM3Ng=='
+          cn: 'https://player.youku.com/embed/XMzE0MDE1NTU2MA=='
         }
       },
       houseInfo: {
