@@ -18,6 +18,7 @@ export class ServicesPickupDialogBookingComponent implements OnInit {
   public houseForm: FormGroup;
   public pickupInfo: PickupServiceInfo;
   public selectedVehicle: PickupVehicle;
+  public confirmCode: string;
   public departures: PickupSpot[];
   public destination: PickupSpot[];
   public PICKUP_SPOTS = PICKUP_SPOTS;
@@ -30,10 +31,11 @@ export class ServicesPickupDialogBookingComponent implements OnInit {
 
     this.pickupInfo = Object.assign({}, data.pickupInfo);
     this.selectedVehicle = Object.assign({}, data.selectedVehicle);
+    this.confirmCode = data.confirmCode;
 
     this.form = formBuilder.group({
       vehicle: null,
-      bookingNumber: null,
+      bookingNumber: this.confirmCode,
       price: null,
       tripType: 'oneway',
       departure: null,

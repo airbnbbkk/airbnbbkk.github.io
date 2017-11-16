@@ -46,7 +46,9 @@ export class AppComponent implements OnInit {
       .subscribe((params: Params) => {
         console.log('lang', params['lang']);
         this.translate.use(params['lang'] || this.translate.currentLang);
-        this.appState.set('confirmationCode', params['cc']);
+        if (params['code']) {
+          this.appState.set('confirmationCode', params['code']);
+        }
       });
     console.log('Initial App State', this.appState.state);
   }
