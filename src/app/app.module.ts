@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule, NoPreloading } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -65,7 +64,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     HttpClientModule,
     NgCustomMaterialModule,
     BrowserAnimationsModule,
@@ -81,15 +79,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: NoPreloading
-    })
+    }),
+    /**
+     * This section will import the `DevModuleModule` only in certain build types.
+     * When the module is not imported it will get tree shaked.
+     * This is a simple example, a big app should probably implement some logic
+     */
+    ...environment.showDevModule ? [/*DevModuleModule*/] : [],
   ],
-
-  /**
-   * This section will import the `DevModuleModule` only in certain build types.
-   * When the module is not imported it will get tree shaked.
-   * This is a simple example, a big app should probably implement some logic
-   */
-  ...environment.showDevModule ? [/*DevModuleModule*/] : [],
+  exports: [
+    TranslateModule
+  ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
    */

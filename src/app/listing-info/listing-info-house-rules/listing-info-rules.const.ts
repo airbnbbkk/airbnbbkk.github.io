@@ -1,4 +1,4 @@
-export const Rules: Dict<InfoByLang<HouseRule[]>> = {
+export const Rules: InfoByLang<HouseRule[]> = {
   en: [
     {
       title: 'Turn Off AC',

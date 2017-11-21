@@ -1,5 +1,4 @@
 export * from './app.module';
-export * from './home/home.module';
 export * from './contacts/contacts.module';
 export * from './header/header.module';
 export * from './listings/listings.module';

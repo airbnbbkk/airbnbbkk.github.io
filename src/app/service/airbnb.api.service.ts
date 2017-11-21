@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
@@ -12,7 +12,7 @@ export class AirbnbApiService extends Api {
   private baseUrl = 'https://api.airbnb.com';
   private gapi: GoogleApi;
 
-  constructor(private http: Http,
+  constructor(private http: HttpClient,
               private googleApiService: GoogleApiService) {
     super();
   }
@@ -27,7 +27,6 @@ export class AirbnbApiService extends Api {
         '/v2/listings?locale=en-US&_offset=0&user_id=45188796' +
         '&currency=USD&_limit=10&_format=v1_legacy_long&client_id=3092nxybyb0otqw18e8nh5nty'
       )
-      .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
@@ -49,8 +48,7 @@ export class AirbnbApiService extends Api {
           assertion_type: 'https://www.googleapis.com/oauth2/v1/userinfo',
           assertion: access_token
         }, {
-          method: 'POST',
-          headers: new Headers({
+          headers: new HttpHeaders({
             'Content-Type': 'application/x-www-form-urlencoded'
           })
         });
@@ -64,9 +62,9 @@ export class AirbnbApiService extends Api {
           thread_id: id,
           message
         }, {
-          method: 'POST',
-          headers: new Headers({
-            'Content-Type': 'application/json'
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            'method': 'POST'
           })
         });
   }
@@ -80,8 +78,7 @@ export class AirbnbApiService extends Api {
           amount,
           message
         }, {
-          method: 'POST',
-          headers: new Headers({
+          headers: new HttpHeaders({
             'Content-Type': 'application/json'
           })
         });

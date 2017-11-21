@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 import { NoContentComponent } from './no-content/no-content.component';
 
 export const ROUTES: Routes = [
-  {path: '', loadChildren: './#HomePageModule'},
-  {path: 'home', loadChildren: './#HomePageModule'},
+  {path: '', loadChildren: './home#HomeModule'},
+  {path: 'home', loadChildren: './home#HomeModule'},
   {path: 'contacts', loadChildren: './#ContactsModule'},
   {path: 'services', loadChildren: './#ServicesModule'},
   {path: 'listing', loadChildren: './#ListingsModule'},

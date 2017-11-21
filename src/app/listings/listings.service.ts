@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from '../../../node_modules/rxjs/Observable';
+import { Observable } from 'rxjs/observable';
+import { fromPromise } from 'rxjs/observable/fromPromise';
 import { AirbnbApiService } from '../service/airbnb.api.service';
 import { RepoService } from '../service/repo.service';
 import * as moment from 'moment';
@@ -23,11 +24,12 @@ export class ListingsService {
 
   private saveAllListingToRepo(listingDocs: Array<Listing & RepoDoc>) {
     console.log('listingDoc', listingDocs);
-    return Observable.fromPromise(this.repoService.saveAll(listingDocs));
+    return fromPromise(this.repoService.saveAll(listingDocs));
   }
 
   private fetchListing() {
-    const listingArray = this.apiService.getListing()
+    // FIXME no any
+    const listingArray: any = this.apiService.getListing()
       .mergeMap(res => {
         return res['listings'];
       });
@@ -86,6 +88,6 @@ export class ListingsService {
     this.repoService.list().then(res => {
       console.log(res);
     });
-    return Observable.fromPromise(this.repoService.list());
+    return fromPromise(this.repoService.list());
   }
 }

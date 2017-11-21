@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
-import {Api} from "./api";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Api } from './api';
 
 @Injectable()
 export class GoogleApiService extends Api {
@@ -9,9 +9,7 @@ export class GoogleApiService extends Api {
   private gapi: GoogleApi;
   private GoogleAuth: any;
 
-  constructor(
-    private http: Http
-  ) {
+  constructor(private http: HttpClient) {
     super();
   }
 

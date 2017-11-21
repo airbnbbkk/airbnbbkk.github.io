@@ -54,6 +54,8 @@
       "allow-pascal-case",
       "ban-keywords",
       "check-format"
-    ]
+    ],
+    "arrow-parens": false
+
   }
 }
