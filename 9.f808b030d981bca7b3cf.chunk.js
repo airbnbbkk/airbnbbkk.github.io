@@ -1,2 +1,126 @@
-webpackJsonp([9],{"5/HB":function(t,a,s){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var n=s("TToO"),c=s("WT6e"),e=s("bfOx"),i=function(){function t(){}return t=n.c([Object(c.l)({selector:"nj-contacts",styles:[s("bhLM")],template:s("5VIl")})],t)}(),r=s("R5jf"),l=s("OE0E"),o=s("DUFE"),d=s("HK5X");s.d(a,"ContactsModule",function(){return m});var m=function(){function t(t,a){console.log("registering fonts"),t.addSvgIcon("whats_app",a.bypassSecurityTrustResourceUrl("../assets/icon/whatsapp-icon.svg")).addSvgIcon("line",a.bypassSecurityTrustResourceUrl("../assets/icon/line-messenger.svg")).addSvgIcon("kakao",a.bypassSecurityTrustResourceUrl("../assets/icon/kakaotalk.svg")).addSvgIcon("wechat",a.bypassSecurityTrustResourceUrl("../assets/icon/wechat.svg"))}return t=n.c([Object(c.A)({declarations:[i],imports:[r.a,d.a,e.f.forChild([{path:"",component:i}])]}),n.f("design:paramtypes",[o.k,l.b])],t)}()},"5VIl":function(t,a){t.exports='<mat-card class="nj-card">\n  <mat-card-header class="nj-card-header">\n    <mat-card-title class="nj-card-title">\n      <span class="nj-card-title-text">{{\'CONTACTS.CONTACTS\' | translate}}</span>\n    </mat-card-title>\n    <mat-card-subtitle>{{\'CONTACTS.ADD_CONTACTS_DESCRIPTION\' | translate}}</mat-card-subtitle>\n  </mat-card-header>\n  <mat-divider></mat-divider>\n  <mat-card-content class="nj-card-content">\n    <mat-list dense class="nj-card-list check-in-card-list">\n      <h3 matSubheader class="nj-card-list-sub-header">{{\'CONTACTS.PHONE_WHATS_APP\' | translate}}</h3>\n      <mat-list-item class="nj-card-list-item">\n        <mat-icon mat-list-icon svgIcon="whats_app" class="nj-card-list-item-icon"></mat-icon>\n        <p matLine class="nj-card-list-item-text">0971404828</p>\n      </mat-list-item>\n    </mat-list>\n    <mat-list dense class="nj-card-list check-in-card-list">\n      <h3 matSubheader class="nj-card-list-sub-header">{{\'CONTACTS.LINE_KAKAO_WECHAT\' | translate}}</h3>\n      <mat-list-item class="nj-card-list-item">\n        <mat-icon mat-list-icon svgIcon="line" class="nj-card-list-item-icon"></mat-icon>\n        <mat-icon mat-list-icon svgIcon="kakao" class="nj-card-list-item-icon"></mat-icon>\n        <mat-icon mat-list-icon svgIcon="wechat" class="nj-card-list-item-icon"></mat-icon>\n        <p matLine class="nj-card-list-item-text">KKTKKT2</p>\n      </mat-list-item>\n    </mat-list>\n  </mat-card-content>\n</mat-card>\n'},"E+XL":function(t,a,s){(t.exports=s("FZ+f")(void 0)).push([t.i,"/* fonts */\n",""])},bhLM:function(t,a,s){var n=s("E+XL");t.exports="string"==typeof n?n:n.toString()}});
-//# sourceMappingURL=9.f808b030d981bca7b3cf.chunk.js.map
+webpackJsonp([9],{
+
+/***/ "5/HB":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/tslib/tslib.es6.js
+var tslib_es6 = __webpack_require__("TToO");
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__("WT6e");
+
+// EXTERNAL MODULE: ./node_modules/@angular/router/esm5/router.js
+var router = __webpack_require__("bfOx");
+
+// CONCATENATED MODULE: ./src/app/contacts/contacts.component.ts
+
+
+var contacts_component_ContactsComponent = /** @class */ (function () {
+    function ContactsComponent() {
+    }
+    ContactsComponent = tslib_es6["c" /* __decorate */]([
+        Object(core["l" /* Component */])({
+            selector: 'nj-contacts',
+            styles: [__webpack_require__("bhLM")],
+            template: __webpack_require__("5VIl")
+        })
+    ], ContactsComponent);
+    return ContactsComponent;
+}());
+
+
+// EXTERNAL MODULE: ./src/app/ng-material/ng-material.module.ts
+var ng_material_module = __webpack_require__("R5jf");
+
+// EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
+var platform_browser = __webpack_require__("OE0E");
+
+// EXTERNAL MODULE: ./node_modules/@angular/material/esm5/material.es5.js + 45 modules
+var material_es5 = __webpack_require__("DUFE");
+
+// EXTERNAL MODULE: ./src/app/service/translationModule.provider.ts
+var translationModule_provider = __webpack_require__("HK5X");
+
+// CONCATENATED MODULE: ./src/app/contacts/contacts.module.ts
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactsModule", function() { return contacts_module_ContactsModule; });
+
+
+
+
+
+
+
+
+var contacts_module_ContactsModule = /** @class */ (function () {
+    function ContactsModule(iconRegistry, sanitizer) {
+        console.log('registering fonts');
+        iconRegistry
+            .addSvgIcon('whats_app', sanitizer.bypassSecurityTrustResourceUrl('../assets/icon/whatsapp-icon.svg'))
+            .addSvgIcon('line', sanitizer.bypassSecurityTrustResourceUrl('../assets/icon/line-messenger.svg'))
+            .addSvgIcon('kakao', sanitizer.bypassSecurityTrustResourceUrl('../assets/icon/kakaotalk.svg'))
+            .addSvgIcon('wechat', sanitizer.bypassSecurityTrustResourceUrl('../assets/icon/wechat.svg'));
+    }
+    ContactsModule = tslib_es6["c" /* __decorate */]([
+        Object(core["A" /* NgModule */])({
+            declarations: [
+                contacts_component_ContactsComponent
+            ],
+            imports: [
+                ng_material_module["a" /* NgCustomMaterialModule */],
+                translationModule_provider["a" /* TranslationModule */],
+                router["f" /* RouterModule */].forChild([{
+                        path: '',
+                        component: contacts_component_ContactsComponent
+                    }])
+            ]
+        }),
+        tslib_es6["f" /* __metadata */]("design:paramtypes", [material_es5["k" /* MatIconRegistry */], platform_browser["b" /* DomSanitizer */]])
+    ], ContactsModule);
+    return ContactsModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "5VIl":
+/***/ (function(module, exports) {
+
+module.exports = "<mat-card class=\"nj-card\">\n  <mat-card-header class=\"nj-card-header\">\n    <mat-card-title class=\"nj-card-title\">\n      <span class=\"nj-card-title-text\">{{'CONTACTS.CONTACTS' | translate}}</span>\n    </mat-card-title>\n    <mat-card-subtitle>{{'CONTACTS.ADD_CONTACTS_DESCRIPTION' | translate}}</mat-card-subtitle>\n  </mat-card-header>\n  <mat-divider></mat-divider>\n  <mat-card-content class=\"nj-card-content\">\n    <mat-list dense class=\"nj-card-list check-in-card-list\">\n      <h3 matSubheader class=\"nj-card-list-sub-header\">{{'CONTACTS.PHONE_WHATS_APP' | translate}}</h3>\n      <mat-list-item class=\"nj-card-list-item\">\n        <mat-icon mat-list-icon svgIcon=\"whats_app\" class=\"nj-card-list-item-icon\"></mat-icon>\n        <p matLine class=\"nj-card-list-item-text\">0971404828</p>\n      </mat-list-item>\n    </mat-list>\n    <mat-list dense class=\"nj-card-list check-in-card-list\">\n      <h3 matSubheader class=\"nj-card-list-sub-header\">{{'CONTACTS.LINE_KAKAO_WECHAT' | translate}}</h3>\n      <mat-list-item class=\"nj-card-list-item\">\n        <mat-icon mat-list-icon svgIcon=\"line\" class=\"nj-card-list-item-icon\"></mat-icon>\n        <mat-icon mat-list-icon svgIcon=\"kakao\" class=\"nj-card-list-item-icon\"></mat-icon>\n        <mat-icon mat-list-icon svgIcon=\"wechat\" class=\"nj-card-list-item-icon\"></mat-icon>\n        <p matLine class=\"nj-card-list-item-text\">KKTKKT2</p>\n      </mat-list-item>\n    </mat-list>\n  </mat-card-content>\n</mat-card>\n"
+
+/***/ }),
+
+/***/ "E+XL":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("FZ+f")(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/* fonts */\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "bhLM":
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__("E+XL");
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ })
+
+});
