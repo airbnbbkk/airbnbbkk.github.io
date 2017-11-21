@@ -21,7 +21,6 @@ import { AppState, InternalStateType } from './app.service';
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { ENV_PROVIDERS } from './environment';
 
 import { NgCustomMaterialModule } from './ng-material/ng-material.module';
 import { NoContentComponent } from './no-content/no-content.component';
