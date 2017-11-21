@@ -1,17 +1,21 @@
-import { ApplicationRef, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule, Http } from '@angular/http';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { RouterModule, NoPreloading } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoPreloading, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import '../styles/headings.css';
 import '../styles/styles.scss';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+/*
+ * Platform and Environment providers/directives/pipes
+ */
+import { environment } from 'environments/environment';
 import { ROUTES } from './app.routes';
 import { AppState, InternalStateType } from './app.service';
 /*
@@ -26,7 +30,6 @@ import { GoogleApiService } from './service/google.api.service';
 import { SideNavModule } from './side-nav/side-nav.module';
 import { HeaderModule } from './header/header.module';
 import { NjCapitalizePipe } from './app.pipe';
-import { MATERIAL_COMPATIBILITY_MODE } from '@angular/material';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -43,7 +46,7 @@ type StoreType = {
 };
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(http: Http) {
+export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
@@ -64,6 +67,7 @@ export function HttpLoaderFactory(http: Http) {
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     NgCustomMaterialModule,
     BrowserAnimationsModule,
     HeaderModule,
@@ -72,77 +76,28 @@ export function HttpLoaderFactory(http: Http) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [Http]
+        deps: [HttpClient]
       }
     }),
-    RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: NoPreloading})
+    RouterModule.forRoot(ROUTES, {
+      useHash: Boolean(history.pushState) === false,
+      preloadingStrategy: NoPreloading
+    })
   ],
-  exports: [
-    TranslateModule
-  ],
+
+  /**
+   * This section will import the `DevModuleModule` only in certain build types.
+   * When the module is not imported it will get tree shaked.
+   * This is a simple example, a big app should probably implement some logic
+   */
+  ...environment.showDevModule ? [/*DevModuleModule*/] : [],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
    */
   providers: [
-    ENV_PROVIDERS,
+    environment.ENV_PROVIDERS,
     APP_PROVIDERS
   ]
 })
 export class AppModule {
-
-  constructor(public appRef: ApplicationRef,
-              public appState: AppState) {
-  }
-
-  public hmrOnInit(store: StoreType) {
-    if (!store || !store.state) {
-      return;
-    }
-    console.log('HMR store', JSON.stringify(store, null, 2));
-    /**
-     * Set state
-     */
-    this.appState._state = store.state;
-    /**
-     * Set input values
-     */
-    if ('restoreInputValues' in store) {
-      let restoreInputValues = store.restoreInputValues;
-      setTimeout(restoreInputValues);
-    }
-
-    this.appRef.tick();
-    delete store.state;
-    delete store.restoreInputValues;
-  }
-
-  public hmrOnDestroy(store: StoreType) {
-    const cmpLocation = this.appRef.components.map((cmp) => cmp.location.nativeElement);
-    /**
-     * Save state
-     */
-    const state = this.appState._state;
-    store.state = state;
-    /**
-     * Recreate root elements
-     */
-    store.disposeOldHosts = createNewHosts(cmpLocation);
-    /**
-     * Save input values
-     */
-    store.restoreInputValues = createInputTransfer();
-    /**
-     * Remove styles
-     */
-    removeNgStyles();
-  }
-
-  public hmrAfterDestroy(store: StoreType) {
-    /**
-     * Display new elements
-     */
-    store.disposeOldHosts();
-    delete store.disposeOldHosts;
-  }
-
 }

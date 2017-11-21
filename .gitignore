@@ -1,4 +1,4 @@
-# @AngularClass
+# tipe.io
 
 # Logs
 logs
@@ -51,6 +51,7 @@ npm-debug.log
 /__build__/**
 /public/dist/
 /src/*/dist/
+/dist/**
 /.awcache
 .webpack.json
 /compiled/
@@ -58,6 +59,7 @@ dll/
 
 # Doc #
 /doc/
+/documentation/
 
 # IDE #
 .idea/
