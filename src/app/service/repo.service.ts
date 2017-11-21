@@ -4,7 +4,7 @@ import PouchDB from 'pouchdb';
 @Injectable()
 export class RepoService {
 
-  private _db: PouchDB.Database<any>;
+  private _db: any;
 
   constructor(db: string) {
     this._db = this.createDb(db);
@@ -29,7 +29,7 @@ export class RepoService {
     return this._db.get(id);
   }
 
-  public save(data: PouchDB.Core.PutDocument<any>) {
+  public save(data: any) {
     if (this.isIdIncluded(data)) {
       return this._db.put(data);
     } else {
@@ -45,7 +45,7 @@ export class RepoService {
     return new PouchDB(db);
   }
 
-  private isIdIncluded(data: PouchDB.Core.PutDocument<any>) {
+  private isIdIncluded(data: any) {
     return !!data['_id'];
   }
 }

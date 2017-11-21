@@ -44,7 +44,7 @@
  */
 
 // support NodeJS modules without type definitions
-declare module '*';
+
 
 /*
  // for legacy tslint etc to understand rename 'modern-lru' with your package

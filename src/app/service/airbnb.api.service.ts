@@ -71,6 +71,23 @@ export class AirbnbApiService extends Api {
         });
   }
 
+  public requestShuttleService(confirmCode, amount, message) {
+    return this.http
+      .post(
+        'https://ydlc96trt9.execute-api.ap-southeast-1.amazonaws.com/dev/service/shuttle',
+        {
+          confirmCode,
+          amount,
+          message
+        }, {
+          method: 'POST',
+          headers: new Headers({
+            'Content-Type': 'application/json'
+          })
+        });
+
+  }
+
   private async getGapi() {
     if (!this.gapi) {
       this.gapi = await this.googleApiService.getClient();

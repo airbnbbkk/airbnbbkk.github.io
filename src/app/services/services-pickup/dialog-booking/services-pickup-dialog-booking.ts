@@ -108,14 +108,6 @@ export class ServicesPickupDialogBookingComponent implements OnInit {
     return multiplier * this.selectedVehicle.price;
   }
 
-  public hourlyTimeMatcher(control: FormControl, form: FormGroupDirective | NgForm): boolean {
-    return !(control.value >= 0 && control.value <= 24);
-  }
-
-  public minutelyTimeMatcher(control: FormControl, form: FormGroupDirective | NgForm): boolean {
-    return !(control.value >= 0 && control.value <= 59);
-  }
-
   public async onSubmit() {
     if (this.form.invalid) {
       return;
@@ -155,13 +147,14 @@ export class ServicesPickupDialogBookingComponent implements OnInit {
       height: '90%',
       data: {
         bookingNumber: this.form.get('bookingNumber').value,
+        amount: this.getPickupPrice(),
         message
       }
     });
   }
 
   private generateMessage() {
-    const title = `Pickup Service Request - ${this.form.get('tripType').value}\n\n`;
+    const title = `Shuttle Service Request - ${this.form.get('tripType').value}\n\n`;
     const price = `Total Price: ${this.getPickupPrice()}\n\n`;
     let fromAirport = '';
     let fromHouse = ``;
@@ -173,12 +166,12 @@ export class ServicesPickupDialogBookingComponent implements OnInit {
         + `airport: ${PICKUP_SPOTS[this.form.get('departure').value]}\n`
         + `date & time: ${this.convertToReadableDate(this.airportForm.get('date').value)} ${this.airportForm.get('time').value}\n`
         + `flight: ${this.airportForm.get('flightName').value} ${this.airportForm.get('flightNumber').value}\n`
-        + `name card: ${this.airportForm.get('name').value}\n\n`
+        + `name card: ${this.airportForm.get('name').value}\n\n`;
     }
 
     if (this.houseForm.enabled) {
       fromHouse = `[House to Airport]\n\n`
-        + `date & time: ${this.convertToReadableDate(this.houseForm.get('date').value)} ${this.houseForm.get('time').value}\n\n`
+        + `date & time: ${this.convertToReadableDate(this.houseForm.get('date').value)} ${this.houseForm.get('time').value}\n\n`;
     }
 
     return title + fromAirport + fromHouse + price;

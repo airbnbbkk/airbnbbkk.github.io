@@ -21,11 +21,10 @@ export class ServicesPickupDialogConfirmComponent {
   }
 
   public async submit() {
-    const msgLink = `Message: https://www.airbnb.com/messaging/qt_for_reservation/${this.data.bookingNumber}`;
-
     this.submitted = true;
 
-    const res = this.airbnbApi.sendMessage(276569855, this.data.message + msgLink);
+    const res = this.airbnbApi.sendMessage(276569855, this.data.message);
+    const resTemp = this.airbnbApi.requestShuttleService(this.data.bookingNumber, this.data.amount, this.data.message);
 
     const subs = res.subscribe((r: any) => {
       console.log('response', r);
@@ -36,6 +35,13 @@ export class ServicesPickupDialogConfirmComponent {
       this.submitted = false;
     }, async () => {
       await subs.unsubscribe();
+    });
+
+    const resTempSubs = resTemp.subscribe((r: any) => {
+      console.log('response', r);
+    }, err => {
+    }, async () => {
+      await resTempSubs.unsubscribe();
     });
   }
 }
