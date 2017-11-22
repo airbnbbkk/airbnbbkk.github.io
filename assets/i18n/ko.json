@@ -2,7 +2,7 @@
   "COMMON": {
     "BAHT": "바트",
     "PRICE": "가격",
-    "WARNING": "경고",
+    "WARNING": "주의",
     "ATTENTION": "주의",
     "ERROR_MESSAGES":{
       "ENGLISH_ONLY":"영어만 입력해 주세요",
@@ -30,6 +30,7 @@
   "LISTING_INFO_LOCATION": {
     "HOW_TO_GO": "가는 방법",
     "HOW_TO_GO_DESCRIPTION":"집 가는 방법을 설명하는 태국 음성 안내 입니다.\n택시 기사분께 들려 드리세요.",
+    "ADDRESS": "주소",
     "MAP": "지도"
   },
   "LISTING_INFO_CHECK_IN_OUT": {
