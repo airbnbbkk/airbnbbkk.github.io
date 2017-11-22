@@ -28,6 +28,7 @@ import { GoogleApiService } from './service/google.api.service';
 import { SideNavModule } from './side-nav/side-nav.module';
 import { HeaderModule } from './header/header.module';
 import { NjCapitalizePipe } from './app.pipe';
+import { TranslationModule } from './service/translationModule.provider';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -77,7 +78,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     RouterModule.forRoot(ROUTES, {
-      useHash: Boolean(history.pushState) === false,
+      useHash: true,
       preloadingStrategy: NoPreloading
     }),
     /**
@@ -85,10 +86,10 @@ export function HttpLoaderFactory(http: HttpClient) {
      * When the module is not imported it will get tree shaked.
      * This is a simple example, a big app should probably implement some logic
      */
-    ...environment.showDevModule ? [/*DevModuleModule*/] : [],
+    // ...environment.showDevModule ? [DevModuleModule] : [],
   ],
   exports: [
-    TranslateModule
+    TranslationModule
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

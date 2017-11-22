@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 import { ServicesComponent } from './services.component';
 import { routes } from './services.routes';
 import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
+import { TranslationModule } from '../service/translationModule.provider';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { NgCustomMaterialModule } from '../ng-material/ng-material.module';
   ],
   imports: [
     NgCustomMaterialModule,
-    TranslateModule,
+    TranslationModule,
     RouterModule.forChild(routes)
   ],
   exports: [
