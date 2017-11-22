@@ -19,6 +19,11 @@ type ListingInfoLocation = {
   voiceGuide: {
     howToGo: InfoByLang<string>;
   }
+  houseInfo: {
+    building: string;
+    floor: number;
+    houseNumber: string;
+  };
   address: InfoByLang<string>;
   gMap: any;
 };
@@ -26,11 +31,6 @@ type ListingInfoLocation = {
 type ListingInfoCheckIn = {
   video: {
     howToGo: InfoByLang<string>;
-  };
-  houseInfo: {
-    building: string;
-    floor: number;
-    houseNumber: string;
   };
   time: {
     in: number;

@@ -13,6 +13,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
+      houseInfo: {
+        building: 'C2',
+        floor: 22,
+        houseNumber: '131/414'
+      },
       address: {
         en: '131/414, 22nd fl, Building C2, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '131/414, Building C2, 33/4 พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -26,11 +31,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/fTprVHLXtZw?rel=0&cc_load_policy=1&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMjg4MDgzODQyMA=='
         }
-      },
-      houseInfo: {
-        building: 'C2',
-        floor: 22,
-        houseNumber: '131/414'
       },
       time: {
         in: 14,
@@ -77,6 +77,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
+      houseInfo: {
+        building: 'B1',
+        floor: 25,
+        houseNumber: '141/740'
+      },
       address: {
         en: '141/740, 25th fl., Building B1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/740, Building B1, Belle Condo, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -90,11 +95,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/6tCii41nYxA?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzE0MDE1NTU2MA=='
         }
-      },
-      houseInfo: {
-        building: 'B1',
-        floor: 25,
-        houseNumber: '141/740'
       },
       time: {
         in: 14,
@@ -141,6 +141,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMjg0OTQzNzU5Mg=='
         }
       },
+      houseInfo: {
+        building: 'A1',
+        floor: 34,
+        houseNumber: '141/260'
+      },
       address: {
         en: '141/260, 34th Fl., Building A1, Belle Condo, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '141/260, Building A1, พระราม 9 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -154,11 +159,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/HHdMmglPL2w?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMjg0OTA0Njc2MA=='
         }
-      },
-      houseInfo: {
-        building: 'A1',
-        floor: 34,
-        houseNumber: '141/260'
       },
       time: {
         in: 14,
@@ -205,6 +205,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
+      houseInfo: {
+        building: 'B',
+        floor: 15,
+        houseNumber: '842/479'
+      },
       address: {
         en: '842/479, 15th Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/479, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -218,11 +223,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzAwNTY1MTEyMA=='
         }
-      },
-      houseInfo: {
-        building: 'B',
-        floor: 15,
-        houseNumber: '842/479'
       },
       time: {
         in: 14,
@@ -269,6 +269,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'http://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
+      houseInfo: {
+        building: 'B',
+        floor: 11,
+        houseNumber: '842/425'
+      },
       address: {
         en: '842/425, 11th Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/425, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -282,11 +287,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'http://player.youku.com/embed/XMzAxODc3NDY0OA=='
         }
-      },
-      houseInfo: {
-        building: 'B',
-        floor: 11,
-        houseNumber: '842/425'
       },
       time: {
         in: 14,
@@ -333,6 +333,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
+      houseInfo: {
+        building: 'B',
+        floor: 22,
+        houseNumber: '842/614'
+      },
       address: {
         en: '842/614, 22nd Fl., Building B, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/614, Building B,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -346,11 +351,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/c6ya6Zu8N0g?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzAxODc2MjIzMg=='
         }
-      },
-      houseInfo: {
-        building: 'B',
-        floor: 22,
-        houseNumber: '842/614'
       },
       time: {
         in: 14,
@@ -397,6 +397,11 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
         }
       },
+      houseInfo: {
+        building: 'A',
+        floor: 12,
+        houseNumber: '842/189'
+      },
       address: {
         en: '842/189, 12th Fl., Building A, Aspire Condo, Soi 2, Param 9, Hua Kwang, Bangkok 10310, Thailand.',
         th: '842/189, Building A,  แอสปาย คอนโด พระราม 9 ซอย 2 แขวง ห้วยขวาง เขต ห้วยขวาง กรุงเทพมหานคร 10310'
@@ -410,11 +415,6 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           ko: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
         }
-      },
-      houseInfo: {
-        building: 'A',
-        floor: 12,
-        houseNumber: '842/189'
       },
       time: {
         in: 14,

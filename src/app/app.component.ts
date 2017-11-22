@@ -1,7 +1,7 @@
 /**
  * Angular 2 decorators and services
  */
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ViewEncapsulation } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router, ActivatedRoute, Params, NavigationEnd } from '@angular/router';
 import { AppState } from './app.service';
@@ -18,8 +18,9 @@ import { AppState } from './app.service';
   ],
   templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewChecked {
   public angularclassLogo = 'assets/img/angularclass-avatar.png';
+  private fragment: string;
 
   constructor(public appState: AppState,
               private translate: TranslateService,
@@ -38,6 +39,15 @@ export class AppComponent implements OnInit {
     });
   }
 
+  public ngAfterViewChecked() {
+    try {
+      const element = document.querySelector('#' + this.fragment);
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) {
+      /* */
+    }
+  }
+
   public ngOnInit() {
     this.translate.setDefaultLang('en');
     this.activatedRoute.queryParams
@@ -48,6 +58,9 @@ export class AppComponent implements OnInit {
           this.appState.set('confirmationCode', params['code']);
         }
       });
+    this.activatedRoute.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+    });
     console.log('Initial App State', this.appState.state);
   }
 }

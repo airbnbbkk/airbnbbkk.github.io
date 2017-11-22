@@ -1,7 +1,7 @@
 <mat-card class="nj-card youtube-card">
   <mat-card-header class="nj-card-header">
     <mat-card-title class="nj-card-title">
-      <mat-icon class="nj-card-title-icon">location_on</mat-icon>
+      <mat-icon class="nj-card-title-icon">record_voice_over</mat-icon>
       <span class="nj-card-title-text">{{'LISTING_INFO_LOCATION.HOW_TO_GO' | translate}}</span>
     </mat-card-title>
     <mat-card-subtitle>
@@ -10,26 +10,45 @@
       </pre>
     </mat-card-subtitle>
   </mat-card-header>
-  <mat-divider></mat-divider>
   <div class="youtube-box" mat-card-image>
     <iframe width="100%" height="100%" [src]="this.getHowToGoVideoUrl()"
             frameborder="0" allowfullscreen></iframe>
   </div>
+</mat-card>
+<mat-card class="nj-card gmap-card">
+  <mat-card-header class="nj-card-header">
+    <mat-card-title class="nj-card-title">
+      <mat-icon class="nj-card-title-icon">location_on</mat-icon>
+      <span class="nj-card-title-text">{{'LISTING_INFO_LOCATION.ADDRESS' | translate }}</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
   <mat-card-content class="nj-card-content">
     <mat-list dense class="nj-card-list">
-      <h4 matSubheader class="nj-card-list-sub-header">{{'LISTING_INFO.ADDRESS' | translate}}</h4>
+      <div class="flex-box">
+        <mat-list-item class="nj-card-list-item">
+          <h4 matLine class="nj-card-list-item-heading"> {{'LISTING_INFO_CHECK_IN_OUT.HOUSE_NUMBER' | translate}}</h4>
+          <p matLine class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.houseNumber }} </p>
+        </mat-list-item>
+        <mat-list-item class="nj-card-list-item">
+          <h4 matLine class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.FLOOR' | translate}}</h4>
+          <p matLine class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.floor }} </p>
+        </mat-list-item>
+        <mat-list-item class="nj-card-list-item">
+          <h4 matLine class="nj-card-list-item-heading">{{'LISTING_INFO_CHECK_IN_OUT.BUILDING' | translate}}</h4>
+          <p matLine class="nj-card-list-item-text"> {{ this.listingInfo.houseInfo.building }} </p>
+        </mat-list-item>
+      </div>
       <mat-list-item class="nj-card-list-item">
         <h4 matLine class="nj-card-list-item-heading">{{'LISTING_INFO.ENGLISH' | translate}}</h4>
+        <h4 matLine class="nj-card-list-item-heading">&nbsp;</h4>
+        <h4 matLine class="nj-card-list-item-heading">{{ this.listingInfo.address.en }}</h4>
       </mat-list-item>
-      <div>
-        <p class="nj-card-list-item-text"> {{ this.listingInfo.location.address.en }} </p>
-      </div>
       <mat-list-item class="nj-card-list-item">
         <h4 matLine class="nj-card-list-item-heading">{{'LISTING_INFO.THAI' | translate}}</h4>
+        <h4 matLine class="nj-card-list-item-heading">&nbsp;</h4>
+        <h4 matLine class="nj-card-list-item-heading">{{ this.listingInfo.address.th }}</h4>
       </mat-list-item>
-      <div>
-        <p class="nj-card-list-item-text"> {{ this.listingInfo.location.address.th }} </p>
-      </div>
     </mat-list>
   </mat-card-content>
 </mat-card>

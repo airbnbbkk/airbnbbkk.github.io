@@ -9,7 +9,7 @@ import { TranslationModule } from '../../service/translationModule.provider';
   templateUrl: 'listing-info-location.html'
 })
 export class ListingInfoLocationComponent implements OnInit {
-  public listingInfo: ListingInfo;
+  public listingInfo: ListingInfoLocation;
   public getHowToGoVideoUrl: () => SafeResourceUrl;
   public gmHouseLocation: SafeResourceUrl;
 
@@ -20,13 +20,13 @@ export class ListingInfoLocationComponent implements OnInit {
   }
 
   public async ngOnInit() {
-    this.listingInfo = this.route.snapshot.data['listingInfo'];
+    this.listingInfo = this.route.snapshot.data['listingInfo'].location;
 
     this.getHowToGoVideoUrl = () => this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.listingInfo.location.voiceGuide.howToGo[this.translate.getCurrentLang()].toString());
+      this.listingInfo.voiceGuide.howToGo[this.translate.getCurrentLang()].toString());
 
     this.gmHouseLocation = this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.listingInfo.location.gMap.toString());
+      this.listingInfo.gMap.toString());
   }
 
 }
