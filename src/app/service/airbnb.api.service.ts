@@ -57,6 +57,7 @@ export class AirbnbApiService extends Api {
   public sendMessage(id: number, message: string) {
     return this.http
       .post(
+        // FIXME url path should be stored in a global const
         'https://98nhqk1s77.execute-api.ap-southeast-1.amazonaws.com/prod/message',
         {
           thread_id: id,
@@ -72,14 +73,16 @@ export class AirbnbApiService extends Api {
   public requestShuttleService(confirmCode, amount, message) {
     return this.http
       .post(
-        'https://ydlc96trt9.execute-api.ap-southeast-1.amazonaws.com/dev/service/shuttle',
+        // FIXME url path should be stored in a global const
+        'https://98nhqk1s77.execute-api.ap-southeast-1.amazonaws.com/prod/service/shuttle',
         {
           confirmCode,
           amount,
           message
         }, {
           headers: new HttpHeaders({
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'method': 'POST'
           })
         });
 
