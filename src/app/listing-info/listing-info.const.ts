@@ -1,6 +1,7 @@
 const GMaps = {
   BELLE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.311621847027!2d100.5672353155985!3d13.76007190080715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e8b89948df9%3A0xb209ddbd1f7910d0!2sBelle+Condominium!5e0!3m2!1sen!2sth!4v1503540415771',
-  ASPIRE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.311621847027!2d100.5672353155985!3d13.76007190080715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ef33442611f%3A0x9d1ddb4e4964bfcb!2sAspire+Rama+9+Condominium!5e0!3m2!1sen!2sth!4v1503540840914'
+  ASPIRE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.311621847027!2d100.5672353155985!3d13.76007190080715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ef33442611f%3A0x9d1ddb4e4964bfcb!2sAspire+Rama+9+Condominium!5e0!3m2!1sen!2sth!4v1503540840914',
+  RHYTHM_ASOKE: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.407754978238!2d100.56226151560517!3d13.754266700940178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x631db0e6f616e2fc!2sRHYTHM+Asoke!5e0!3m2!1sen!2sth!4v1514630935170'
 };
 
 export const ListingInfoDict: Dict<ListingInfo> = {
@@ -394,7 +395,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
           ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
+          cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
       houseInfo: {
@@ -413,7 +414,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
+          cn: 'https://player.youku.com/embed/XMzI3NzM1MTY2OA=='
         }
       },
       time: {
@@ -429,7 +430,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     },
     facilities: {
       wifi: {
-        name: 'NJ7',
+        name: 'NUI7',
         pw: 1234512345
       },
       dumpster: {
@@ -448,6 +449,70 @@ export const ListingInfoDict: Dict<ListingInfo> = {
           en: 'right in front of the house building',
           ko: '숙소 빌딩 밖 맞은 편',
           cn: '就在房屋前面'
+        }
+      }
+    }
+  },
+  nj_8: {
+    location: {
+      voiceGuide: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/UbltQydj1bk?rel=0',
+          ko: 'https://www.youtube.com/embed/UbltQydj1bk?rel=0',
+          cn: 'https://player.youku.com/embed/XMzA2MjY4OTUwNA=='
+        }
+      },
+      houseInfo: {
+        building: '1',
+        floor: 28,
+        houseNumber: '299/279'
+      },
+      address: {
+        en: '299/279, 28th Fl., Rhythm Asoke 1, Asok-Din Daeng Rd, Khwaeng Makkasan, Khet Ratchathewi, Bangkok 10400',
+        th: '299/279, 28th Fl., คอนโดริทึ่มอโศก1 ถนนอโศก-ดินแดง แขวงมักกะสัน เขตราชเทวี กรุงเทพมหานคร 10400'
+      },
+      gMap: GMaps.RHYTHM_ASOKE
+    },
+    checkIn: {
+      video: {
+        howToGo: {
+          en: 'https://www.youtube.com/embed/Js2BFprZmDg?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/Js2BFprZmDg?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          cn: 'https://player.youku.com/embed/XMzI3NzM1MTY2OA=='
+        }
+      },
+      time: {
+        in: 14,
+        out: 12,
+        flexIn: 5,
+        flexOut: 6,
+        paidIn: 5,
+        paidOut: 5,
+        overStayCharge: 1000
+      },
+      leaveKeycard: 'LEAVE_KEY_CARD_IN_THE_MAIL_BOX'
+    },
+    facilities: {
+      wifi: {
+        name: 'NUI8',
+        pw: 1234512345
+      },
+      dumpster: {
+        location: {
+          en: 'Behind the elevator, a room plated with \"Garbage\"',
+          ko: '엘리베이터 뒤쪽 \"Garbage\"라고 적혀있는 곳',
+          cn: '在电梯后面，有一个房间铺上了\"垃圾\"'
+        }
+      },
+      poolAndGym: {
+        hours: {
+          open: 7,
+          close: 21
+        },
+        location: {
+          en: 'Pool is on the 7th floor and the gym is on the 8th floor.',
+          ko: '수영장은 7층, 헬스장은 8층에 위치',
+          cn: '游泳池位于7楼，健身房位于8楼。'
         }
       }
     }
