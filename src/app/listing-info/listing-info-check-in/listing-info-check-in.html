@@ -61,19 +61,22 @@
           translate }}
         </p>
       </mat-list-item>
-      <mat-list-item class="nj-card-list-item">
+      <mat-list-item *ngIf="isAspire()" class="nj-card-list-item">
         <mat-icon mat-list-icon class="nj-card-list-item-icon"></mat-icon>
         <p md-line class="keycard-instruction">{{'LISTING_INFO_CHECK_IN_OUT.LEAVE_KEY_CARD_INSTRUCTION' | translate}}</p>
       </mat-list-item>
-      <div class="warn-box">
-        <p [innerHTML]="'LISTING_INFO_CHECK_IN_OUT.LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION' | translate"></p>
-        <div class="button-row">
-          <span class="flex-spacer-middle"></span>
-          <button mat-mini-fab (click)="openDialog()">
-            <mat-icon>search</mat-icon>
-          </button>
+      <mat-list-item class="nj-card-list-item">
+        <mat-icon mat-list-icon class="nj-card-list-item-icon"></mat-icon>
+        <div class="warn-box">
+          <p [innerHTML]="'LISTING_INFO_CHECK_IN_OUT.LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION' | translate"></p>
+          <div class="button-row">
+            <span class="flex-spacer-middle"></span>
+            <button mat-mini-fab (click)="openDialog()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
         </div>
-      </div>
+      </mat-list-item>
       <br><br>
       <mat-list-item class="nj-card-list-item">
         <mat-icon mat-list-icon class="nj-card-list-item-icon">mood</mat-icon>

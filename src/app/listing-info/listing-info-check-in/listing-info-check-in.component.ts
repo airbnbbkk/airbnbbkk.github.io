@@ -39,4 +39,8 @@ export class ListingInfoCheckInComponent implements OnInit {
     return this.domSanitizer.bypassSecurityTrustResourceUrl(
       this.listingInfo.video.howToGo[this.translate.getCurrentLang()].concat('&cc_lang_pref=' + this.translate.getCurrentGoogleLang()).toString());
   }
+
+  public isAspire() {
+    return this.listingOrder >= 4 && this.listingOrder <= 7;
+  }
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ListingInfoCheckInComponent } from './listing-info-check-in.component';
 import { NgCustomMaterialModule } from '../../ng-material/ng-material.module';
@@ -11,6 +12,7 @@ import { ListingInfoCheckOutImgDialogComponent } from './listing-info-check-out-
     ListingInfoCheckOutImgDialogComponent
   ],
   imports: [
+    CommonModule,
     NgCustomMaterialModule,
     TranslationModule,
     RouterModule.forChild([

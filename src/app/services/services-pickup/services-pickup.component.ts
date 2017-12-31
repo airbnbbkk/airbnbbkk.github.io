@@ -15,8 +15,7 @@ export class ServicesPickupComponent {
 
   constructor(public translate: TranslationModule,
               public dialog: MatDialog,
-              public appState: AppState
-  ) {``
+              public appState: AppState) {
     this.pickupInfo = ServicesPickupInfo;
   }
 
