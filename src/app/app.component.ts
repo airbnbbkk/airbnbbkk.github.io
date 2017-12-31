@@ -59,10 +59,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
         if (params['code']) {
           this.appState.set('confirmationCode', params['code']);
         }
+        if (params['frag']) {
+          this.fragment = params['frag'];
+        }
       });
-    this.activatedRoute.fragment.subscribe(fragment => {
-      this.fragment = fragment;
-    });
     console.log('Initial App State', this.appState.state);
   }
 }
