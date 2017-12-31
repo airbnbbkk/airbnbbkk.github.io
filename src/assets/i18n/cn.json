@@ -48,6 +48,7 @@
     "HOW_TO_CHECK_OUT": "如何退房",
     "LEAVE_KEY_CARD": "退货钥匙卡",
     "LEAVE_KEY_CARD_DESCRIPTION": "当您退房时，请退回您的钥匙卡并整理房子。",
+    "LEAVE_KEY_CARD_INSTRUCTION": "当您退还钥匙卡时，请保持信箱房间的门打开，因为如果没有钥匙卡，您无法从里面打开门",
     "LEAVE_KEY_CARD_ON_THE_TABLE": "请将钥匙卡放在餐桌上。",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX": "将钥匙卡留在邮箱中",
     "LEAVE_KEY_CARD_IN_THE_MAIL_BOX_IMG_DESCRIPTION": "请将钥匙卡的照片作为证据发送给我们。\n如果钥匙卡没有照片不存在，我们将不得不要求赔偿您的损失。",

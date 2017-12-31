@@ -13,6 +13,7 @@ import { TranslationModule } from '../../service/translationModule.provider';
 export class ListingInfoCheckInComponent implements OnInit {
 
   public listingInfo: ListingInfoCheckIn;
+  public listingOrder: number;
 
   constructor(private route: ActivatedRoute,
               private domSanitizer: DomSanitizer,
@@ -23,6 +24,7 @@ export class ListingInfoCheckInComponent implements OnInit {
 
   public ngOnInit() {
     this.listingInfo = this.route.snapshot.data['listingInfo'].checkIn;
+    this.listingOrder = this.route.snapshot.data['listingInfo'].order;
   }
 
   public openDialog() {

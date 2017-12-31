@@ -9,10 +9,12 @@ type HouseRule = {
 };
 
 type ListingInfo = {
+  name: string,
+  id: number,
+  order: number,
   location: ListingInfoLocation;
   checkIn: ListingInfoCheckIn;
   facilities: ListingInfoFacilities;
-
 };
 
 type ListingInfoLocation = {

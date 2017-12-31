@@ -41,8 +41,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   public ngAfterViewChecked() {
     try {
-      const element = document.querySelector('#' + this.fragment);
-      document.querySelector('#' + this.fragment).scrollIntoView();
+      if (this.fragment) {
+        const element = document.querySelector('#' + this.fragment);
+        document.querySelector('#' + this.fragment).scrollIntoView();
+      }
     } catch (e) {
       /* */
     }

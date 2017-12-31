@@ -6,6 +6,9 @@ const GMaps = {
 
 export const ListingInfoDict: Dict<ListingInfo> = {
   nj_1: {
+    name: 'NJ1',
+    id: 16268602,
+    order: 1,
     location: {
       voiceGuide: {
         howToGo: {
@@ -70,6 +73,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_2: {
+    name: 'NJ2',
+    id: 16874939,
+    order: 2,
     location: {
       voiceGuide: {
         howToGo: {
@@ -134,6 +140,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_3: {
+    name: 'NJ3',
+    id: 17972084,
+    order: 3,
     location: {
       voiceGuide: {
         howToGo: {
@@ -198,6 +207,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_4: {
+    name: 'NJ4',
+    id: 18722790,
+    order: 4,
     location: {
       voiceGuide: {
         howToGo: {
@@ -262,12 +274,15 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_5: {
+    name: 'NJ5',
+    id: 19097139,
+    order: 5,
     location: {
       voiceGuide: {
         howToGo: {
           en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
           ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          cn: 'http://player.youku.com/embed/XMzAwNzc1MTkxNg=='
+          cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
       houseInfo: {
@@ -286,7 +301,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         howToGo: {
           en: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=en',
           ko: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
-          cn: 'http://player.youku.com/embed/XMzAxODc3NDY0OA=='
+          cn: 'https://player.youku.com/embed/XMzAxODc3NDY0OA=='
         }
       },
       time: {
@@ -326,6 +341,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_6: {
+    name: 'NJ6',
+    id: 20777226,
+    order: 6,
     location: {
       voiceGuide: {
         howToGo: {
@@ -390,6 +408,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_7: {
+    name: 'NJ7',
+    id: 21170179,
+    order: 7,
     location: {
       voiceGuide: {
         howToGo: {
@@ -454,6 +475,9 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     }
   },
   nj_8: {
+    name: 'NJ8',
+    id: 22471822,
+    order: 8,
     location: {
       voiceGuide: {
         howToGo: {
