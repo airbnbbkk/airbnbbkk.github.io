@@ -232,8 +232,8 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/kbh0r9qtpmE?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          en: 'https://www.youtube.com/embed/3hMUhX7tpGo?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/3hMUhX7tpGo?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzAwNTY1MTEyMA=='
         }
       },
@@ -299,8 +299,8 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/obS5pZdbV2s?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          en: 'https://www.youtube.com/embed/kcARJqpccro?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/kcARJqpccro?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzAxODc3NDY0OA=='
         }
       },
@@ -366,8 +366,8 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/c6ya6Zu8N0g?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/c6ya6Zu8N0g?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          en: 'https://www.youtube.com/embed/VwPTbsruZHg?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/VwPTbsruZHg?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzAxODc2MjIzMg=='
         }
       },
@@ -414,8 +414,8 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     location: {
       voiceGuide: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
-          ko: 'https://www.youtube.com/embed/4Ee6iIGCxR8?rel=0',
+          en: 'https://www.youtube.com/embed/E70Hg9PCg_Y?rel=0',
+          ko: 'https://www.youtube.com/embed/E70Hg9PCg_Y?rel=0',
           cn: 'https://player.youku.com/embed/XMzAwNzc1MTkxNg=='
         }
       },
@@ -433,8 +433,8 @@ export const ListingInfoDict: Dict<ListingInfo> = {
     checkIn: {
       video: {
         howToGo: {
-          en: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=en',
-          ko: 'https://www.youtube.com/embed/mvCFo5UiCcc?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
+          en: 'https://www.youtube.com/embed/E70Hg9PCg_Y?rel=0&cc_load_policy=1&&cc_lang_pref=en',
+          ko: 'https://www.youtube.com/embed/E70Hg9PCg_Y?rel=0&cc_load_policy=1&&cc_lang_pref=ko',
           cn: 'https://player.youku.com/embed/XMzI3NzM1MTY2OA=='
         }
       },
