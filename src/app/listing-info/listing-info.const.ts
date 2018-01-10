@@ -72,7 +72,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       }
     }
   },
-  nj_2: {
+  /*nj_2: {
     name: 'NJ2',
     id: 16874939,
     order: 2,
@@ -205,7 +205,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         }
       }
     }
-  },
+  },*/
   nj_4: {
     name: 'NJ4',
     id: 18722790,
@@ -407,7 +407,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
       }
     }
   },
-  nj_7: {
+  /*nj_7: {
     name: 'NJ7',
     id: 21170179,
     order: 7,
@@ -473,7 +473,7 @@ export const ListingInfoDict: Dict<ListingInfo> = {
         }
       }
     }
-  },
+  },*/
   nj_8: {
     name: 'NJ8',
     id: 22471822,
